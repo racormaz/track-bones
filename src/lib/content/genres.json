@@ -1,0 +1,86 @@
+[
+	{
+		"id": "house",
+		"label": "House",
+		"subgenres": [
+			{ "id": "deep-house", "label": "Deep" },
+			{ "id": "tech-house", "label": "Tech" },
+			{ "id": "progressive-house", "label": "Progressive" },
+			{ "id": "lo-fi-house", "label": "Lo-fi" }
+		]
+	},
+	{
+		"id": "techno",
+		"label": "Techno",
+		"subgenres": [
+			{ "id": "melodic-techno", "label": "Melodic" },
+			{ "id": "industrial-techno", "label": "Industrial" },
+			{ "id": "minimal-techno", "label": "Minimal" },
+			{ "id": "dub-techno", "label": "Dub" }
+		]
+	},
+	{
+		"id": "dnb",
+		"label": "Drum & Bass / Jungle",
+		"subgenres": [
+			{ "id": "liquid-dnb", "label": "Liquid" },
+			{ "id": "neurofunk", "label": "Neurofunk" },
+			{ "id": "jungle", "label": "Jungle" },
+			{ "id": "jump-up", "label": "Jump-up" }
+		]
+	},
+	{
+		"id": "ambient",
+		"label": "Ambient / Downtempo",
+		"subgenres": [
+			{ "id": "drone", "label": "Drone" },
+			{ "id": "dark-ambient", "label": "Dark" },
+			{ "id": "downtempo", "label": "Downtempo" },
+			{ "id": "new-age", "label": "New Age" }
+		]
+	},
+	{
+		"id": "experimental",
+		"label": "Experimental",
+		"subgenres": [
+			{ "id": "musique-concrete", "label": "Musique Concrète" },
+			{ "id": "glitch", "label": "Glitch" },
+			{ "id": "noise", "label": "Noise" }
+		]
+	},
+	{ "id": "idm", "label": "IDM" },
+	{
+		"id": "bass",
+		"label": "Bass Music",
+		"subgenres": [
+			{ "id": "wave", "label": "Wave" },
+			{ "id": "halftime", "label": "Halftime" },
+			{ "id": "midtempo-bass", "label": "Midtempo" }
+		]
+	},
+	{
+		"id": "dubstep",
+		"label": "Dubstep",
+		"subgenres": [
+			{ "id": "uk-dubstep", "label": "UK / Deep" },
+			{ "id": "brostep", "label": "Brostep" },
+			{ "id": "riddim", "label": "Riddim" }
+		]
+	},
+	{
+		"id": "trance",
+		"label": "Trance",
+		"subgenres": [
+			{ "id": "uplifting-trance", "label": "Uplifting" },
+			{ "id": "progressive-trance", "label": "Progressive" },
+			{ "id": "goa-trance", "label": "Goa" }
+		]
+	},
+	{ "id": "acid-house", "label": "Acid House" },
+	{ "id": "uk-garage", "label": "UK Garage" },
+	{ "id": "psytrance", "label": "Psytrance" },
+	{ "id": "trap", "label": "Trap" },
+	{ "id": "future-bass", "label": "Future Bass" },
+	{ "id": "synthwave", "label": "Synthwave" },
+	{ "id": "hardstyle", "label": "Hardstyle" }
+]
