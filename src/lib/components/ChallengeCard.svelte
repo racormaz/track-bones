@@ -3,6 +3,7 @@
 	import { CATEGORY_LABELS } from '$lib/types';
 	import { slide } from 'svelte/transition';
 	import Icon, { type IconName } from './Icon.svelte';
+	import ConceptVisual from './ConceptVisual.svelte';
 
 	let { concept, onReroll }: { concept: Concept; onReroll: () => void } = $props();
 
@@ -80,6 +81,11 @@
 
 	{#if expanded}
 		<div transition:slide={{ duration: 180 }} class="border-t border-border/60 px-5 py-4">
+			{#if concept.visual && concept.visual.type !== 'none'}
+				<div class="mb-3">
+					<ConceptVisual visual={concept.visual} />
+				</div>
+			{/if}
 			<p class="text-sm leading-relaxed text-fg/80">{concept.definition}</p>
 			{#if concept.wikiSummary}
 				<p class="mt-3 text-xs leading-relaxed text-muted italic">{concept.wikiSummary}</p>

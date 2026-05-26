@@ -8,7 +8,22 @@
 		"prompt": "Accent only the off-beats and sixteenth-note upbeats for an entire 8-bar section so no hit lands on a downbeat.",
 		"definition": "Syncopation is the accenting of beats or subdivisions that fall outside the primary pulse.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Syncopation",
-		"wikiSummary": "In music, syncopation is a variety of rhythms played together to make a piece of music, making part or all of a tune or piece of music off-beat. More simply, syncopation is \"a disturbance or interruption of the regular flow of rhythm\": a \"placement of rhythmic stresses or accents where they wouldn't normally occur\". It is the correlation of at least two sets of time intervals."
+		"wikiSummary": "In music, syncopation is a variety of rhythms played together to make a piece of music, making part or all of a tune or piece of music off-beat. More simply, syncopation is \"a disturbance or interruption of the regular flow of rhythm\": a \"placement of rhythmic stresses or accents where they wouldn't normally occur\". It is the correlation of at least two sets of time intervals.",
+		"visual": {
+			"type": "rhythm-grid",
+			"steps": 16,
+			"hits": [
+				2,
+				5,
+				7,
+				10,
+				13
+			],
+			"accents": [
+				2,
+				10
+			]
+		}
 	},
 	{
 		"id": "syncopation-hihat",
@@ -26,7 +41,21 @@
 		"relatedIds": [
 			"syncopation"
 		],
-		"wikiSummary": "In music, syncopation is a variety of rhythms played together to make a piece of music, making part or all of a tune or piece of music off-beat. More simply, syncopation is \"a disturbance or interruption of the regular flow of rhythm\": a \"placement of rhythmic stresses or accents where they wouldn't normally occur\". It is the correlation of at least two sets of time intervals."
+		"wikiSummary": "In music, syncopation is a variety of rhythms played together to make a piece of music, making part or all of a tune or piece of music off-beat. More simply, syncopation is \"a disturbance or interruption of the regular flow of rhythm\": a \"placement of rhythmic stresses or accents where they wouldn't normally occur\". It is the correlation of at least two sets of time intervals.",
+		"visual": {
+			"type": "rhythm-grid",
+			"steps": 16,
+			"hits": [
+				1,
+				3,
+				5,
+				7,
+				9,
+				11,
+				13,
+				15
+			]
+		}
 	},
 	{
 		"id": "swing",
@@ -154,7 +183,23 @@
 		"prompt": "Build your lead melody entirely around dotted-eighth notes for the first 16 bars.",
 		"definition": "A dotted note is extended by half its base value, creating a long-short feel.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Dotted_note",
-		"wikiSummary": "In Western musical notation, a dotted note is a note with a small dot written after it. In modern practice, the dot increases the duration of the original note by half of its value. This makes a dotted note equivalent to the original note tied to a note of half the value – for example, a dotted half note is equivalent to a half note tied to a quarter note. Subsequent dots add progressively halved value, as shown in the example to the right."
+		"wikiSummary": "In Western musical notation, a dotted note is a note with a small dot written after it. In modern practice, the dot increases the duration of the original note by half of its value. This makes a dotted note equivalent to the original note tied to a note of half the value – for example, a dotted half note is equivalent to a half note tied to a quarter note. Subsequent dots add progressively halved value, as shown in the example to the right.",
+		"visual": {
+			"type": "rhythm-grid",
+			"steps": 16,
+			"hits": [
+				0,
+				3,
+				6,
+				9,
+				12
+			],
+			"accents": [
+				0,
+				6,
+				12
+			]
+		}
 	},
 	{
 		"id": "dotted-rhythm-bass",
@@ -1964,7 +2009,21 @@
 		"prompt": "Lay the entire track out in the classic intro / build / drop / breakdown / second drop / outro shape before adding any sound.",
 		"definition": "The dominant EDM song-form built around two energy peaks separated by a breakdown.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Song_structure",
-		"wikiSummary": "Song structure is the arrangement of a song, and is a part of the songwriting process. It is typically sectional, which uses repeating forms in songs. Common piece-level musical forms for vocal music include bar form, 32-bar form, verse–chorus form, ternary form, strophic form, and the 12-bar blues. Popular music songs traditionally use the same music for each verse or stanza of lyrics. Pop and traditional forms can be used even with songs that have structural differences in melodies. The most common format in modern popular music is introduction (intro), verse, pre-chorus, chorus, verse, pre-chorus, chorus, bridge, and chorus, with an optional outro. In rock music styles, notably heavy metal music, there are usually one or more guitar solos in the song, often found after the middle chorus part. In pop music, there may be a guitar solo, or a solo performed with another instrument such as a synthesizer or a saxophone."
+		"wikiSummary": "Song structure is the arrangement of a song, and is a part of the songwriting process. It is typically sectional, which uses repeating forms in songs. Common piece-level musical forms for vocal music include bar form, 32-bar form, verse–chorus form, ternary form, strophic form, and the 12-bar blues. Popular music songs traditionally use the same music for each verse or stanza of lyrics. Pop and traditional forms can be used even with songs that have structural differences in melodies. The most common format in modern popular music is introduction (intro), verse, pre-chorus, chorus, verse, pre-chorus, chorus, bridge, and chorus, with an optional outro. In rock music styles, notably heavy metal music, there are usually one or more guitar solos in the song, often found after the middle chorus part. In pop music, there may be a guitar solo, or a solo performed with another instrument such as a synthesizer or a saxophone.",
+		"visual": {
+			"type": "energy-curve",
+			"points": [
+				0.15,
+				0.2,
+				0.35,
+				0.8,
+				0.95,
+				0.3,
+				0.7,
+				0.95,
+				0.2
+			]
+		}
 	},
 	{
 		"id": "eight-bar-phrasing",
@@ -2011,7 +2070,18 @@
 		"genres": [],
 		"prompt": "Identify one moment in your track where tension peaks; design the 8 bars before and after to amplify the contrast.",
 		"definition": "The pacing of musical pressure and resolution that drives emotional arc.",
-		"wikiUrl": null
+		"wikiUrl": null,
+		"visual": {
+			"type": "energy-curve",
+			"points": [
+				0.3,
+				0.45,
+				0.6,
+				0.8,
+				0.95,
+				0.2
+			]
+		}
 	},
 	{
 		"id": "energy-curve",
@@ -2088,7 +2158,19 @@
 		"prompt": "Telegraph a full drop, then cut to silence or a misleading element for exactly 4 bars before delivering the real drop.",
 		"definition": "A misleading drop that subverts the listener’s expectation before the real one lands.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Drop_(music)",
-		"wikiSummary": "A drop or beat drop in music, made popular by electronic dance music (EDM) styles, is a point in a music track where a sudden change of rhythm or bass line occurs, which is preceded by a build-up section and break. The drop is the loudest portion of an EDM song."
+		"wikiSummary": "A drop or beat drop in music, made popular by electronic dance music (EDM) styles, is a point in a music track where a sudden change of rhythm or bass line occurs, which is preceded by a build-up section and break. The drop is the loudest portion of an EDM song.",
+		"visual": {
+			"type": "energy-curve",
+			"points": [
+				0.2,
+				0.45,
+				0.9,
+				0.1,
+				0.5,
+				0.95,
+				0.2
+			]
+		}
 	},
 	{
 		"id": "half-drop",
@@ -2103,7 +2185,20 @@
 		"prompt": "Make your first drop a stripped-back version with only kick + bass + minimal lead; save the full drop for the second one.",
 		"definition": "A drop with reduced energy or sparser instrumentation, usually a setup for the full drop later.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Drop_(music)",
-		"wikiSummary": "A drop or beat drop in music, made popular by electronic dance music (EDM) styles, is a point in a music track where a sudden change of rhythm or bass line occurs, which is preceded by a build-up section and break. The drop is the loudest portion of an EDM song."
+		"wikiSummary": "A drop or beat drop in music, made popular by electronic dance music (EDM) styles, is a point in a music track where a sudden change of rhythm or bass line occurs, which is preceded by a build-up section and break. The drop is the loudest portion of an EDM song.",
+		"visual": {
+			"type": "energy-curve",
+			"points": [
+				0.2,
+				0.4,
+				0.85,
+				0.95,
+				0.55,
+				0.4,
+				0.95,
+				0.2
+			]
+		}
 	},
 	{
 		"id": "pre-drop-silence",
@@ -2129,7 +2224,18 @@
 		"genres": [],
 		"prompt": "Start the track fully loaded and arrange by removing elements. Final 16 bars must have at most 3 layers playing.",
 		"definition": "Composing by starting dense and stripping back over time, rather than adding from sparse to dense.",
-		"wikiUrl": null
+		"wikiUrl": null,
+		"visual": {
+			"type": "energy-curve",
+			"points": [
+				0.95,
+				0.8,
+				0.65,
+				0.5,
+				0.35,
+				0.15
+			]
+		}
 	},
 	{
 		"id": "aaba-form",
@@ -2218,7 +2324,21 @@
 		"prompt": "Lock a single kick pattern on every downbeat and never break it for the entire track. The kick is the contract.",
 		"definition": "A kick on every beat of a 4/4 bar; the defining pulse of much dance music.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Four_on_the_floor_(music)",
-		"wikiSummary": "Four-on-the-floor is a rhythm used primarily in dance genres such as disco and electronic dance music. It is a steady, uniformly accented beat in 44 time in which the bass drum is hit on every beat .\nThis was popularized in the disco music of the 1970s\nand the term four-on-the-floor was widely used in that era, since on a drum set, the beat is played with the pedal-operated, drum-kit bass drum."
+		"wikiSummary": "Four-on-the-floor is a rhythm used primarily in dance genres such as disco and electronic dance music. It is a steady, uniformly accented beat in 44 time in which the bass drum is hit on every beat .\nThis was popularized in the disco music of the 1970s\nand the term four-on-the-floor was widely used in that era, since on a drum set, the beat is played with the pedal-operated, drum-kit bass drum.",
+		"visual": {
+			"type": "rhythm-grid",
+			"steps": 16,
+			"hits": [
+				0,
+				4,
+				8,
+				12
+			],
+			"accents": [
+				0,
+				8
+			]
+		}
 	},
 	{
 		"id": "dj-friendly-intro",
@@ -2309,7 +2429,18 @@
 		"prompt": "Halve the snare rate at the drop (140 BPM track → snare on beat 3 only) and let the bass do all the rhythmic work.",
 		"definition": "Dubstep’s defining feel: drums slow to half-time at the drop while sub work continues.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Dubstep",
-		"wikiSummary": "Dubstep is a genre of electronic dance music that originated in South London in the early 2000s. The style, whose roots trace to the Jamaican sound system party scene in the early 1980s, emerged as a UK garage offshoot that blended 2-step rhythms and sparse dub production, as well as incorporating elements of broken beat, grime, and drum and bass."
+		"wikiSummary": "Dubstep is a genre of electronic dance music that originated in South London in the early 2000s. The style, whose roots trace to the Jamaican sound system party scene in the early 1980s, emerged as a UK garage offshoot that blended 2-step rhythms and sparse dub production, as well as incorporating elements of broken beat, grime, and drum and bass.",
+		"visual": {
+			"type": "rhythm-grid",
+			"steps": 16,
+			"hits": [
+				0,
+				8
+			],
+			"accents": [
+				8
+			]
+		}
 	},
 	{
 		"id": "synthwave-gated-snare-arrival",
@@ -2477,6 +2608,10 @@
 			"kind": "interactive",
 			"label": "Ableton — Learn Synths",
 			"url": "https://learningsynths.ableton.com/"
+		},
+		"visual": {
+			"type": "waveform",
+			"shape": "sine"
 		}
 	},
 	{
@@ -2736,7 +2871,11 @@
 		"prompt": "Build a supersaw lead from 7 detuned sawtooth oscillators, spread the detune wide, and play a long-held chord at the drop.",
 		"definition": "A stacked, detuned sawtooth synth voice popularized by the Roland JP-8000 and trance music.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Roland_JP-8000",
-		"wikiSummary": "The Roland JP-8000 is an analog modeling synthesizer released by the Roland Corporation in 1996."
+		"wikiSummary": "The Roland JP-8000 is an analog modeling synthesizer released by the Roland Corporation in 1996.",
+		"visual": {
+			"type": "waveform",
+			"shape": "saw"
+		}
 	},
 	{
 		"id": "fm-bass",
@@ -2801,7 +2940,21 @@
 		"prompt": "Lock a 16th-note rolling bass on the off-beats (every \"and\") for the whole track, ducked to the kick on each downbeat.",
 		"definition": "The relentless 16th-note off-beat bass that defines psytrance momentum.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Psychedelic_trance",
-		"wikiSummary": "Psychedelic trance, psytrance, or psy is a subgenre of trance music characterized by arrangements of rhythms and layered melodies created by high tempo riffs. The genre offers variety in terms of mood, tempo, and style. Some examples include full on, darkpsy, forest, minimal (Zenonesque), hitech psy, progressive, night-time, suomi, psy-chill, psycore, psybient, psybreaks, or \"adapted\" tracks from other music genres. Goa trance preceded psytrance; when digital media became more commonly used, psytrance evolved. Goa continues to develop alongside the other genres."
+		"wikiSummary": "Psychedelic trance, psytrance, or psy is a subgenre of trance music characterized by arrangements of rhythms and layered melodies created by high tempo riffs. The genre offers variety in terms of mood, tempo, and style. Some examples include full on, darkpsy, forest, minimal (Zenonesque), hitech psy, progressive, night-time, suomi, psy-chill, psycore, psybient, psybreaks, or \"adapted\" tracks from other music genres. Goa trance preceded psytrance; when digital media became more commonly used, psytrance evolved. Goa continues to develop alongside the other genres.",
+		"visual": {
+			"type": "rhythm-grid",
+			"steps": 16,
+			"hits": [
+				1,
+				3,
+				5,
+				7,
+				9,
+				11,
+				13,
+				15
+			]
+		}
 	},
 	{
 		"id": "trap-808-glide",

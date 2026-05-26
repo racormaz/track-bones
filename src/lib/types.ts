@@ -55,6 +55,18 @@ export type SecondaryRef = {
 
 export type Rarity = 'common' | 'rare' | 'legendary';
 
+// Discriminated union of per-concept visual diagrams. Wave 1 implements the first 3.
+// Remaining types are reserved so concepts.json can be authored ahead of components.
+export type Visual =
+	| { type: 'none' }
+	| { type: 'rhythm-grid'; steps: number; hits: number[]; accents?: number[] }
+	| { type: 'waveform'; shape: 'sine' | 'saw' | 'square' | 'triangle' | 'noise' }
+	| { type: 'energy-curve'; points: number[] }
+	| { type: 'arrangement-form'; blocks: { label: string; color?: string }[] }
+	| { type: 'envelope'; attack: number; decay: number; sustain: number; release: number }
+	| { type: 'filter-sweep'; filter: 'lowpass' | 'highpass' | 'bandpass'; direction: 'up' | 'down' | 'both' }
+	| { type: 'cadence'; from: string; to: string; mode: 'authentic' | 'plagal' | 'deceptive' | 'half' };
+
 export type Concept = {
 	id: string;
 	name: string;
@@ -68,6 +80,7 @@ export type Concept = {
 	secondaryRef?: SecondaryRef;
 	sections?: SectionId[]; // section affinity for Deep mode
 	rarity?: Rarity; // missing = common
+	visual?: Visual; // missing = no diagram (renders text-only)
 	relatedIds?: string[];
 };
 
