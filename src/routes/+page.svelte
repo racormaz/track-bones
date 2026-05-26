@@ -30,7 +30,9 @@
 		generateChallengeWithCombo,
 		rerollOne,
 		pickTemplate,
-		assignSections,
+		generateDeepChallenge,
+		rerollSectionPick,
+		rerollFraming,
 		findActiveCombo
 	} from '$lib/challenge/generator';
 	import ModePicker from '$lib/components/ModePicker.svelte';
@@ -49,12 +51,17 @@
 	type Step = 'mode' | 'genre' | 'difficulty' | 'challenge';
 
 	let step = $state<Step>('mode');
+	// Quick-mode: 5 cards, one per category in CATEGORIES order.
+	// Deep-mode: deepSectionPicks is the source of truth; conceptIds is a derived flat list.
 	let conceptIds = $state<string[]>([]);
 	let template = $state<SectionTemplate | null>(null);
-	let sectionAssignments = $state<Record<string, SectionId> | undefined>(undefined);
+	let deepSectionPicks = $state<{ sectionId: SectionId; conceptId: string }[]>([]);
+	let framingConceptId = $state<string | null>(null);
 	let activeCombo = $state<Combo | null>(null);
 	let drawerOpen = $state(false);
 	let toast = $state<string | null>(null);
+
+	const framingConcept = $derived(framingConceptId ? (conceptsById.get(framingConceptId) ?? null) : null);
 
 	function showToast(msg: string) {
 		toast = msg;
@@ -63,51 +70,122 @@
 		}, 1600);
 	}
 
-	function generate() {
+	// Flat list of all currently-picked concept IDs (used for combo detection, history saves).
+	function flatPicks(): string[] {
+		if (preferences.lastMode === 'deep') {
+			return [
+				...(framingConceptId ? [framingConceptId] : []),
+				...deepSectionPicks.map((p) => p.conceptId)
+			];
+		}
+		return conceptIds;
+	}
+
+	function refreshCombo() {
+		if (
+			preferences.lastMode !== 'deep' ||
+			!combosResolved() ||
+			!preferences.lastGenre ||
+			!preferences.lastDifficulty
+		) {
+			activeCombo = null;
+			return;
+		}
+		activeCombo = findActiveCombo({
+			combos,
+			picked: flatPicks(),
+			genre: preferences.lastGenre,
+			difficulty: preferences.lastDifficulty
+		});
+	}
+
+	function generateQuick() {
 		if (preferences.lastGenre === null || preferences.lastDifficulty === null) return;
+		conceptIds = generateChallenge({
+			concepts,
+			genre: preferences.lastGenre,
+			difficulty: preferences.lastDifficulty,
+			excludeIds: recentConceptIds(10)
+		});
+		template = null;
+		deepSectionPicks = [];
+		framingConceptId = null;
+		activeCombo = null;
+	}
+
+	function generateDeep() {
+		if (preferences.lastGenre === null || preferences.lastDifficulty === null) return;
+		const genre = genresById.get(preferences.lastGenre);
+		const picked = pickTemplate(genre?.templates);
+		if (!picked) {
+			// No templates authored for this genre — fall back to Quick layout.
+			template = null;
+			deepSectionPicks = [];
+			framingConceptId = null;
+			generateQuick();
+			showToast('No templates for this genre yet. Showing flat brief.');
+			return;
+		}
+		template = picked;
+
+		const result = generateDeepChallenge({
+			concepts,
+			template: picked,
+			genre: preferences.lastGenre,
+			difficulty: preferences.lastDifficulty,
+			excludeIds: recentConceptIds(10)
+		});
+		framingConceptId = result.framingConceptId;
+		deepSectionPicks = result.sectionPicks;
+		conceptIds = flatPicks(); // sync for history/save
+		refreshCombo();
+
+		if (combosResolved() && !activeCombo) {
+			// Try to bias toward a combo by regenerating with the combo-aware path
+			// IF the user explicitly opted in. We pull the picks from the regular
+			// algorithm first and only retry if no combo surfaced naturally —
+			// the curated combos are small enough that they often won't trigger
+			// with random distribution. This is best-effort.
+			const comboResult = generateChallengeWithCombo({
+				concepts,
+				combos,
+				genre: preferences.lastGenre,
+				difficulty: preferences.lastDifficulty,
+				excludeIds: recentConceptIds(10)
+			});
+			if (comboResult.comboId) {
+				// We have a combo. Re-derive deep section picks around those concept IDs.
+				const lockedIds = new Set(comboResult.conceptIds);
+				const deepResult = generateDeepChallenge({
+					concepts,
+					template: picked,
+					genre: preferences.lastGenre,
+					difficulty: preferences.lastDifficulty,
+					excludeIds: [...recentConceptIds(10)]
+				});
+				// If the locked combo ids landed in deep, use it; otherwise stick with the original.
+				const deepIds = new Set([
+					...(deepResult.framingConceptId ? [deepResult.framingConceptId] : []),
+					...deepResult.sectionPicks.map((p) => p.conceptId)
+				]);
+				const containsCombo = [...lockedIds].every((id) => deepIds.has(id));
+				if (containsCombo) {
+					framingConceptId = deepResult.framingConceptId;
+					deepSectionPicks = deepResult.sectionPicks;
+					conceptIds = [...deepIds];
+					activeCombo = combosById.get(comboResult.comboId) ?? null;
+				}
+			}
+		}
+	}
+
+	function generate() {
 		try {
-			const wantCombos = preferences.lastMode === 'deep' && combosResolved();
-
-			if (wantCombos) {
-				const result = generateChallengeWithCombo({
-					concepts,
-					combos,
-					genre: preferences.lastGenre,
-					difficulty: preferences.lastDifficulty,
-					excludeIds: recentConceptIds(10)
-				});
-				conceptIds = result.conceptIds;
-				activeCombo = result.comboId ? (combosById.get(result.comboId) ?? null) : null;
-				if (!activeCombo) {
-					showToast('No combos available for this set yet.');
-				}
-			} else {
-				conceptIds = generateChallenge({
-					concepts,
-					genre: preferences.lastGenre,
-					difficulty: preferences.lastDifficulty,
-					excludeIds: recentConceptIds(10)
-				});
-				activeCombo = null;
-			}
-
 			if (preferences.lastMode === 'deep') {
-				const genre = genresById.get(preferences.lastGenre);
-				template = pickTemplate(genre?.templates);
-				if (template) {
-					sectionAssignments = assignSections({
-						conceptIds,
-						conceptsById,
-						template
-					});
-				} else {
-					sectionAssignments = undefined;
-				}
+				generateDeep();
 			} else {
-				template = null;
-				sectionAssignments = undefined;
+				generateQuick();
 			}
-
 			step = 'challenge';
 		} catch (err) {
 			console.error(err);
@@ -130,11 +208,11 @@
 
 	function onPickMode(m: Mode) {
 		setMode(m);
-		if (preferences.lastGenre && preferences.lastDifficulty) {
-			generate();
-		} else {
-			step = 'genre';
-		}
+		// Always walk through genre + difficulty after a mode pick so the user can
+		// change any of the three when they hit the picker flow. The fast-path back
+		// to the challenge view only fires on initial app load (onMount) when all
+		// three prefs are already cached.
+		step = 'genre';
 	}
 
 	function onPickGenre(g: GenreId) {
@@ -147,6 +225,7 @@
 		generate();
 	}
 
+	// Quick-mode reroll: by category index.
 	function onRerollOne(index: number) {
 		if (preferences.lastGenre === null || preferences.lastDifficulty === null) return;
 		const category = CATEGORIES[index];
@@ -161,24 +240,73 @@
 				excludeIds: [...conceptIds, ...recentConceptIds(10)]
 			});
 			conceptIds = conceptIds.map((id, i) => (i === index ? newId : id));
-
-			// Re-assign sections if in Deep mode so the new concept sits somewhere sensible.
-			if (preferences.lastMode === 'deep' && template) {
-				sectionAssignments = assignSections({ conceptIds, conceptsById, template });
-			}
-
-			// Re-evaluate active combo: if the new picks still satisfy a combo, keep / find one.
-			if (preferences.lastMode === 'deep' && combosResolved() && preferences.lastGenre && preferences.lastDifficulty) {
-				activeCombo = findActiveCombo({
-					combos,
-					picked: conceptIds,
-					genre: preferences.lastGenre,
-					difficulty: preferences.lastDifficulty
-				});
-			}
 		} catch (err) {
 			console.error(err);
 			showToast('No alternatives left for this slot.');
+		}
+	}
+
+	// Deep-mode reroll: by section id.
+	function onRerollSection(sectionId: SectionId) {
+		if (
+			!template ||
+			preferences.lastGenre === null ||
+			preferences.lastDifficulty === null
+		) {
+			return;
+		}
+		const current = deepSectionPicks.find((p) => p.sectionId === sectionId);
+		if (!current) return;
+		const otherIds = deepSectionPicks
+			.filter((p) => p.sectionId !== sectionId)
+			.map((p) => p.conceptId);
+		try {
+			const newId = rerollSectionPick({
+				concepts,
+				template,
+				sectionId,
+				currentId: current.conceptId,
+				otherPickedIds: otherIds,
+				framingId: framingConceptId,
+				genre: preferences.lastGenre,
+				difficulty: preferences.lastDifficulty,
+				excludeIds: recentConceptIds(10)
+			});
+			deepSectionPicks = deepSectionPicks.map((p) =>
+				p.sectionId === sectionId ? { ...p, conceptId: newId } : p
+			);
+			conceptIds = flatPicks();
+			refreshCombo();
+		} catch (err) {
+			console.error(err);
+			showToast('No alternatives left for this section.');
+		}
+	}
+
+	function onRerollFraming() {
+		if (
+			!template ||
+			preferences.lastGenre === null ||
+			preferences.lastDifficulty === null
+		) {
+			return;
+		}
+		try {
+			const newId = rerollFraming({
+				concepts,
+				template,
+				currentId: framingConceptId,
+				pickedIds: deepSectionPicks.map((p) => p.conceptId),
+				genre: preferences.lastGenre,
+				difficulty: preferences.lastDifficulty,
+				excludeIds: recentConceptIds(10)
+			});
+			framingConceptId = newId;
+			conceptIds = flatPicks();
+			refreshCombo();
+		} catch (err) {
+			console.error(err);
+			showToast('No alternative framing available.');
 		}
 	}
 
@@ -201,7 +329,8 @@
 			difficulty: preferences.lastDifficulty,
 			conceptIds,
 			templateId: template?.id,
-			sectionAssignments,
+			deepSectionPicks: preferences.lastMode === 'deep' ? deepSectionPicks : undefined,
+			framingConceptId: framingConceptId ?? undefined,
 			comboId: activeCombo?.id
 		});
 		showToast('Saved to history');
@@ -212,41 +341,37 @@
 	}
 
 	function onOpenFromHistory(c: Challenge) {
-		if (c.mode) setMode(c.mode);
+		setMode(c.mode);
 		setGenre(c.genre);
 		setDifficulty(c.difficulty);
 		conceptIds = c.conceptIds.filter((id) => conceptsById.has(id));
 		activeCombo = c.comboId ? (combosById.get(c.comboId) ?? null) : null;
-		// If any concept was deleted since save, refill missing slots.
-		if (conceptIds.length < CATEGORIES.length) {
-			try {
-				conceptIds = generateChallenge({
-					concepts,
-					genre: c.genre,
-					difficulty: c.difficulty,
-					excludeIds: conceptIds
-				});
-			} catch {
-				/* leave partial */
-			}
-		}
 
-		// Restore template + sections from saved challenge if present, otherwise re-derive.
 		if (c.mode === 'deep') {
 			const genre = genresById.get(c.genre);
-			const savedTemplate = c.templateId
-				? (genre?.templates ?? []).find((t) => t.id === c.templateId)
-				: undefined;
-			template = savedTemplate ?? pickTemplate(genre?.templates);
-			if (template) {
-				sectionAssignments =
-					c.sectionAssignments ?? assignSections({ conceptIds, conceptsById, template });
-			} else {
-				sectionAssignments = undefined;
+			template = c.templateId
+				? ((genre?.templates ?? []).find((t) => t.id === c.templateId) ?? pickTemplate(genre?.templates))
+				: pickTemplate(genre?.templates);
+			deepSectionPicks = c.deepSectionPicks ?? [];
+			framingConceptId = c.framingConceptId ?? null;
+
+			// If somehow we lost section picks (corrupt save?), regenerate.
+			if (template && deepSectionPicks.length === 0) {
+				const result = generateDeepChallenge({
+					concepts,
+					template,
+					genre: c.genre,
+					difficulty: c.difficulty,
+					excludeIds: recentConceptIds(10)
+				});
+				framingConceptId = result.framingConceptId;
+				deepSectionPicks = result.sectionPicks;
+				conceptIds = flatPicks();
 			}
 		} else {
 			template = null;
-			sectionAssignments = undefined;
+			deepSectionPicks = [];
+			framingConceptId = null;
 		}
 
 		step = 'challenge';
@@ -304,8 +429,11 @@
 				genre={preferences.lastGenre}
 				difficulty={preferences.lastDifficulty}
 				{template}
-				{sectionAssignments}
+				{deepSectionPicks}
+				{framingConcept}
 				combo={activeCombo}
+				{onRerollSection}
+				{onRerollFraming}
 				{onRerollOne}
 				{onRerollAll}
 				{onSave}

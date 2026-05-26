@@ -1,5 +1,5 @@
 import { browser } from '$app/environment';
-import type { Challenge, GenreId, Difficulty, Mode } from '../types';
+import type { Challenge, GenreId, Difficulty, Mode, SectionId } from '../types';
 
 const KEY = 'track-bones:history';
 const CAP = 50;
@@ -45,7 +45,8 @@ export function saveChallenge(args: {
 	difficulty: Difficulty;
 	conceptIds: string[];
 	templateId?: string;
-	sectionAssignments?: Record<string, string>;
+	deepSectionPicks?: { sectionId: SectionId; conceptId: string }[];
+	framingConceptId?: string;
 	comboId?: string;
 }): Challenge {
 	const entry: Challenge = {
@@ -56,7 +57,8 @@ export function saveChallenge(args: {
 		difficulty: args.difficulty,
 		conceptIds: args.conceptIds,
 		templateId: args.templateId,
-		sectionAssignments: args.sectionAssignments,
+		deepSectionPicks: args.deepSectionPicks,
+		framingConceptId: args.framingConceptId,
 		comboId: args.comboId
 	};
 	state.items = [entry, ...state.items].slice(0, CAP);

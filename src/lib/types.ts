@@ -78,7 +78,8 @@ export type Concept = {
 	wikiUrl: string | null;
 	wikiSummary?: string;
 	secondaryRef?: SecondaryRef;
-	sections?: SectionId[]; // section affinity for Deep mode
+	sections?: SectionId[]; // section affinity for Deep mode (non-arrangement concepts)
+	framingRequiresAnyOf?: SectionId[]; // arrangement concepts only: template must include one of these to be eligible as Deep-mode framing
 	rarity?: Rarity; // missing = common
 	visual?: Visual; // missing = no diagram (renders text-only)
 	relatedIds?: string[];
@@ -111,6 +112,8 @@ export type SectionId = string;
 export type Section = {
 	id: SectionId;
 	label: string;
+	description: string; // one-sentence inline explanation; every section has one
+	ref?: SecondaryRef; // optional learn-more link, same shape as concept refs
 	barHint?: string;
 };
 
@@ -124,13 +127,14 @@ export type SectionTemplate = {
 export type Challenge = {
 	id: string; // uuid-ish
 	timestamp: number; // epoch ms
-	mode?: Mode; // optional for backward-compat with v1 saves
+	mode: Mode;
 	genre: GenreId;
 	difficulty: Difficulty;
-	conceptIds: string[]; // one per category, in CATEGORIES order
+	conceptIds: string[]; // Quick mode: 5 cards in CATEGORIES order. Deep mode: flat list of all picks including framing.
 	templateId?: string; // deep mode only
-	sectionAssignments?: Record<string, SectionId>; // deep mode only; conceptId → sectionId
-	comboId?: string; // deep mode + combos enabled
+	deepSectionPicks?: { sectionId: SectionId; conceptId: string }[]; // deep mode only, ordered per template
+	framingConceptId?: string; // deep mode only, arrangement concept used as overall framing
+	comboId?: string;
 };
 
 export type Preferences = {

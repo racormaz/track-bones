@@ -11,6 +11,7 @@
 	import { DIFFICULTY_LABELS, MODE_LABELS, CATEGORIES } from '$lib/types';
 	import ChallengeCard from './ChallengeCard.svelte';
 	import ComboCard from './ComboCard.svelte';
+	import FramingCard from './FramingCard.svelte';
 	import SectionHeader from './SectionHeader.svelte';
 	import Icon from './Icon.svelte';
 	import genres from '$lib/content/genres.json';
@@ -23,8 +24,11 @@
 		genre,
 		difficulty,
 		template,
-		sectionAssignments,
+		deepSectionPicks,
+		framingConcept,
 		combo,
+		onRerollSection,
+		onRerollFraming,
 		onRerollOne,
 		onRerollAll,
 		onSave,
@@ -37,8 +41,11 @@
 		genre: GenreId;
 		difficulty: Difficulty;
 		template?: SectionTemplate | null;
-		sectionAssignments?: Record<string, SectionId>;
+		deepSectionPicks?: { sectionId: SectionId; conceptId: string }[];
+		framingConcept?: Concept | null;
 		combo?: Combo | null;
+		onRerollSection: (sectionId: SectionId) => void;
+		onRerollFraming: () => void;
 		onRerollOne: (index: number) => void;
 		onRerollAll: () => void;
 		onSave: () => void;
@@ -49,28 +56,7 @@
 	const genreList = genres as Genre[];
 	const genreLabel = $derived(genreList.find((g) => g.id === genre)?.label ?? genre);
 
-	const orderedConcepts = $derived(
-		conceptIds
-			.map((id, i) => ({ concept: conceptsById.get(id), index: i }))
-			.filter((x): x is { concept: Concept; index: number } => x.concept !== undefined)
-	);
-
-	const useSections = $derived(
-		mode === 'deep' && template != null && sectionAssignments != null
-	);
-
-	// Build section → list of {concept, index} in section order, only when useSections.
-	const grouped = $derived.by(() => {
-		if (!useSections || !template || !sectionAssignments) return null;
-		return template.sections
-			.map((section) => ({
-				section,
-				items: orderedConcepts.filter(
-					({ concept }) => sectionAssignments[concept.id] === section.id
-				)
-			}))
-			.filter((group) => group.items.length > 0);
-	});
+	const isDeep = $derived(mode === 'deep' && template != null && deepSectionPicks != null);
 </script>
 
 <section class="flex flex-col gap-5 px-5 pt-8 pb-32">
@@ -86,35 +72,41 @@
 			<span class="text-border" aria-hidden="true">·</span>
 			<span class="text-muted">{DIFFICULTY_LABELS[difficulty]}</span>
 		</button>
-		{#if useSections && template}
+		{#if isDeep && template}
 			<p class="text-xs text-muted">{template.label}</p>
 		{:else}
 			<p class="text-xs tracking-[0.18em] text-muted uppercase">Your bones</p>
 		{/if}
 	</header>
 
-	{#if useSections && grouped}
+	{#if isDeep && template && deepSectionPicks}
 		<div class="stagger-in flex flex-col gap-3">
-			{#each grouped as group (group.section.id)}
-				<div class="flex flex-col gap-3">
-					<SectionHeader label={group.section.label} barHint={group.section.barHint} />
-					<ol class="flex flex-col gap-3">
-						{#each group.items as { concept, index } (concept.id)}
-							<li>
-								<ChallengeCard {concept} onReroll={() => onRerollOne(index)} />
-							</li>
-						{/each}
-					</ol>
-				</div>
+			{#if framingConcept}
+				<FramingCard concept={framingConcept} onReroll={onRerollFraming} />
+			{/if}
+			{#each template.sections as section (section.id)}
+				{@const pick = deepSectionPicks.find((p) => p.sectionId === section.id)}
+				{@const concept = pick ? conceptsById.get(pick.conceptId) : undefined}
+				{#if concept}
+					<div class="flex flex-col gap-2">
+						<SectionHeader
+							label={section.label}
+							description={section.description}
+							barHint={section.barHint}
+							ref={section.ref}
+						/>
+						<ChallengeCard {concept} onReroll={() => onRerollSection(section.id)} />
+					</div>
+				{/if}
 			{/each}
 		</div>
 	{:else}
 		<ol class="stagger-in flex flex-col gap-3">
 			{#each CATEGORIES as cat, i (cat)}
-				{@const item = orderedConcepts.find((x) => x.index === i)}
-				{#if item}
+				{@const concept = conceptsById.get(conceptIds[i])}
+				{#if concept}
 					<li>
-						<ChallengeCard concept={item.concept} onReroll={() => onRerollOne(i)} />
+						<ChallengeCard {concept} onReroll={() => onRerollOne(i)} />
 					</li>
 				{/if}
 			{/each}

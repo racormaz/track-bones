@@ -14,11 +14,46 @@
 				"label": "Club Mix",
 				"description": "8-minute DJ-friendly extended mix.",
 				"sections": [
-					{ "id": "intro", "label": "Intro", "barHint": "32-64 bars" },
-					{ "id": "breakdown", "label": "Breakdown", "barHint": "16-32 bars" },
-					{ "id": "drop", "label": "Drop", "barHint": "32-64 bars" },
-					{ "id": "break", "label": "Mid Break", "barHint": "16-32 bars" },
-					{ "id": "outro", "label": "Outro", "barHint": "32 bars" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "The opening; bring up energy gradually, no full kick pattern or lead yet.",
+						"barHint": "32-64 bars"
+					},
+					{
+						"id": "breakdown",
+						"label": "Breakdown",
+						"description": "Energy dip mid-track; drums often drop out so a melodic motif can sit alone.",
+						"ref": {
+							"kind": "article",
+							"label": "Song structure",
+							"url": "https://en.wikipedia.org/wiki/Song_structure"
+						},
+						"barHint": "16-32 bars"
+					},
+					{
+						"id": "drop",
+						"label": "Drop",
+						"description": "The energy peak; full pattern arrives, kick and bass commit, the groove locks in.",
+						"ref": {
+							"kind": "article",
+							"label": "Drop (music)",
+							"url": "https://en.wikipedia.org/wiki/Drop_(music)"
+						},
+						"barHint": "32-64 bars"
+					},
+					{
+						"id": "break",
+						"label": "Mid Break",
+						"description": "A low-energy middle section between peaks; drums often drop out.",
+						"barHint": "16-32 bars"
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "The closing tail; strip elements down so the track mixes cleanly into the next.",
+						"barHint": "32 bars"
+					}
 				]
 			}
 		]
@@ -38,12 +73,40 @@
 				"label": "Club Tool",
 				"description": "Long evolving structure with two energy peaks.",
 				"sections": [
-					{ "id": "intro", "label": "Intro", "barHint": "64 bars" },
-					{ "id": "build", "label": "First Build", "barHint": "16-32 bars" },
-					{ "id": "peak1", "label": "First Peak", "barHint": "32 bars" },
-					{ "id": "break", "label": "Mid Break" },
-					{ "id": "peak2", "label": "Second Peak", "barHint": "32-64 bars" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Sparse percussion only; built for DJs to mix into from the previous track.",
+						"barHint": "64 bars"
+					},
+					{
+						"id": "build",
+						"label": "First Build",
+						"description": "A short rising section that tightens tension into the first peak.",
+						"barHint": "16-32 bars"
+					},
+					{
+						"id": "peak1",
+						"label": "First Peak",
+						"description": "High-energy zone where elements stack near their fullest.",
+						"barHint": "32 bars"
+					},
+					{
+						"id": "break",
+						"label": "Mid Break",
+						"description": "Low-energy interlude; drums often drop out so a textural moment can breathe."
+					},
+					{
+						"id": "peak2",
+						"label": "Second Peak",
+						"description": "The fullest version, usually denser than the first; all elements at maximum.",
+						"barHint": "32-64 bars"
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Wind down; strip back to drums and one textural element for the DJ mix-out."
+					}
 				]
 			}
 		]
@@ -63,11 +126,40 @@
 				"label": "Standard",
 				"description": "Intro → first drop → mid-section break → second drop.",
 				"sections": [
-					{ "id": "intro", "label": "Intro", "barHint": "32 bars" },
-					{ "id": "drop1", "label": "First Drop", "barHint": "32-48 bars" },
-					{ "id": "break", "label": "Mid Break", "barHint": "16-32 bars" },
-					{ "id": "drop2", "label": "Second Drop", "barHint": "32-64 bars" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Atmospheric or melodic opening; no full breakbeat yet, often just kick/bass.",
+						"barHint": "32 bars"
+					},
+					{
+						"id": "drop1",
+						"label": "First Drop",
+						"description": "The breakbeat arrives; bass voice commits; usually stripped relative to the second drop.",
+						"ref": {
+							"kind": "article",
+							"label": "Drop (music)",
+							"url": "https://en.wikipedia.org/wiki/Drop_(music)"
+						},
+						"barHint": "32-48 bars"
+					},
+					{
+						"id": "break",
+						"label": "Mid Break",
+						"description": "Energy dip mid-track; drums step down or drop out, melodic content carries the section.",
+						"barHint": "16-32 bars"
+					},
+					{
+						"id": "drop2",
+						"label": "Second Drop",
+						"description": "The full payoff; bass at its widest, drums at their hardest.",
+						"barHint": "32-64 bars"
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Drums and bass step back; melodic tail or pad lingers to mix out."
+					}
 				]
 			}
 		]
@@ -87,9 +179,21 @@
 				"label": "Free-form",
 				"description": "No rigid template. Three phases of evolving texture.",
 				"sections": [
-					{ "id": "opening", "label": "Opening" },
-					{ "id": "development", "label": "Development" },
-					{ "id": "dissolution", "label": "Dissolution" }
+					{
+						"id": "opening",
+						"label": "Opening",
+						"description": "First exposed material; establishes the sonic world without rigid pulse."
+					},
+					{
+						"id": "development",
+						"label": "Development",
+						"description": "Slow transformation of the opening material; introduce new layers gradually."
+					},
+					{
+						"id": "dissolution",
+						"label": "Dissolution",
+						"description": "The piece quietly disassembles itself; elements drop until only texture or silence remains."
+					}
 				]
 			}
 		]
@@ -108,10 +212,26 @@
 				"label": "Free-form",
 				"description": "No template. Four phases of statement and transformation.",
 				"sections": [
-					{ "id": "opening", "label": "Opening" },
-					{ "id": "statement", "label": "Statement" },
-					{ "id": "development", "label": "Development" },
-					{ "id": "dissolution", "label": "Dissolution" }
+					{
+						"id": "opening",
+						"label": "Opening",
+						"description": "First exposed material; establish the sonic vocabulary."
+					},
+					{
+						"id": "statement",
+						"label": "Statement",
+						"description": "A concentrated assertion of the central idea, usually mid-piece."
+					},
+					{
+						"id": "development",
+						"label": "Development",
+						"description": "Transform, fragment, or recombine the statement; introduce contrast."
+					},
+					{
+						"id": "dissolution",
+						"label": "Dissolution",
+						"description": "The piece disassembles into texture, silence, or unrecognizable material."
+					}
 				]
 			}
 		]
@@ -125,10 +245,26 @@
 				"label": "Free-form",
 				"description": "Through-composed, deliberately resistant to rigid section labels.",
 				"sections": [
-					{ "id": "opening", "label": "Opening" },
-					{ "id": "statement", "label": "Statement" },
-					{ "id": "development", "label": "Development" },
-					{ "id": "dissolution", "label": "Dissolution" }
+					{
+						"id": "opening",
+						"label": "Opening",
+						"description": "Establish the rhythmic and timbral palette; let the listener orient."
+					},
+					{
+						"id": "statement",
+						"label": "Statement",
+						"description": "Concentrated articulation of the central rhythmic or melodic idea."
+					},
+					{
+						"id": "development",
+						"label": "Development",
+						"description": "Process the statement: glitch, displace, reframe, or invert."
+					},
+					{
+						"id": "dissolution",
+						"label": "Dissolution",
+						"description": "Final unraveling; the material disintegrates into texture or silence."
+					}
 				]
 			}
 		]
@@ -147,12 +283,41 @@
 				"label": "Standard",
 				"description": "Intro, two drops with a mid-track break.",
 				"sections": [
-					{ "id": "intro", "label": "Intro" },
-					{ "id": "build", "label": "Build" },
-					{ "id": "drop1", "label": "First Drop" },
-					{ "id": "break", "label": "Mid Break" },
-					{ "id": "drop2", "label": "Second Drop" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Atmospheric setup; kick and sub bass establish the pulse, no full bass voice yet."
+					},
+					{
+						"id": "build",
+						"label": "Build",
+						"description": "Tension rises into the first drop; riser FX, snare rolls, filter sweeps."
+					},
+					{
+						"id": "drop1",
+						"label": "First Drop",
+						"description": "First commitment to the full bass voice; usually stripped for impact contrast.",
+						"ref": {
+							"kind": "article",
+							"label": "Drop (music)",
+							"url": "https://en.wikipedia.org/wiki/Drop_(music)"
+						}
+					},
+					{
+						"id": "break",
+						"label": "Mid Break",
+						"description": "Low-energy middle section; drums step down or drop entirely."
+					},
+					{
+						"id": "drop2",
+						"label": "Second Drop",
+						"description": "The fullest version; layered bass, denser drum programming."
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Tail; strip back to pad or atmospheric loop."
+					}
 				]
 			}
 		]
@@ -171,12 +336,45 @@
 				"label": "Standard",
 				"description": "Intro, build, half-time drop, second drop.",
 				"sections": [
-					{ "id": "intro", "label": "Intro", "barHint": "16-32 bars" },
-					{ "id": "build", "label": "Build", "barHint": "8-16 bars" },
-					{ "id": "drop1", "label": "First Drop", "barHint": "32 bars" },
-					{ "id": "break", "label": "Mid Break" },
-					{ "id": "drop2", "label": "Second Drop", "barHint": "32 bars" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Atmospheric or rhythmic setup; usually no bass voice yet.",
+						"barHint": "16-32 bars"
+					},
+					{
+						"id": "build",
+						"label": "Build",
+						"description": "Rising tension; snare rolls, risers, pre-drop signaling.",
+						"barHint": "8-16 bars"
+					},
+					{
+						"id": "drop1",
+						"label": "First Drop",
+						"description": "Drums hit half-time; bass voice commits. Often more restrained than the second drop.",
+						"ref": {
+							"kind": "article",
+							"label": "Drop (music)",
+							"url": "https://en.wikipedia.org/wiki/Drop_(music)"
+						},
+						"barHint": "32 bars"
+					},
+					{
+						"id": "break",
+						"label": "Mid Break",
+						"description": "Energy resets; bass drops out, melodic material or vocal chops can shine."
+					},
+					{
+						"id": "drop2",
+						"label": "Second Drop",
+						"description": "Full bass design at its widest; usually the heaviest moment in the track.",
+						"barHint": "32 bars"
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Drums and bass thin out; texture or pad carries the tail."
+					}
 				]
 			}
 		]
@@ -195,12 +393,46 @@
 				"label": "Uplifting",
 				"description": "Long build, anthemic breakdown, double drop.",
 				"sections": [
-					{ "id": "intro", "label": "Intro", "barHint": "32 bars" },
-					{ "id": "first-drop", "label": "First Drop", "barHint": "32 bars" },
-					{ "id": "breakdown", "label": "Breakdown", "barHint": "32-64 bars" },
-					{ "id": "build", "label": "Build", "barHint": "16-32 bars" },
-					{ "id": "main-drop", "label": "Main Drop", "barHint": "32-64 bars" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Sparse rhythmic opening for DJ mixing.",
+						"barHint": "32 bars"
+					},
+					{
+						"id": "first-drop",
+						"label": "First Drop",
+						"description": "Sets up the chord progression at moderate density; lead is usually a single voice.",
+						"barHint": "32 bars"
+					},
+					{
+						"id": "breakdown",
+						"label": "Breakdown",
+						"description": "Drums drop, the anthemic melodic theme is exposed in full.",
+						"ref": {
+							"kind": "article",
+							"label": "Song structure",
+							"url": "https://en.wikipedia.org/wiki/Song_structure"
+						},
+						"barHint": "32-64 bars"
+					},
+					{
+						"id": "build",
+						"label": "Build",
+						"description": "Tension climbs back; supersaw stacks layer in, snare rolls accelerate.",
+						"barHint": "16-32 bars"
+					},
+					{
+						"id": "main-drop",
+						"label": "Main Drop",
+						"description": "Full supersaw stack over the same progression as the first drop; the emotional peak.",
+						"barHint": "32-64 bars"
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Strip back to drums and a single pad for DJ-friendly mix-out."
+					}
 				]
 			}
 		]
@@ -214,11 +446,32 @@
 				"label": "Single Pattern",
 				"description": "One 16-step 303 line arranged purely by filter automation.",
 				"sections": [
-					{ "id": "intro", "label": "Intro" },
-					{ "id": "filter-open", "label": "Filter Opens" },
-					{ "id": "peak", "label": "Peak", "barHint": "32-64 bars" },
-					{ "id": "filter-close", "label": "Filter Closes" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Drums and the 303 enter with filter mostly closed; sparse and dark."
+					},
+					{
+						"id": "filter-opens",
+						"label": "Filter Opens",
+						"description": "Slow filter automation upward; the squelch becomes audible."
+					},
+					{
+						"id": "peak",
+						"label": "Peak",
+						"description": "Filter near fully open, resonance pushed; the 303 is loudest and most acidic.",
+						"barHint": "32-64 bars"
+					},
+					{
+						"id": "filter-close",
+						"label": "Filter Closes",
+						"description": "Reverse the build; filter automation downward, energy bleeds away."
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Drums step out; 303 fades or holds a single note."
+					}
 				]
 			}
 		]
@@ -232,12 +485,42 @@
 				"label": "2-Step",
 				"description": "Verse / chorus toggle between 2-step and 4-to-the-floor.",
 				"sections": [
-					{ "id": "intro", "label": "Intro" },
-					{ "id": "verse", "label": "Verse (2-step)" },
-					{ "id": "chorus", "label": "Chorus (4/4)" },
-					{ "id": "break", "label": "Break" },
-					{ "id": "chorus2", "label": "Final Chorus" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Skipping drums establish the swing; bass enters in the second 8 bars."
+					},
+					{
+						"id": "verse",
+						"label": "Verse (2-step)",
+						"description": "2-step kick pattern; syncopated, off-kilter feel.",
+						"barHint": "16 bars"
+					},
+					{
+						"id": "chorus",
+						"label": "Chorus (4/4)",
+						"description": "Snap to four-on-the-floor; the hook arrives, energy locks straight.",
+						"ref": {
+							"kind": "article",
+							"label": "Song structure",
+							"url": "https://en.wikipedia.org/wiki/Song_structure"
+						}
+					},
+					{
+						"id": "break",
+						"label": "Break",
+						"description": "Drums thin; melodic chops or vocal cuts carry the moment."
+					},
+					{
+						"id": "chorus2",
+						"label": "Final Chorus",
+						"description": "Return to 4/4; usually adds a counter-melody or stacked vocal."
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Strip to drums for the DJ to mix out."
+					}
 				]
 			}
 		]
@@ -251,12 +534,36 @@
 				"label": "Continuous Build",
 				"description": "Rolling bass throughout, melodic layers add and dissolve.",
 				"sections": [
-					{ "id": "intro", "label": "Intro" },
-					{ "id": "bass-roll", "label": "Bass Roll" },
-					{ "id": "melodic-layer", "label": "Melodic Layer" },
-					{ "id": "peak", "label": "Peak" },
-					{ "id": "dissolve", "label": "Dissolve" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Atmospheric pads and a slowly rising kick; rolling bass not yet committed."
+					},
+					{
+						"id": "bass-roll",
+						"label": "Bass Roll",
+						"description": "The relentless 16th-note off-beat bassline locks in; the rhythmic engine of the track."
+					},
+					{
+						"id": "melodic-layer",
+						"label": "Melodic Layer",
+						"description": "A lead motif arrives above the bass-roll without changing the rhythmic engine."
+					},
+					{
+						"id": "peak",
+						"label": "Peak",
+						"description": "All layers stack; lead, percussion, FX at their busiest."
+					},
+					{
+						"id": "dissolve",
+						"label": "Dissolve",
+						"description": "Layers thin one by one; bass-roll fades, atmosphere takes over."
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Texture-only tail; kick still pulsing for DJ mix-out."
+					}
 				]
 			}
 		]
@@ -270,12 +577,41 @@
 				"label": "Standard",
 				"description": "Intro, build, two drops separated by a switch.",
 				"sections": [
-					{ "id": "intro", "label": "Intro" },
-					{ "id": "build", "label": "Build" },
-					{ "id": "drop1", "label": "First Drop" },
-					{ "id": "switch", "label": "Switch" },
-					{ "id": "drop2", "label": "Second Drop" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Atmospheric or melodic opening; 808 enters but hi-hats not yet committed."
+					},
+					{
+						"id": "build",
+						"label": "Build",
+						"description": "Hi-hat rolls accelerate; risers and snare fills signal the drop."
+					},
+					{
+						"id": "drop1",
+						"label": "First Drop",
+						"description": "Full 808 pattern lands; hi-hats rolling at trap speed; sparse melodic content.",
+						"ref": {
+							"kind": "article",
+							"label": "Drop (music)",
+							"url": "https://en.wikipedia.org/wiki/Drop_(music)"
+						}
+					},
+					{
+						"id": "switch",
+						"label": "Switch",
+						"description": "Short transition where the drum pattern shifts and the bass voice changes character."
+					},
+					{
+						"id": "drop2",
+						"label": "Second Drop",
+						"description": "Variation on the first drop; new bass character or additional melodic layer."
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Drums fade; final 808 tail or atmospheric loop closes."
+					}
 				]
 			}
 		]
@@ -289,13 +625,46 @@
 				"label": "Standard",
 				"description": "Vocal-chop chord stabs across a verse-chorus shape.",
 				"sections": [
-					{ "id": "intro", "label": "Intro" },
-					{ "id": "verse", "label": "Verse" },
-					{ "id": "build", "label": "Build" },
-					{ "id": "drop1", "label": "First Drop" },
-					{ "id": "break", "label": "Mid Break" },
-					{ "id": "drop2", "label": "Second Drop" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Sparse vocal chops over a soft pad; no drums yet or just a kick pulse."
+					},
+					{
+						"id": "verse",
+						"label": "Verse",
+						"description": "First lyrical or melodic statement; drums enter at half-time."
+					},
+					{
+						"id": "build",
+						"label": "Build",
+						"description": "Risers, vocal pitch-bend, snare rolls into the drop."
+					},
+					{
+						"id": "drop1",
+						"label": "First Drop",
+						"description": "Full chord-stab synth voice over four-on-the-floor or half-time drums.",
+						"ref": {
+							"kind": "article",
+							"label": "Drop (music)",
+							"url": "https://en.wikipedia.org/wiki/Drop_(music)"
+						}
+					},
+					{
+						"id": "break",
+						"label": "Mid Break",
+						"description": "Vocal-chop only, drums step back; transitional space."
+					},
+					{
+						"id": "drop2",
+						"label": "Second Drop",
+						"description": "Variation: new synth voice or additional layer over the same chord progression."
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Pad and final vocal chop fade out."
+					}
 				]
 			}
 		]
@@ -309,14 +678,51 @@
 				"label": "Pop Form",
 				"description": "Verse / chorus / bridge, borrowed from 80s pop.",
 				"sections": [
-					{ "id": "intro", "label": "Intro" },
-					{ "id": "verse1", "label": "Verse 1" },
-					{ "id": "chorus1", "label": "Chorus 1" },
-					{ "id": "verse2", "label": "Verse 2" },
-					{ "id": "chorus2", "label": "Chorus 2" },
-					{ "id": "bridge", "label": "Bridge" },
-					{ "id": "chorus3", "label": "Final Chorus" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Arpeggiated pad establishes the chord progression; no drums yet."
+					},
+					{
+						"id": "verse1",
+						"label": "Verse 1",
+						"description": "First melodic statement; lead enters, drums at moderate density."
+					},
+					{
+						"id": "chorus1",
+						"label": "Chorus 1",
+						"description": "Hook section; the main melodic and harmonic statement.",
+						"ref": {
+							"kind": "article",
+							"label": "Song structure",
+							"url": "https://en.wikipedia.org/wiki/Song_structure"
+						}
+					},
+					{
+						"id": "verse2",
+						"label": "Verse 2",
+						"description": "Second statement; usually adds a layered texture (gated snare, supporting lead)."
+					},
+					{
+						"id": "chorus2",
+						"label": "Chorus 2",
+						"description": "Repeat hook; conventionally the gated reverb snare arrives here for impact."
+					},
+					{
+						"id": "bridge",
+						"label": "Bridge",
+						"description": "A contrasting departure; new chord progression or sparser texture before the final chorus."
+					},
+					{
+						"id": "chorus3",
+						"label": "Final Chorus",
+						"description": "Final hook; lead often lifted an octave or doubled for the climactic statement."
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Pad and arp tail out; reverb wash carries the final seconds."
+					}
 				]
 			}
 		]
@@ -330,13 +736,46 @@
 				"label": "Standard",
 				"description": "Build, kick-roll, drop with reverse-bass, second drop.",
 				"sections": [
-					{ "id": "intro", "label": "Intro" },
-					{ "id": "build", "label": "Build" },
-					{ "id": "kick-roll", "label": "Kick Roll" },
-					{ "id": "drop1", "label": "First Drop" },
-					{ "id": "break", "label": "Break" },
-					{ "id": "drop2", "label": "Second Drop (reverse-bass)" },
-					{ "id": "outro", "label": "Outro" }
+					{
+						"id": "intro",
+						"label": "Intro",
+						"description": "Pad and anthem lead establish the chord progression; no kick yet."
+					},
+					{
+						"id": "build",
+						"label": "Build",
+						"description": "Rising tension; kick enters, snare rolls accelerate."
+					},
+					{
+						"id": "kick-roll",
+						"label": "Kick Roll",
+						"description": "Descending pattern of pitched kicks that rolls into the drop, signalling impact."
+					},
+					{
+						"id": "drop1",
+						"label": "First Drop",
+						"description": "Full kick pattern at hardstyle BPM; anthem lead at full stack.",
+						"ref": {
+							"kind": "article",
+							"label": "Drop (music)",
+							"url": "https://en.wikipedia.org/wiki/Drop_(music)"
+						}
+					},
+					{
+						"id": "break",
+						"label": "Break",
+						"description": "Drums drop out; pad and lead breathe; reverse-bass not yet introduced."
+					},
+					{
+						"id": "drop2",
+						"label": "Second Drop (reverse-bass)",
+						"description": "Reverse-bass enters as the defining voice; the peak of the track."
+					},
+					{
+						"id": "outro",
+						"label": "Outro",
+						"description": "Kick and lead thin out; pad tail carries the close."
+					}
 				]
 			}
 		]

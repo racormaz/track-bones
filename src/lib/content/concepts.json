@@ -2023,7 +2023,14 @@
 				0.95,
 				0.2
 			]
-		}
+		},
+		"framingRequiresAnyOf": [
+			"drop",
+			"drop1",
+			"drop2",
+			"main-drop",
+			"first-drop"
+		]
 	},
 	{
 		"id": "eight-bar-phrasing",
@@ -2170,7 +2177,14 @@
 				0.95,
 				0.2
 			]
-		}
+		},
+		"framingRequiresAnyOf": [
+			"drop",
+			"drop1",
+			"drop2",
+			"main-drop",
+			"first-drop"
+		]
 	},
 	{
 		"id": "half-drop",
@@ -2198,7 +2212,14 @@
 				0.95,
 				0.2
 			]
-		}
+		},
+		"framingRequiresAnyOf": [
+			"drop",
+			"drop1",
+			"drop2",
+			"main-drop",
+			"first-drop"
+		]
 	},
 	{
 		"id": "pre-drop-silence",
@@ -2214,7 +2235,14 @@
 		],
 		"prompt": "Cut everything to silence for exactly 1 bar before your drop hits. No tail, no reverb wash, no cymbal — total silence.",
 		"definition": "A deliberate gap of silence immediately before a drop to maximize contrast.",
-		"wikiUrl": null
+		"wikiUrl": null,
+		"framingRequiresAnyOf": [
+			"drop",
+			"drop1",
+			"drop2",
+			"main-drop",
+			"first-drop"
+		]
 	},
 	{
 		"id": "subtractive-arrangement",
@@ -2338,7 +2366,20 @@
 				0,
 				8
 			]
-		}
+		},
+		"framingRequiresAnyOf": [
+			"drop",
+			"drop1",
+			"drop2",
+			"main-drop",
+			"peak",
+			"peak1",
+			"peak2",
+			"chorus",
+			"chorus1",
+			"chorus2",
+			"chorus3"
+		]
 	},
 	{
 		"id": "dj-friendly-intro",
@@ -2352,7 +2393,10 @@
 		],
 		"prompt": "Build a 32-bar intro of just percussion and one filtered element — no melody, no bass — so a DJ can mix it cleanly.",
 		"definition": "An extended percussive intro designed for DJ mixing into the previous track.",
-		"wikiUrl": null
+		"wikiUrl": null,
+		"framingRequiresAnyOf": [
+			"intro"
+		]
 	},
 	{
 		"id": "uk-garage-two-step-structure",
@@ -2365,7 +2409,12 @@
 		"prompt": "Build the verse around skipping 2-step drums and the chorus around 4-to-the-floor, alternating every 16 bars.",
 		"definition": "UK garage’s signature structural toggle between syncopated 2-step and 4/4 sections.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/2-step_garage",
-		"wikiSummary": "2-step garage, or simply 2-step, is a genre of electronic music and a subgenre of UK garage. One of the primary characteristics of the 2-step sound – the term being coined to describe \"a general rubric for all kinds of jittery, irregular rhythms that don't conform to garage's traditional four-on-the-floor pulse\" – is that the rhythm lacks the kick drum pattern found in many other styles of electronic music with a regular four-on-the-floor beat."
+		"wikiSummary": "2-step garage, or simply 2-step, is a genre of electronic music and a subgenre of UK garage. One of the primary characteristics of the 2-step sound – the term being coined to describe \"a general rubric for all kinds of jittery, irregular rhythms that don't conform to garage's traditional four-on-the-floor pulse\" – is that the rhythm lacks the kick drum pattern found in many other styles of electronic music with a regular four-on-the-floor beat.",
+		"framingRequiresAnyOf": [
+			"verse",
+			"chorus",
+			"chorus2"
+		]
 	},
 	{
 		"id": "dnb-intro-break-drop",
@@ -2378,7 +2427,14 @@
 		"prompt": "Structure as 32 bars of intro (no breakbeat), 16-bar break (drums solo), then the drop. Repeat.",
 		"definition": "The conventional drum & bass arrangement: a long melodic intro, a drum solo break, then the bassline drop.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Drum_and_bass",
-		"wikiSummary": "Drum and bass (D&B), also known as drum 'n' bass, is a genre of electronic dance music that emerged in the United Kingdom in the early 1990s. It is characterised by fast breakbeats with heavy bass and sub-bass lines, samples, and synthesizers."
+		"wikiSummary": "Drum and bass (D&B), also known as drum 'n' bass, is a genre of electronic dance music that emerged in the United Kingdom in the early 1990s. It is characterised by fast breakbeats with heavy bass and sub-bass lines, samples, and synthesizers.",
+		"framingRequiresAnyOf": [
+			"drop",
+			"drop1",
+			"drop2",
+			"main-drop",
+			"first-drop"
+		]
 	},
 	{
 		"id": "ambient-long-form",
@@ -2391,7 +2447,12 @@
 		"prompt": "Write a 7+ minute piece with no drums and no clear section boundaries. The only change allowed is one new texture every 90 seconds.",
 		"definition": "An ambient compositional approach where evolution is slow and structural boundaries are deliberately blurred.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Ambient_music",
-		"wikiSummary": "Ambient music is a genre of music that emphasizes tone and atmosphere over traditional musical structure or rhythm. Often \"peaceful\" sounding and lacking composition, beat, and/or structured melody, ambient music uses textural layers of sound that can reward both passive and active listening, and encourage a sense of calm or contemplation. The genre evokes an \"atmospheric\", \"visual\", or \"unobtrusive\" quality. Nature soundscapes may be included, and some works use sustained or repeated notes, as in drone music. Bearing elements associated with new-age music, instruments such as the piano, strings and flute may be emulated through a synthesizer."
+		"wikiSummary": "Ambient music is a genre of music that emphasizes tone and atmosphere over traditional musical structure or rhythm. Often \"peaceful\" sounding and lacking composition, beat, and/or structured melody, ambient music uses textural layers of sound that can reward both passive and active listening, and encourage a sense of calm or contemplation. The genre evokes an \"atmospheric\", \"visual\", or \"unobtrusive\" quality. Nature soundscapes may be included, and some works use sustained or repeated notes, as in drone music. Bearing elements associated with new-age music, instruments such as the piano, strings and flute may be emulated through a synthesizer.",
+		"framingRequiresAnyOf": [
+			"opening",
+			"development",
+			"dissolution"
+		]
 	},
 	{
 		"id": "acid-303-filter-sweep-build",
@@ -2404,7 +2465,11 @@
 		"prompt": "Loop one 16-step 303 pattern unchanged for 64 bars and arrange purely by slowly opening the filter cutoff.",
 		"definition": "The classic acid arrangement technique of holding pattern static while sweeping the TB-303 filter.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Acid_house",
-		"wikiSummary": "Acid house is a subgenre of house music developed around the mid-1980s by DJs from Chicago. The style is defined primarily by the squelching sounds and basslines of the Roland TB-303 electronic bass synthesizer-sequencer, an innovation attributed to Chicago artists Phuture and Sleezy D circa 1986."
+		"wikiSummary": "Acid house is a subgenre of house music developed around the mid-1980s by DJs from Chicago. The style is defined primarily by the squelching sounds and basslines of the Roland TB-303 electronic bass synthesizer-sequencer, an innovation attributed to Chicago artists Phuture and Sleezy D circa 1986.",
+		"framingRequiresAnyOf": [
+			"filter-opens",
+			"filter-closes"
+		]
 	},
 	{
 		"id": "trance-double-drop",
@@ -2416,7 +2481,11 @@
 		],
 		"prompt": "Drop in twice — first at the standard 64-bar mark with a stripped lead, second time with full supersaw arpeggios layered on top of the same chord progression.",
 		"definition": "A trance staple where the second drop layers richer leads over the first drop’s progression.",
-		"wikiUrl": null
+		"wikiUrl": null,
+		"framingRequiresAnyOf": [
+			"main-drop",
+			"first-drop"
+		]
 	},
 	{
 		"id": "dubstep-half-time-drop",
@@ -2440,7 +2509,12 @@
 			"accents": [
 				8
 			]
-		}
+		},
+		"framingRequiresAnyOf": [
+			"drop",
+			"drop1",
+			"drop2"
+		]
 	},
 	{
 		"id": "synthwave-gated-snare-arrival",
@@ -2453,7 +2527,12 @@
 		"prompt": "Hold off introducing the gated-reverb snare until the second verse, then never remove it again.",
 		"definition": "Synthwave structural convention of saving the big 80s gated snare for impact mid-track.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Gated_reverb",
-		"wikiSummary": "Gated reverb or gated ambience is an audio processing technique that combines strong reverb and a noise gate that cuts the tail of the reverb. The effect is typically applied to recordings of drums to make the hits sound powerful and \"punchy\" while keeping the overall mix sound clean and transparent."
+		"wikiSummary": "Gated reverb or gated ambience is an audio processing technique that combines strong reverb and a noise gate that cuts the tail of the reverb. The effect is typically applied to recordings of drums to make the hits sound powerful and \"punchy\" while keeping the overall mix sound clean and transparent.",
+		"framingRequiresAnyOf": [
+			"verse2",
+			"chorus2",
+			"chorus3"
+		]
 	},
 	{
 		"id": "hardstyle-reverse-bass-entry",
@@ -2466,7 +2545,10 @@
 		"prompt": "Bring in the reverse-bass exclusively at the second drop, never the first, so its arrival defines the track’s peak.",
 		"definition": "A hardstyle convention of holding the iconic reverse-bass back for impact at the second drop.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Hardstyle",
-		"wikiSummary": "Hardstyle, is an electronic dance genre that emerged in the late 1990s, with origins in the Netherlands, Belgium and Italy. Hardstyle mixes influences from techno, new beat and hardcore."
+		"wikiSummary": "Hardstyle, is an electronic dance genre that emerged in the late 1990s, with origins in the Netherlands, Belgium and Italy. Hardstyle mixes influences from techno, new beat and hardcore.",
+		"framingRequiresAnyOf": [
+			"drop2"
+		]
 	},
 	{
 		"id": "sidechain-compression",

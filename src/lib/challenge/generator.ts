@@ -189,6 +189,216 @@ export function generateChallengeWithCombo(input: GenerateInput & { combos: Comb
 	return { conceptIds: ordered, comboId: combo.id };
 }
 
+// ----- Deep mode (v2.1): one card per section + framing layer -----
+
+const SECTION_CATEGORIES: Category[] = ['rhythm', 'melody', 'harmony', 'sound-design'];
+
+// Pick an eligible arrangement concept to use as the OVERALL framing for a Deep challenge.
+// Returns null when the filtered pool is empty (the UI degrades gracefully without a framing card).
+export function pickFraming(args: {
+	concepts: Concept[];
+	template: SectionTemplate;
+	genre: GenreId;
+	difficulty: Difficulty;
+	excludeIds?: Iterable<string>;
+	random?: () => number;
+}): Concept | null {
+	const random = args.random ?? Math.random;
+	const exclude = new Set(args.excludeIds ?? []);
+	const templateSectionIds = new Set(args.template.sections.map((s) => s.id));
+
+	const candidates = args.concepts.filter((c) => {
+		if (c.category !== 'arrangement') return false;
+		if (c.difficulty > args.difficulty) return false;
+		if (c.genres.length > 0 && !c.genres.includes(args.genre)) return false;
+		if (exclude.has(c.id)) return false;
+		if (c.framingRequiresAnyOf && c.framingRequiresAnyOf.length > 0) {
+			return c.framingRequiresAnyOf.some((id) => templateSectionIds.has(id));
+		}
+		return true;
+	});
+
+	if (candidates.length === 0) return null;
+	return candidates[Math.floor(random() * candidates.length)];
+}
+
+// For a given section, pick the best concept from the four non-arrangement categories.
+// Rotation logic: prefer (1) any concept with section affinity to this section,
+// (2) failing that, the least-used category so far, (3) within that, the usual
+// genre-bias-then-difficulty rules from pickFromBucket.
+export function pickForSection(args: {
+	concepts: Concept[];
+	sectionId: SectionId;
+	categoriesUsed: Map<Category, number>;
+	genre: GenreId;
+	difficulty: Difficulty;
+	exclude: Set<string>;
+	random?: () => number;
+}): Concept | null {
+	const random = args.random ?? Math.random;
+
+	// Step 1: try affinity-matched concepts across the 4 non-arrangement categories.
+	const affinityMatches = args.concepts.filter((c) => {
+		if (!SECTION_CATEGORIES.includes(c.category)) return false;
+		if (c.difficulty > args.difficulty) return false;
+		if (c.genres.length > 0 && !c.genres.includes(args.genre)) return false;
+		if (args.exclude.has(c.id)) return false;
+		return c.sections ? c.sections.includes(args.sectionId) : false;
+	});
+
+	if (affinityMatches.length > 0) {
+		return affinityMatches[Math.floor(random() * affinityMatches.length)];
+	}
+
+	// Step 2: no affinity match — pick the least-used category and pull from it.
+	const sorted = [...SECTION_CATEGORIES].sort((a, b) => {
+		const ua = args.categoriesUsed.get(a) ?? 0;
+		const ub = args.categoriesUsed.get(b) ?? 0;
+		if (ua !== ub) return ua - ub;
+		return random() < 0.5 ? -1 : 1; // tiebreak: random
+	});
+
+	for (const category of sorted) {
+		const c = pickFromBucket(
+			{
+				concepts: args.concepts,
+				genre: args.genre,
+				difficulty: args.difficulty,
+				category,
+				exclude: args.exclude
+			},
+			random
+		);
+		if (c) return c;
+	}
+
+	return null;
+}
+
+export type DeepChallengeInput = {
+	concepts: Concept[];
+	template: SectionTemplate;
+	genre: GenreId;
+	difficulty: Difficulty;
+	excludeIds?: Iterable<string>;
+	random?: () => number;
+};
+
+export type DeepChallengeResult = {
+	framingConceptId: string | null;
+	sectionPicks: { sectionId: SectionId; conceptId: string }[];
+};
+
+export function generateDeepChallenge(input: DeepChallengeInput): DeepChallengeResult {
+	const random = input.random ?? Math.random;
+	const exclude = new Set(input.excludeIds ?? []);
+
+	const framing = pickFraming({
+		concepts: input.concepts,
+		template: input.template,
+		genre: input.genre,
+		difficulty: input.difficulty,
+		excludeIds: exclude,
+		random
+	});
+	if (framing) exclude.add(framing.id);
+
+	const categoriesUsed = new Map<Category, number>();
+	const sectionPicks: { sectionId: SectionId; conceptId: string }[] = [];
+
+	for (const section of input.template.sections) {
+		const pick = pickForSection({
+			concepts: input.concepts,
+			sectionId: section.id,
+			categoriesUsed,
+			genre: input.genre,
+			difficulty: input.difficulty,
+			exclude,
+			random
+		});
+		if (!pick) {
+			throw new Error(`No concept available for section "${section.id}". Library is too sparse.`);
+		}
+		sectionPicks.push({ sectionId: section.id, conceptId: pick.id });
+		exclude.add(pick.id);
+		categoriesUsed.set(pick.category, (categoriesUsed.get(pick.category) ?? 0) + 1);
+	}
+
+	return {
+		framingConceptId: framing?.id ?? null,
+		sectionPicks
+	};
+}
+
+// Reroll a single section's pick. Excludes current + other section picks + recents.
+export function rerollSectionPick(args: {
+	concepts: Concept[];
+	template: SectionTemplate;
+	sectionId: SectionId;
+	currentId: string;
+	otherPickedIds: string[];
+	framingId?: string | null;
+	genre: GenreId;
+	difficulty: Difficulty;
+	excludeIds?: Iterable<string>;
+	random?: () => number;
+}): string {
+	const exclude = new Set(args.excludeIds ?? []);
+	exclude.add(args.currentId);
+	for (const id of args.otherPickedIds) exclude.add(id);
+	if (args.framingId) exclude.add(args.framingId);
+
+	// Build categoriesUsed from the other picked concepts so rotation tries to
+	// preserve diversity (don't reroll into a category that's already saturated).
+	const categoriesUsed = new Map<Category, number>();
+	for (const id of args.otherPickedIds) {
+		const c = args.concepts.find((x) => x.id === id);
+		if (c && SECTION_CATEGORIES.includes(c.category)) {
+			categoriesUsed.set(c.category, (categoriesUsed.get(c.category) ?? 0) + 1);
+		}
+	}
+
+	const pick = pickForSection({
+		concepts: args.concepts,
+		sectionId: args.sectionId,
+		categoriesUsed,
+		genre: args.genre,
+		difficulty: args.difficulty,
+		exclude,
+		random: args.random
+	});
+	if (!pick) {
+		throw new Error(`No alternative concept available for section "${args.sectionId}".`);
+	}
+	return pick.id;
+}
+
+// Reroll only the framing (OVERALL) card.
+export function rerollFraming(args: {
+	concepts: Concept[];
+	template: SectionTemplate;
+	currentId: string | null;
+	pickedIds: string[];
+	genre: GenreId;
+	difficulty: Difficulty;
+	excludeIds?: Iterable<string>;
+	random?: () => number;
+}): string | null {
+	const exclude = new Set(args.excludeIds ?? []);
+	if (args.currentId) exclude.add(args.currentId);
+	for (const id of args.pickedIds) exclude.add(id);
+
+	const next = pickFraming({
+		concepts: args.concepts,
+		template: args.template,
+		genre: args.genre,
+		difficulty: args.difficulty,
+		excludeIds: exclude,
+		random: args.random
+	});
+	return next?.id ?? null;
+}
+
 // Pick a template for a genre. Weighted random when multiple templates exist.
 export function pickTemplate(
 	templates: SectionTemplate[] | undefined,
@@ -196,51 +406,6 @@ export function pickTemplate(
 ): SectionTemplate | null {
 	if (!templates || templates.length === 0) return null;
 	return templates[Math.floor(random() * templates.length)];
-}
-
-// Spread-first, affinity-second assignment of picked concepts to template sections.
-// Returns a map of conceptId → sectionId.
-export function assignSections(args: {
-	conceptIds: string[];
-	conceptsById: Map<string, Concept>;
-	template: SectionTemplate;
-	random?: () => number;
-}): Record<string, SectionId> {
-	const random = args.random ?? Math.random;
-	const sectionIds = args.template.sections.map((s) => s.id);
-	const result: Record<string, SectionId> = {};
-	const used = new Set<SectionId>();
-
-	// Build (concept, allowedSections[]) tuples.
-	const items = args.conceptIds.map((id) => {
-		const c = args.conceptsById.get(id);
-		const affinity = c?.sections ?? [];
-		const allowed = affinity.filter((s) => sectionIds.includes(s));
-		return {
-			id,
-			allowed: allowed.length > 0 ? allowed : sectionIds.slice() // fall back to all sections
-		};
-	});
-
-	// Most-constrained-first.
-	items.sort((a, b) => a.allowed.length - b.allowed.length);
-
-	for (const item of items) {
-		// First try an unused allowed section.
-		let chosen = item.allowed.find((s) => !used.has(s));
-		if (!chosen) {
-			// Fall back: any unused section.
-			chosen = sectionIds.find((s) => !used.has(s));
-		}
-		if (!chosen) {
-			// Pure overflow: pick a random section (shouldn't happen with 5 cards ≤ N sections).
-			chosen = sectionIds[Math.floor(random() * sectionIds.length)];
-		}
-		result[item.id] = chosen;
-		used.add(chosen);
-	}
-
-	return result;
 }
 
 export function rerollOne(
