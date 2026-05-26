@@ -17,6 +17,7 @@
 	import { encodeChallenge } from '$lib/challenge/encode';
 	import { openDrawer, showToast } from '$lib/stores/ui.svelte';
 	import Icon from '$lib/components/Icon.svelte';
+	import SparkMark from '$lib/components/SparkMark.svelte';
 
 	const concepts = conceptsRaw as Concept[];
 	const genres = genresRaw as Genre[];
@@ -116,29 +117,21 @@
 </script>
 
 <section class="flex min-h-[calc(100svh-5rem)] flex-col justify-between px-5 pt-12 pb-12">
-	<div class="flex flex-col gap-6">
-		<header class="flex flex-col gap-3">
-			<h1 class="text-3xl font-semibold tracking-tight">Constraints, not music.</h1>
-			<p class="max-w-md text-sm leading-relaxed text-muted">
-				Pick a genre, get five starting bones for a track. No AI music. No MIDI. Just the kind
-				of compositional constraints that unstick you and grow your vocabulary.
+	<div class="flex flex-col items-center gap-8 pt-8">
+		<div class="flex flex-col items-center gap-5">
+			<SparkMark size={96} animate />
+			<div class="flex flex-col items-center gap-1">
+				<p class="text-2xl font-semibold tracking-[0.04em] text-fg">FyeStarta</p>
+				<p class="text-[10px] tracking-[0.28em] text-muted uppercase">track ideation</p>
+			</div>
+		</div>
+
+		<header class="flex flex-col items-center gap-2 text-center">
+			<h1 class="text-4xl font-semibold tracking-tight">Break the wall.</h1>
+			<p class="max-w-xs text-sm leading-relaxed text-muted">
+				Constraint cards for electronic producers.
 			</p>
 		</header>
-
-		<ul class="flex flex-col gap-2 pt-2">
-			<li class="flex items-start gap-3 text-xs text-muted">
-				<span class="mt-0.5 text-accent"><Icon name="zap" size={14} /></span>
-				<span><span class="font-medium text-fg/85">Quick</span> — 5 random constraints across rhythm, melody, harmony, arrangement, sound design.</span>
-			</li>
-			<li class="flex items-start gap-3 text-xs text-muted">
-				<span class="mt-0.5 text-accent"><Icon name="layers" size={14} /></span>
-				<span><span class="font-medium text-fg/85">Deep</span> — same constraints arranged into a track shape, section by section, with synergies.</span>
-			</li>
-			<li class="flex items-start gap-3 text-xs text-muted">
-				<span class="mt-0.5 text-accent"><Icon name="sparkles" size={14} /></span>
-				<span>Each prompt links to Wikipedia and (for some) a deeper production resource. Concepts you didn't know had names.</span>
-			</li>
-		</ul>
 	</div>
 
 	<div class="flex flex-col gap-3 pt-8">
@@ -146,7 +139,7 @@
 			<button
 				type="button"
 				onclick={generateAndGo}
-				class="flex w-full items-center justify-center gap-2 rounded-[var(--radius-card)] bg-accent px-5 py-4 text-base font-semibold text-accent-fg transition-colors hover:opacity-90"
+				class="spark-cta flex w-full items-center justify-center gap-2 rounded-[var(--radius-card)] bg-accent px-5 py-4 text-base font-semibold text-accent-fg transition-colors"
 			>
 				Continue
 				<span class="text-accent-fg/80 text-xs font-medium">
@@ -164,7 +157,7 @@
 			<button
 				type="button"
 				onclick={startFresh}
-				class="flex w-full items-center justify-center gap-2 rounded-[var(--radius-card)] bg-accent px-5 py-4 text-base font-semibold text-accent-fg transition-colors hover:opacity-90"
+				class="spark-cta flex w-full items-center justify-center gap-2 rounded-[var(--radius-card)] bg-accent px-5 py-4 text-base font-semibold text-accent-fg transition-colors"
 			>
 				Start
 			</button>
@@ -182,3 +175,10 @@
 		{/if}
 	</div>
 </section>
+
+<style>
+	.spark-cta:hover {
+		background-color: var(--color-spark);
+		color: #fff;
+	}
+</style>

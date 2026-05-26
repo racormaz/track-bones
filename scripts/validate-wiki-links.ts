@@ -50,7 +50,7 @@ async function fetchSummary(title: string): Promise<SummaryOk | null> {
 	const res = await fetch(url, {
 		headers: {
 			Accept: 'application/json',
-			'User-Agent': 'track-bones-link-validator/1.0 (https://github.com/racormaz/track-bones)'
+			'User-Agent': 'fyestarta-link-validator/1.0 (https://github.com/racormaz/fyestarta)'
 		},
 		redirect: 'follow'
 	});

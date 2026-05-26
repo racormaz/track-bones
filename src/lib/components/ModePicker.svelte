@@ -12,7 +12,7 @@
 			value: 'quick',
 			label: 'Quick',
 			icon: 'zap',
-			blurb: '5 starting constraints. Fast inspiration.'
+			blurb: 'A handful of constraints. Fast inspiration.'
 		},
 		{
 			value: 'deep',

@@ -28,8 +28,8 @@
 <div class="mx-auto max-w-2xl">
 	<header class="px-5 pt-6 pb-1">
 		<a href={`${base}/`} class="inline-flex items-center gap-2">
-			<span class="inline-block h-2 w-2 rounded-full bg-accent" aria-hidden="true"></span>
-			<span class="text-sm font-semibold tracking-tight text-fg">Track Bones</span>
+			<span class="inline-block h-2 w-2 rounded-full bg-spark" aria-hidden="true" style="background-color: var(--color-spark);"></span>
+			<span class="text-sm font-semibold tracking-[0.04em] text-fg">FyeStarta</span>
 		</a>
 	</header>
 

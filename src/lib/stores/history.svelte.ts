@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import type { Challenge, GenreId, Difficulty, Mode, SectionId } from '../types';
 
-const KEY = 'track-bones:history';
+const KEY = 'fyestarta:history';
 const CAP = 50;
 
 function load(): Challenge[] {

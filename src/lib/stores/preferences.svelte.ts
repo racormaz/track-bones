@@ -1,7 +1,7 @@
 import { browser } from '$app/environment';
 import type { Preferences, GenreId, Difficulty, Mode } from '../types';
 
-const KEY = 'track-bones:preferences';
+const KEY = 'fyestarta:preferences';
 const DEFAULTS: Preferences = {
 	lastMode: null,
 	lastGenre: null,
