@@ -738,17 +738,6 @@
 		"rarity": "legendary"
 	},
 	{
-		"id": "motif",
-		"name": "Motif",
-		"category": "melody",
-		"difficulty": 1,
-		"genres": [],
-		"prompt": "State a 4-note motif in the first bar and develop only that motif for the entire A section.",
-		"definition": "A motif is the shortest identifiable musical idea, the molecule of a melody.",
-		"wikiUrl": "https://en.wikipedia.org/wiki/Motif_(music)",
-		"wikiSummary": "In music, a motif or motive is a short musical idea, salient recurring figure, musical fragment, or succession of notes that has some special importance in or is characteristic of a composition. The motif is the smallest structural unit possessing thematic identity."
-	},
-	{
 		"id": "theme",
 		"name": "Theme",
 		"category": "melody",
@@ -3300,5 +3289,757 @@
 		"definition": "A short, simple, highly memorable melodic fragment built to stick in the listener’s head.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Earworm",
 		"wikiSummary": "An earworm or brainworm, also described as sticky music or stuck song syndrome, is a catchy or memorable piece of music or saying that continuously occupies a person's mind even after it is no longer being played or spoken about. Involuntary Musical Imagery (INMI) is most common after earworms, but INMI as a label is not solely restricted to earworms; musical hallucinations also fall into this category, although they are not the same thing. Earworms are considered to be a common type of involuntary cognition. Some of the phrases often used to describe earworms include \"musical imagery repetition\" and \"involuntary musical imagery\"."
+	},
+	{
+		"id": "pop-hook",
+		"name": "Pop Hook",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"future-bass"
+		],
+		"prompt": "Write a 4-bar vocal hook that lands its highest pitch on beat 1 of bar 3, uses no more than 5 distinct pitches, and is sung at least 3 times in the chorus.",
+		"definition": "A short, immediately memorable melodic or lyrical phrase engineered to be the song's primary point of recognition.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Hook_(music)",
+		"wikiSummary": "A hook is a musical idea, often a short riff, passage, or phrase, that is used in popular music to make a song appealing and to \"catch the ear of the listener.\" The term generally applies to popular music, especially rock, R&B, hip-hop, dance, and pop. In these genres, the hook is often found in, or consists of, the chorus. A hook can be either melodic or rhythmic, and often incorporates the main motif for a piece of music."
+	},
+	{
+		"id": "ear-candy-fill",
+		"name": "Ear Candy Fill",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"future-bass",
+			"house"
+		],
+		"prompt": "Place a 1-bar non-repeating ornamental fill (FX riser, reversed cymbal, vocal chop spray, or pitched stab) at the last bar of every 8-bar phrase, never the same twice.",
+		"definition": "A brief, non-repeating decorative element placed at section seams to reward close listening without becoming a recurring motif.",
+		"wikiUrl": null
+	},
+	{
+		"id": "lead-riff",
+		"name": "Lead Riff (Synth Lead)",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"trance",
+			"house"
+		],
+		"prompt": "Compose an 8-note monosynth lead phrase over 2 bars, repeat it identically for the first 16 bars of the drop, then transpose up a minor third for the next 8.",
+		"definition": "A foreground synthesizer melodic phrase that carries the main melodic identity of a section, typically on a saw, square, or supersaw timbre.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Riff",
+		"wikiSummary": "A riff is a short, repeated motif or figure in the melody or accompaniment of a musical composition. Riffs are most often found in various genres of rock music, as well as Latin, funk, and jazz, although classical music is also sometimes based on a riff, as in Ravel's Boléro. Riffs can be as simple as a tenor saxophone honking a simple, catchy rhythmic figure, or as complex as the riff-based variations in the head arrangements played by the Count Basie Orchestra."
+	},
+	{
+		"id": "vocal-chop-motif",
+		"name": "Vocal Chop Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"future-bass",
+			"house",
+			"dubstep"
+		],
+		"prompt": "Take a single sung syllable, pitch it across 4 notes spanning a perfect fifth, and arrange those 4 chops as a 2-bar pattern that repeats 8 times in the drop.",
+		"definition": "A melodic figure built from short, repitched fragments of a vocal recording treated as a sample-instrument motif.",
+		"wikiUrl": null
+	},
+	{
+		"id": "signature-riff",
+		"name": "Signature Riff",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"dnb"
+		],
+		"prompt": "Write a single 2-bar guitar/bass riff that opens the track, returns unchanged before every chorus, and is the last thing heard in the outro.",
+		"definition": "A short instrumental phrase so identified with a song that it serves as the song's primary recognition cue across multiple sections.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Riff",
+		"wikiSummary": "A riff is a short, repeated motif or figure in the melody or accompaniment of a musical composition. Riffs are most often found in various genres of rock music, as well as Latin, funk, and jazz, although classical music is also sometimes based on a riff, as in Ravel's Boléro. Riffs can be as simple as a tenor saxophone honking a simple, catchy rhythmic figure, or as complex as the riff-based variations in the head arrangements played by the Count Basie Orchestra."
+	},
+	{
+		"id": "lick",
+		"name": "Lick",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"house"
+		],
+		"prompt": "Drop a 6-12 note improvisatory phrase into a gap between vocal lines exactly once per verse, never landing on the downbeat.",
+		"definition": "A stock or improvisatory melodic phrase used as a filler or solo fragment, often borrowed from a player's vocabulary.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Lick_(music)",
+		"wikiSummary": "In popular music genres such as country, blues, jazz or rock music, a lick is \"a stock pattern or phrase\" consisting of a short series of notes used in solos and melodic lines and accompaniment. For musicians, learning a lick is usually a form of imitation. By imitating, musicians understand and analyze what others have done, allowing them to build a vocabulary of their own."
+	},
+	{
+		"id": "power-chord-riff",
+		"name": "Power-Chord Riff",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"techno",
+			"dnb",
+			"dubstep"
+		],
+		"prompt": "Build a 4-bar riff using only root-fifth dyads on three pitches, palm-muted 16ths under sustained chord hits on beats 1 and 3.",
+		"definition": "A riff built primarily from two-note root-fifth dyads (power chords) rather than single notes, giving harmonic weight without modal commitment.",
+		"wikiUrl": null
+	},
+	{
+		"id": "gallop-riff",
+		"name": "Gallop Riff",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"techno",
+			"dnb"
+		],
+		"prompt": "Write a riff whose rhythm is strictly eighth-two-sixteenths (long-short-short) repeated for 4 bars on a single pitch, then transpose the same rhythm down a whole step for 4 bars.",
+		"definition": "A riff defined by a galloping long-short-short rhythmic cell (typically dotted-eighth or eighth + two sixteenths) repeated as the primary rhythmic identity.",
+		"wikiUrl": null
+	},
+	{
+		"id": "head",
+		"name": "Head",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"house"
+		],
+		"prompt": "Compose a 16-bar AABA melody that states the tune's theme, then improvise/develop for 32 bars, then return to the head unchanged for the final 16.",
+		"definition": "The primary stated melody of a jazz tune, played at the top and tail of the performance around improvised choruses.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Head_(music)",
+		"wikiSummary": "In its broadest sense, the head of a piece of music is its main theme, particularly in jazz, where the term takes on a more specific set of innovation. In other types of music, \"head\" may refer to the first or most prominent section of a song. The term may, though obtusely, be applied to classical music, insofar as classical pieces generally bear similar thematic elements, but the preferred term in this instance is (main) theme or subject. The term \"head\" is most often used in jazz and may refer to the thematic melody, an instance of it in a performance of the song, or a more abstract compilation of ideas as to what the song is. It may also, though uncommonly, refer to the first section of the melody, or the theme riff in the melody."
+	},
+	{
+		"id": "ii-v-lick",
+		"name": "ii-V Lick",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [],
+		"prompt": "Write an 8-note phrase that targets the 3rd of the V chord on the downbeat of the V bar, and resolves to the 5th of the I chord on the downbeat of the I bar, all 16th notes.",
+		"definition": "A pre-formed melodic phrase shaped to navigate the ii-V-I progression with strong chord-tone targeting.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Ii%E2%80%93V%E2%80%93I_progression",
+		"wikiSummary": "The ii–V–I progression is a common cadential chord progression used in a wide variety of music genres, including jazz harmony. It is a succession of chords whose roots descend in fifths from the second degree (supertonic) to the fifth degree (dominant), and finally to the tonic. In a major key, the supertonic triad (ii) is minor, and in a minor key it is diminished. The dominant is, in its normal form, a major triad and commonly a dominant seventh chord. With the addition of chord alterations, substitutions, and extensions, limitless variations exist on this simple formula."
+	},
+	{
+		"id": "comping-figure",
+		"name": "Comping Figure",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"house"
+		],
+		"prompt": "Write a 2-bar rhythmic chord pattern (chord stabs only, no held notes) that lands on the and-of-2 and the and-of-4, repeating identically for 32 bars under a soloist.",
+		"definition": "A rhythmic chordal accompaniment pattern played behind a soloist, defined by its rhythmic shape rather than its melodic content.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Comping_(jazz)",
+		"wikiSummary": "In jazz, comping is the chords, rhythms, and countermelodies that bassists, keyboard players, guitar players, or drummers use to support a musician's improvised solo or melody lines. It is also the action of accompanying, and the left-hand part of a solo pianist."
+	},
+	{
+		"id": "montuno",
+		"name": "Montuno",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"house"
+		],
+		"prompt": "Write a 2-bar syncopated piano figure in clave-aligned 16ths using only chord tones of i-iv-V-i, and loop it identically for 64 bars.",
+		"definition": "An Afro-Cuban syncopated piano vamp built on chord tones in clave-aligned rhythm, sustained as the rhythmic-harmonic engine of a section.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Montuno",
+		"wikiSummary": "Montuno has several meanings pertaining to Cuban music and its derivatives. Literally, montuno means 'comes from the mountain', and so son montuno may refer to the older type of son played in the mountainous rural areas of Oriente. Another possibility is that the word montuno comes from the word montura, the Spanish word for \"saddle\", because the rhythm in son music is like riding a horse. Or it may mean the final section of a song-based composition; in this sense it is simply part of a piece of music. Here it is usually a faster, brasher, semi-improvised instrumental section, sometimes with a repetitive vocal refrain. Finally, the term montuno is also used for a piano guajeo, the ostinato figure accompanying the montuno section, when it describes a repeated syncopated piano vamp, often with chromatic root movement."
+	},
+	{
+		"id": "guide-tone-line",
+		"name": "Guide Tone Line",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [
+			"ambient"
+		],
+		"prompt": "Write a slow melody where each chord change is voiced by its 3rd or 7th, with stepwise motion between adjacent chord tones across 8 bars.",
+		"definition": "A connective melodic line built from the 3rds and 7ths of successive chords, moving by step to outline harmonic motion.",
+		"wikiUrl": null
+	},
+	{
+		"id": "head-motif",
+		"name": "Head Motif (Kopfmotiv)",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "Compose a 3- to 5-note opening cell that appears as the literal first sound of every major section of the piece, untransposed each time.",
+		"definition": "The opening melodic cell of a piece used as a recurring identifier at the start of subsequent movements or sections.",
+		"wikiUrl": null
+	},
+	{
+		"id": "basic-idea",
+		"name": "Basic Idea (Schoenbergian)",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [],
+		"prompt": "Write a 2-bar phrase, then derive every subsequent phrase in the section by transforming only that 2-bar cell (no new pitch material introduced).",
+		"definition": "Schoenberg's term for the foundational 2-bar musical idea from which an entire piece's material is derived through transformation.",
+		"wikiUrl": null
+	},
+	{
+		"id": "transition-motif",
+		"name": "Transition Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"house",
+			"trance",
+			"ambient"
+		],
+		"prompt": "Write a 4-bar phrase that appears only when modulating between sections, never inside a stable section, and whose contour rises by step across its full length.",
+		"definition": "A motif reserved for connecting passages between sections, signaling motion or modulation rather than statement.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Transition_(music)",
+		"wikiSummary": "A transition is a passage of music composed to link one section of music to another. Transitions often function as a moment of transformation and may, or may not in themselves, introduce new, musical material."
+	},
+	{
+		"id": "codetta",
+		"name": "Codetta",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"ambient",
+			"house"
+		],
+		"prompt": "Write a 4-bar phrase using only the tonic and dominant pitches that appears exclusively to close each section, never inside one.",
+		"definition": "A small closing phrase that concludes a section (not the whole piece) with cadential weight.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Coda_(music)",
+		"wikiSummary": "In music, a coda is a passage that brings a piece to an end. It may be as simple as a few measures, or as complex as an entire section."
+	},
+	{
+		"id": "incipit",
+		"name": "Incipit",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "Compose a distinctive 5-7 note opening figure that you commit to as the track's literal identifier (intro logo), and never reuse it inside the track.",
+		"definition": "The first few notes of a piece used as its unique identifying signature, like a melodic logo.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Incipit",
+		"wikiSummary": "The incipit of a text is the first few words of the text, employed as an identifying label. In a musical composition, an incipit is an initial sequence of notes, having the same purpose. The word incipit comes from Latin and means \"it begins\". Its counterpart taken from the ending of the text is the explicit. The unfolding refers to a papyrus scroll. The end is also referred to as desinit, 'it is finished'."
+	},
+	{
+		"id": "drone-and-motif",
+		"name": "Drone-and-Motif Pairing",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"psytrance",
+			"ambient"
+		],
+		"prompt": "Hold a single root-fifth drone in the bass for the entire track, and let a melodic motif of 7-9 notes ornament that drone in the top voice, returning every 16 bars.",
+		"definition": "A pairing in which a sustained drone anchors pitch space while a melodic motif rotates above it as the only source of variation.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Drone_(sound)",
+		"wikiSummary": "In music, a drone is a harmonic or monophonic effect or accompaniment where a note or chord is continuously sounded throughout most or all of a piece. A drone may also be any part of a musical instrument used to produce this effect; an archaic term for this is burden such as a \"drone [pipe] of a bagpipe\", the pedal point in an organ, or the lowest course of a lute. Α burden is also part of a song that is repeated at the end of each stanza, such as the chorus or refrain."
+	},
+	{
+		"id": "alap-style-motif",
+		"name": "Alap-Style Melodic Call",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [
+			"ambient"
+		],
+		"prompt": "Write a melodically free, unmetered intro that introduces 5 pitches one at a time, where each new pitch never appears more than one scale step above or below previously introduced ones.",
+		"definition": "A free-meter, gradually unfolding melodic invocation that exposes a scale one note at a time within strict adjacency limits.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Alap",
+		"wikiSummary": "The Alap is the opening section of a typical North Indian classical performance. It is a form of melodic improvisation that introduces and develops a raga. In dhrupad singing the alap is unmetered, improvised and unaccompanied, and started at a slow tempo.\nFor people unfamiliar with the raga form, it introduces the thaat to the listener. It defines the raga, its mood, and the emphasized notes and notes with a secondary role."
+	},
+	{
+		"id": "adhan-style-call",
+		"name": "Adhan-Style Melodic Call",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [
+			"ambient"
+		],
+		"prompt": "Sing or synth-voice a phrase, then immediately repeat it longer, ornamented, and ranging an octave wider; alternate 12 such pairs without metric pulse.",
+		"definition": "A call-style phrase that returns as an ornamented, wider-range version of itself in alternation, drawn from Islamic call-to-prayer tradition.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Adhan",
+		"wikiSummary": "The adhan is the Islamic call to prayer, usually recited by a muezzin, traditionally from the minaret of a mosque, shortly before each of the five obligatory daily prayers."
+	},
+	{
+		"id": "pibroch-ground",
+		"name": "Pibroch Ground (Urlar)",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [
+			"ambient"
+		],
+		"prompt": "Write a slow 16-bar theme, then produce 4 successive variations of it where each variation adds one ornamental layer while preserving the original note placements.",
+		"definition": "A slow stated theme (urlar) followed by a series of progressively more ornamented variations, drawn from the Scottish piobaireachd tradition.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Pibroch",
+		"wikiSummary": "\n\nPibroch, piobaireachd or ceòl mòr is an art music genre associated primarily with the Scottish Highlands that is characterised by extended compositions with a melodic theme and elaborate formal variations. Strictly meaning 'piping' in Scottish Gaelic, piobaireachd has for some four centuries been music of the great Highland bagpipe."
+	},
+	{
+		"id": "trance-lead-hook",
+		"name": "Trance Lead Hook",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"trance",
+			"psytrance"
+		],
+		"prompt": "Write a 16-bar supersaw melody in a minor key, introduce a stripped-down 8-bar preview before the breakdown, then deliver it fully after the build.",
+		"definition": "The signature melodic phrase of a trance track, previewed in stripped form pre-breakdown and stated in full post-build.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Trance_music",
+		"wikiSummary": "Trance is a genre of electronic dance music that emerged from the techno and EBM scene in Frankfurt, Germany, in the late 1980s and early 1990s, and quickly spread throughout Europe."
+	},
+	{
+		"id": "growl-motif",
+		"name": "Dubstep Growl Motif",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [
+			"dubstep",
+			"future-bass"
+		],
+		"prompt": "Write a 2-bar bass phrase using only 3 pitches at 70-75% wavetable position, modulated by an envelope-driven LFO with rhythm 16th-16th-8th-rest-8th-16th-16th.",
+		"definition": "A short bass-synth phrase whose identity is the timbral growl shape as much as the pitch sequence, typical of dubstep drops.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Dubstep",
+		"wikiSummary": "Dubstep is a genre of electronic dance music that originated in South London in the early 2000s. The style, whose roots trace to the Jamaican sound system party scene in the early 1980s, emerged as a UK garage offshoot that blended 2-step rhythms and sparse dub production, as well as incorporating elements of broken beat, grime, and drum and bass."
+	},
+	{
+		"id": "dnb-stab-motif",
+		"name": "DnB Stab Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"dnb"
+		],
+		"prompt": "Write a 1-bar pattern of 3 short pitched stabs (Reese or sub) at positions 1, 2.5, and 4, looping for 32 bars over a Think break.",
+		"definition": "A short, sharply attacked sub or Reese-bass motif arranged as 2-3 staccato stabs per bar over a break.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Kevin_Saunderson",
+		"wikiSummary": "Kevin Maurice Saunderson is an American electronic dance music DJ and record producer. He is famous for being a member of a trio, along with Juan Atkins and Derrick May, who came to be known as the Belleville Three, who are often credited to being among the pioneers and originators of techno: in particular this act helped define Detroit techno, the earliest style of this music genre. Born in New York, at the age of nine he moved to Belleville, Michigan, a suburb of Detroit, where at Belleville High School he befriended the other members of the trio."
+	},
+	{
+		"id": "techno-blip-motif",
+		"name": "Techno Blip Motif",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"techno"
+		],
+		"prompt": "Loop a single 16th-note pitched blip on offbeats only for 32 bars, then add one neighbor pitch a minor third away for the next 32.",
+		"definition": "A minimal pitched-percussive motif of 1-2 pitches, sustained by repetition rather than melodic development.",
+		"wikiUrl": null
+	},
+	{
+		"id": "house-piano-riff",
+		"name": "House Piano Riff",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"house",
+			"uk-garage"
+		],
+		"prompt": "Write a 2-bar piano figure of root-position 7th-chord stabs on the and-of-1 and the and-of-3, looping for 16 bars under a 4-on-the-floor kick.",
+		"definition": "A syncopated piano-chord motif anchored on the offbeats, foundational to classic house music.",
+		"wikiUrl": null
+	},
+	{
+		"id": "hoover-motif",
+		"name": "Hoover Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"hardstyle",
+			"trance"
+		],
+		"prompt": "Write a 1-bar pitched-hoover phrase of 4 notes spanning a fifth, repeat 8 times rising chromatically each pair, then drop back to the original.",
+		"definition": "A motif voiced on the detuned saw/PWM \"hoover\" patch, treated as a sequence of pitched hits.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Hoover_sound",
+		"wikiSummary": "Hoover sound refers to a particular synthesizer sound in electronic music, commonly used in rave techno, hardcore techno, gabber, breakbeat hardcore, trance, hard house and hard NRG. Originally called the \"Mentasm\", the name that stuck was the one likening the sound to that of a vacuum cleaner."
+	},
+	{
+		"id": "acid-303-motif",
+		"name": "Acid 303 Squelch Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"acid-house",
+			"techno"
+		],
+		"prompt": "Sequence 16 sixteenth-notes from a single root pitch with 3-4 accents, 2-3 slides, and 1-2 octave jumps; let filter cutoff sweep across 32 bars without changing the pitch sequence.",
+		"definition": "A monophonic 16th-note pattern with accent/slide/octave features driven by a 303-style synth, whose identity is the filter sweep over a fixed note sequence.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Acid_house",
+		"wikiSummary": "Acid house is a subgenre of house music developed around the mid-1980s by DJs from Chicago. The style is defined primarily by the squelching sounds and basslines of the Roland TB-303 electronic bass synthesizer-sequencer, an innovation attributed to Chicago artists Phuture and Sleezy D circa 1986."
+	},
+	{
+		"id": "breakbeat-hit-motif",
+		"name": "Breakbeat Hit Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"dnb"
+		],
+		"prompt": "Pick 4 single drum hits from a break (kick, snare, ghost, crash) and arrange them as a 2-bar pattern, looping unchanged for 32 bars.",
+		"definition": "A motif constructed from individually placed drum hits sliced from a breakbeat, treated as a melodic-rhythmic figure.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Breakbeat",
+		"wikiSummary": "Breakbeat is a broad type of electronic music that uses drum breaks, often sampled from early recordings of funk, jazz, and R&B. Breakbeats have been used in styles such as Florida breaks, hip-hop, jungle, drum and bass, big beat, breakbeat hardcore, and UK garage styles."
+	},
+	{
+		"id": "three-note-cell",
+		"name": "Three-Note Cell",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "Compose a 3-note cell (rhythm + interval shape) and base every section's melodic material on transformations of only those 3 notes for the entire track.",
+		"definition": "A 3-pitch generative cell (a la Beethoven 5th's short-short-short-long) from which all melodic material in a piece is derived.",
+		"wikiUrl": null
+	},
+	{
+		"id": "two-note-cell",
+		"name": "Two-Note Cell",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"ambient",
+			"techno"
+		],
+		"prompt": "Alternate two pitches a tritone or minor second apart in a Jaws-style binary pattern, slowly accelerating from 1/4 to 1/16 notes over 32 bars.",
+		"definition": "A binary two-pitch alternation whose identity comes from the interval and the acceleration/deceleration of the alternation.",
+		"wikiUrl": null
+	},
+	{
+		"id": "arch-motif",
+		"name": "Arch Motif",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [],
+		"prompt": "Write a single 4-bar phrase whose pitch peak is at exactly the midpoint, rising stepwise to it and descending stepwise from it.",
+		"definition": "A phrase whose contour rises to a single midpoint apex and then symmetrically descends within one statement.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Arch_form",
+		"wikiSummary": "In music, arch form is a sectional structure for a piece of music based on repetition, in reverse order, of all or most musical sections such that the overall form is symmetric, most often around a central movement. The sections need not be repeated verbatim but must at least share thematic material."
+	},
+	{
+		"id": "descending-motif",
+		"name": "Descending Motif",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [],
+		"prompt": "Write a 2-bar motif whose every successive pitch is lower than the last, spanning a full octave from top to bottom.",
+		"definition": "A motif whose pitches descend monotonically across the phrase, defining the figure by its downward direction.",
+		"wikiUrl": null
+	},
+	{
+		"id": "ascending-motif",
+		"name": "Ascending Motif",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [],
+		"prompt": "Write a 2-bar motif whose every successive pitch is higher than the last, spanning a full octave from bottom to top.",
+		"definition": "A motif whose pitches ascend monotonically across the phrase, defining the figure by its upward direction.",
+		"wikiUrl": null
+	},
+	{
+		"id": "leaping-motif",
+		"name": "Leaping (Disjunct) Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "Write a motif of 6-8 notes where every interval is at least a perfect 4th; no stepwise motion allowed.",
+		"definition": "A motif built primarily from large intervallic leaps (perfect 4th or wider) rather than scalar motion.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Steps_and_skips",
+		"wikiSummary": "In music, a step, or conjunct motion, is the difference in pitch between two consecutive notes of a musical scale. In other words, it is the interval between two consecutive scale degrees. Any larger interval is called a skip, or disjunct motion."
+	},
+	{
+		"id": "stepwise-motif",
+		"name": "Stepwise (Conjunct) Motif",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [],
+		"prompt": "Write a motif of 8-10 notes where every interval is exactly a 2nd (major or minor); no leaps allowed.",
+		"definition": "A motif built entirely from scale steps (no skips), tracing a continuous scalar shape.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Steps_and_skips",
+		"wikiSummary": "In music, a step, or conjunct motion, is the difference in pitch between two consecutive notes of a musical scale. In other words, it is the interval between two consecutive scale degrees. Any larger interval is called a skip, or disjunct motion."
+	},
+	{
+		"id": "pivot-tone-motif",
+		"name": "Pivot-Tone Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"ambient",
+			"house"
+		],
+		"prompt": "Hold one pitch (e.g. A4) as a constant top note across 4 chord changes, where each new chord assigns that pitch a different scale degree.",
+		"definition": "A motif consisting of a single held or repeated pitch whose function changes as the harmony around it shifts.",
+		"wikiUrl": null
+	},
+	{
+		"id": "fanfare-motif",
+		"name": "Fanfare Motif",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"hardstyle"
+		],
+		"prompt": "Write a 1-bar motif using only the notes of a major triad, with at least one perfect-5th leap and a dotted long-short-short rhythm.",
+		"definition": "A brassy declarative motif built from triadic arpeggios and dotted rhythms, evoking heraldic announcement.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Fanfare",
+		"wikiSummary": "A fanfare is a short musical flourish which is typically played by trumpets, French horns or other brass instruments, often accompanied by percussion. It is a \"brief improvised introduction to an instrumental performance\". A fanfare has also been defined in The Golden Encyclopedia of Music as \"a musical announcement played on brass instruments before the arrival of an important person\", such as heralding the entrance of a monarch. Historically, fanfares were usually played by trumpet players, as the trumpet was associated with royalty. Bugles are also mentioned. The melody notes of fanfare are often based around the major triad, often using \"heroic dotted rhythms\"."
+	},
+	{
+		"id": "question-answer-motif",
+		"name": "Question-and-Answer Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "Write a single 8-bar phrase as two 4-bar halves: the first ends on the dominant (half cadence, \"question\"), the second restates with new ending on tonic (\"answer\").",
+		"definition": "A self-contained antecedent-consequent motif where one phrase poses an open cadence and a related phrase resolves it.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Period_(music)",
+		"wikiSummary": "In music theory, the term period refers to forms of repetition and contrast between adjacent small-scale formal structures such as phrases. In twentieth-century music scholarship, the term is usually used similarly to the definition in the Oxford Companion to Music: \"a period consists of two phrases, antecedent and consequent, each of which begins with the same basic motif.\" Earlier and later usages vary somewhat, but usually refer to notions of symmetry, difference, and an open section followed by a closure. The concept of a musical period originates in comparisons between music structure and rhetoric at least as early as the 16th century."
+	},
+	{
+		"id": "pickup-motif",
+		"name": "Pickup Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"house"
+		],
+		"prompt": "Build a recurring 1-bar motif that always starts on the and-of-4 of the previous bar and lands its accent on the downbeat of bar 1, every time it appears.",
+		"definition": "A motif whose identifying feature is an anacrusic launch into a strong downbeat landing, treated as the full phrase shape (not just the pickup itself).",
+		"wikiUrl": null
+	},
+	{
+		"id": "cadenza-flourish-motif",
+		"name": "Cadenza-Style Flourish",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [
+			"trance",
+			"dnb"
+		],
+		"prompt": "Insert a single unmetered or tempo-free virtuosic run of 16-32 notes between the build and the drop, never repeating within the track.",
+		"definition": "A virtuosic, often rhythmically free flourish placed at a structural seam as a one-time display.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Cadenza",
+		"wikiSummary": "In music, a cadenza is, generically, an improvised or written-out ornamental passage played or sung by a soloist(s), usually in a \"free\" rhythmic style, and often allowing virtuosic display. During this time, the accompaniment will rest or sustain a note or chord. Thus, an improvised cadenza is indicated in written notation by a fermata in all parts. A cadenza will usually occur over either the final or penultimate note in a piece, the lead-in, or the final or penultimate note in an important subsection of a piece. A cadenza can also be found before a final coda or ritornello."
+	},
+	{
+		"id": "real-sequence",
+		"name": "Real Sequence",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "State a 2-bar motif, then transpose it exactly (preserving all intervals chromatically) up a minor 3rd, then up another minor 3rd, then a final minor 3rd.",
+		"definition": "Repetition of a motif at successive transpositions where intervals are preserved exactly (chromatic transposition).",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Sequence_(music)",
+		"wikiSummary": "In music, a sequence is the restatement of a motif or longer melodic passage at a higher or lower pitch in the same voice. It is one of the most common and simple methods of elaborating a melody in eighteenth and nineteenth century classical music. Characteristics of sequences:Two segments, usually no more than three or four\nUsually in only one direction: continually higher or lower\nSegments continue by same interval distance"
+	},
+	{
+		"id": "tonal-sequence",
+		"name": "Tonal Sequence",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "State a 2-bar motif in C major, then repeat it stepwise up the scale (D-E-F-G), letting interval qualities adjust to stay in the key.",
+		"definition": "Repetition of a motif at successive scale-step transpositions where intervals adjust diatonically rather than preserving chromatically.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Sequence_(music)",
+		"wikiSummary": "In music, a sequence is the restatement of a motif or longer melodic passage at a higher or lower pitch in the same voice. It is one of the most common and simple methods of elaborating a melody in eighteenth and nineteenth century classical music. Characteristics of sequences:Two segments, usually no more than three or four\nUsually in only one direction: continually higher or lower\nSegments continue by same interval distance"
+	},
+	{
+		"id": "modulating-sequence",
+		"name": "Modulating Sequence",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [
+			"trance"
+		],
+		"prompt": "State a 2-bar motif, then re-state it each time transposed into a new key, modulating through 4 keys over 8 bars before resolving home.",
+		"definition": "A sequence whose successive statements move the music into different key centers rather than staying in one tonal region.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Sequence_(music)",
+		"wikiSummary": "In music, a sequence is the restatement of a motif or longer melodic passage at a higher or lower pitch in the same voice. It is one of the most common and simple methods of elaborating a melody in eighteenth and nineteenth century classical music. Characteristics of sequences:Two segments, usually no more than three or four\nUsually in only one direction: continually higher or lower\nSegments continue by same interval distance"
+	},
+	{
+		"id": "tonal-inversion",
+		"name": "Tonal Inversion",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "Write a diatonic 8-note motif, then invert it so the contour flips but every pitch stays in the home scale (let interval qualities change as needed).",
+		"definition": "Inversion where the contour reverses but each pitch is constrained to the diatonic scale, so interval qualities adjust.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Inversion_(music)",
+		"wikiSummary": "In music theory, an inversion is a rearrangement of the top-to-bottom elements in an interval, a chord, a melody, or a group of contrapuntal lines of music. In each of these cases, \"inversion\" has a distinct but related meaning. The concept of inversion also plays an important role in musical set theory."
+	},
+	{
+		"id": "truncation",
+		"name": "Truncation",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "State an 8-note motif twice, then state only its first 4 notes twice, then only its first 2 notes four times, before the section ends.",
+		"definition": "Successive shortening of a motif by lopping notes off its tail (or head) across restatements.",
+		"wikiUrl": null
+	},
+	{
+		"id": "expansion",
+		"name": "Expansion / Extension",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "State a 4-note motif twice, then re-state it with 2 extra notes appended; restate again with 4 extra notes; finally with 8 extra notes.",
+		"definition": "Progressive lengthening of a motif by appending new notes to extend its end across restatements.",
+		"wikiUrl": null
+	},
+	{
+		"id": "motif-combination",
+		"name": "Motif Combination",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [],
+		"prompt": "Write motif A (4 notes, rhythm A) and motif B (4 notes, rhythm B), then state a third motif built by interleaving them note-by-note into a single 8-note phrase.",
+		"definition": "Fusion of two distinct motifs into a single combined statement (interleaved, stacked, or concatenated).",
+		"wikiUrl": null
+	},
+	{
+		"id": "pitch-permutation",
+		"name": "Pitch Permutation",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [],
+		"prompt": "Write a 6-note motif. Then write 3 restatements where the pitch order is permuted (e.g. reverse pairs, swap halves, rotate by 2) while keeping the rhythm identical.",
+		"definition": "Reordering of a motif's pitches while preserving its rhythm, drawn from 12-tone practice.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Permutation_(music)",
+		"wikiSummary": "In musical set theory, a permutation (order) of a set is any ordering of the elements of that set. A specific arrangement of a set of discrete entities, or parameters, such as pitch, dynamics, or timbre. Different permutations may be related by transformation, through the application of zero or more operations, such as transposition, inversion, retrogradation, circular permutation, or multiplicative operations. These may produce reorderings of the members of the set, or may simply map the set onto itself."
+	},
+	{
+		"id": "rotation",
+		"name": "Rotation",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "Write an 8-note motif, then restate it starting from note 3 (notes 3-4-5-6-7-8-1-2), then starting from note 5, then starting from note 7.",
+		"definition": "Cyclical reordering of a motif so it starts on a different note each time while preserving the internal sequence.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Permutation_(music)",
+		"wikiSummary": "In musical set theory, a permutation (order) of a set is any ordering of the elements of that set. A specific arrangement of a set of discrete entities, or parameters, such as pitch, dynamics, or timbre. Different permutations may be related by transformation, through the application of zero or more operations, such as transposition, inversion, retrogradation, circular permutation, or multiplicative operations. These may produce reorderings of the members of the set, or may simply map the set onto itself."
+	},
+	{
+		"id": "interpolation",
+		"name": "Interpolation",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "Take a 4-note motif. Restate it with one neighboring pitch inserted between each pair of original notes (yielding 7 notes). Restate again with two inserts between each pair (10 notes).",
+		"definition": "Insertion of additional pitches between a motif's original notes, expanding it from within without changing the anchor notes.",
+		"wikiUrl": null
+	},
+	{
+		"id": "ornamentation",
+		"name": "Ornamentation / Embellishment",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [],
+		"prompt": "State a 4-bar motif plain on first appearance. On its second appearance, decorate every note with a trill, grace note, or short turn without changing the underlying pitches or rhythm.",
+		"definition": "Decoration of a motif with trills, grace notes, turns, or slides on restatement while preserving its skeletal pitches and rhythm.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Ornament_(music)",
+		"wikiSummary": "In music, ornaments or embellishments are musical flourishes—typically, added notes—that are not essential to carry the overall line of the melody, but serve instead to decorate or \"ornament\" that line, provide added interest and variety, and give the performer the opportunity to add expressiveness to a song or piece. Many ornaments are performed as \"fast notes\" around a central, main note."
+	},
+	{
+		"id": "arp-motif",
+		"name": "Arpeggiator Motif",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"trance",
+			"synthwave",
+			"house"
+		],
+		"prompt": "Hold a 4-note chord through an arpeggiator set to up-down 16ths over 2 octaves, change the chord every 2 bars, and let the arp pattern itself be the motif for 16 bars.",
+		"definition": "A motif generated by an arpeggiator running over held chords, where the arp pattern (not the held chord) carries the melodic identity.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Arpeggio",
+		"wikiSummary": "An arpeggio is a type of chord in which the notes that compose a chord are individually sounded in a progressive rising or descending order. Arpeggios on keyboard instruments may be called rolled chords."
+	},
+	{
+		"id": "stutter-motif",
+		"name": "Stutter Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"experimental",
+			"idm",
+			"dubstep",
+			"future-bass"
+		],
+		"prompt": "Take a single pitched sample and stutter-repeat it in 16th-32nd-64th accelerating subdivisions over 1 bar, treating that 1-bar stutter as a recurring motif every 8 bars.",
+		"definition": "A motif built from rapid granular re-triggering of a single sound, where the stutter rhythm itself is the figure.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Stutter_edit",
+		"wikiSummary": "\nThe stutter edit, or stutter effect, is the rhythmic repetition of small fragments of audio, occurring as the common 16th note repetition, but also as 64th notes and beyond, with layers of digital signal processing operations in a rhythmic fashion based on the overall length of the host tempo. The Stutter Edit audio software VST plug-in implements forms of granular synthesis, sample retrigger, and various effects to create a certain audible manipulation of the sound run through it, in which fragments of audio are repeated in rhythmic intervals. The plug-in allows musicians to manipulate audio in real time, slicing audio into small fragments and sequences the pieces into rhythmic effects, recreating techniques that formerly took hours to do in the studio. Electronic musician Brian Transeau is widely recognized for pioneering the stutter edit as a musical technique; he developed, coined the term, and holds multiple patents for the Stutter Edit software plug-in."
+	},
+	{
+		"id": "chord-stab-motif",
+		"name": "Chord Stab Motif",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"house",
+			"trap",
+			"dnb"
+		],
+		"prompt": "Pick one chord voicing. Play it as a 1-bar 4-stab rhythmic pattern (positions 1, 1.75, 2.5, 4) and loop unchanged for 16 bars.",
+		"definition": "A motif built from short staccato chord hits on a fixed voicing, where the rhythm is the identity and the harmony is static.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Stab_(music)",
+		"wikiSummary": "In music, a stab is a single staccato note or chord that adds dramatic punctuation to a composition. Stabs may be provided by horns —a horn stab—or an orchestral sample—an orchestra hit—and usually occur on a 1-beat. Stabs are used in a wide variety of music genres including jazz, rock, classical, funk, freestyle, trap, EDM, metal and ska."
+	},
+	{
+		"id": "pitch-bend-motif",
+		"name": "Pitch-Bend Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"dubstep",
+			"future-bass",
+			"synthwave",
+			"trap"
+		],
+		"prompt": "Hold a single note for 2 bars while bending it down a perfect 5th and back up over its duration. Repeat this gesture every 4 bars as the section's identifying figure.",
+		"definition": "A motif defined by continuous pitch glide rather than discrete note placement.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Pitch_wheel",
+		"wikiSummary": "In electronic music, a pitch wheel, pitch bend or bender is a control on a synthesizer to vary the pitch in a continuously variable manner (portamento)."
+	},
+	{
+		"id": "resampled-motif",
+		"name": "Resampled Motif",
+		"category": "melody",
+		"difficulty": 3,
+		"genres": [
+			"experimental",
+			"idm",
+			"future-bass"
+		],
+		"prompt": "Render a 4-bar melody. Reimport it as a sample, chop it into 8 slices, rearrange the slices in a new order, and use that rearrangement as the motif for the next section.",
+		"definition": "A motif created by sampling a rendered melodic phrase and reconstructing a new sequence from its chopped pieces.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Chopped_and_screwed",
+		"wikiSummary": "Chopped and screwed is a genre of hip-hop music and technique of remixing music that involves slowing down the tempo and DJing. It was pioneered by DJ Screw, and became a staple in the Houston hip hop scene in the 1990s. The screwed technique involves slowing the tempo of a song down to 60 and 70 quarter-note beats per minute and applying techniques such as skipping beats, record scratching, stop-time and affecting portions of the original composition to create a \"chopped-up\" variant of the material."
+	},
+	{
+		"id": "one-shot-stab-motif",
+		"name": "One-Shot Stab Motif",
+		"category": "melody",
+		"difficulty": 1,
+		"genres": [
+			"dnb",
+			"trap"
+		],
+		"prompt": "Trigger a single pitched one-shot sample (orchestra hit, vocal \"hey\", or risers stab) on beat 1 of every 4th bar across the entire track, never anywhere else.",
+		"definition": "A motif consisting of a single sampled hit deployed at a strict periodic placement.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Stab_(music)",
+		"wikiSummary": "In music, a stab is a single staccato note or chord that adds dramatic punctuation to a composition. Stabs may be provided by horns —a horn stab—or an orchestral sample—an orchestra hit—and usually occur on a 1-beat. Stabs are used in a wide variety of music genres including jazz, rock, classical, funk, freestyle, trap, EDM, metal and ska."
+	},
+	{
+		"id": "wobble-motif",
+		"name": "Wobble Motif",
+		"category": "melody",
+		"difficulty": 2,
+		"genres": [
+			"dubstep",
+			"dnb"
+		],
+		"prompt": "Hold a 1-bar bass note, modulate its filter cutoff with an LFO synced to 1/4 notes, then change the LFO sync to 1/8 for bar 2, 1/16 for bar 3, 1/8 for bar 4. Loop this 4-bar wobble pattern.",
+		"definition": "A motif whose pitch is mostly static but whose identity comes from a structured LFO-modulation pattern over time.",
+		"wikiUrl": "https://en.wikipedia.org/wiki/Dubstep",
+		"wikiSummary": "Dubstep is a genre of electronic dance music that originated in South London in the early 2000s. The style, whose roots trace to the Jamaican sound system party scene in the early 1980s, emerged as a UK garage offshoot that blended 2-step rhythms and sparse dub production, as well as incorporating elements of broken beat, grime, and drum and bass."
 	}
 ]
