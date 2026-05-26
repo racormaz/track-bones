@@ -2,6 +2,7 @@
 	import type { Concept } from '$lib/types';
 	import { CATEGORY_LABELS } from '$lib/types';
 	import { slide } from 'svelte/transition';
+	import Icon from './Icon.svelte';
 
 	let { concept, onReroll }: { concept: Concept; onReroll: () => void } = $props();
 
@@ -39,10 +40,12 @@
 				<p class="text-sm leading-relaxed text-fg/90">{concept.prompt}</p>
 			</div>
 			<span
-				class="shrink-0 pt-1 text-xs text-muted transition-transform"
+				class="shrink-0 pt-1 text-muted transition-transform"
 				class:rotate-180={expanded}
-				aria-hidden="true">▾</span
+				aria-hidden="true"
 			>
+				<Icon name="chevron-down" size={16} />
+			</span>
 		</div>
 
 		<button
@@ -52,20 +55,7 @@
 			onclick={onReroll}
 			class="mt-3 mr-3 flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-muted transition-colors hover:bg-card-2 hover:text-fg"
 		>
-			<svg
-				viewBox="0 0 24 24"
-				width="18"
-				height="18"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				aria-hidden="true"
-			>
-				<path d="M21 12a9 9 0 1 1-3-6.7" />
-				<path d="M21 4v5h-5" />
-			</svg>
+			<Icon name="rotate-cw" />
 		</button>
 	</div>
 
@@ -83,20 +73,7 @@
 					class="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
 				>
 					Read more on Wikipedia
-					<svg
-						viewBox="0 0 24 24"
-						width="12"
-						height="12"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						aria-hidden="true"
-					>
-						<path d="M7 17L17 7" />
-						<path d="M7 7h10v10" />
-					</svg>
+					<Icon name="external-link" size={12} />
 				</a>
 			{/if}
 		</div>

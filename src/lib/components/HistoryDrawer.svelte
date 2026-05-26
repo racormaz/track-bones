@@ -4,6 +4,7 @@
 	import { DIFFICULTY_LABELS } from '$lib/types';
 	import genres from '$lib/content/genres.json';
 	import type { Genre, Challenge } from '$lib/types';
+	import Icon from './Icon.svelte';
 
 	let { onClose, onOpen }: { onClose: () => void; onOpen: (c: Challenge) => void } = $props();
 
@@ -58,10 +59,10 @@
 			<button
 				type="button"
 				aria-label="Close"
-				class="flex h-8 w-8 items-center justify-center rounded-full text-xl text-muted hover:text-fg"
+				class="flex h-8 w-8 items-center justify-center rounded-full text-muted hover:text-fg"
 				onclick={onClose}
 			>
-				×
+				<Icon name="x" size={20} />
 			</button>
 		</div>
 	</header>
@@ -91,7 +92,7 @@
 							class="flex h-8 w-8 items-center justify-center rounded-full text-muted hover:text-fg"
 							onclick={() => deleteChallenge(item.id)}
 						>
-							×
+							<Icon name="x" size={16} />
 						</button>
 					</li>
 				{/each}

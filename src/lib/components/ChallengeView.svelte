@@ -2,6 +2,7 @@
 	import type { Concept, GenreId, Difficulty } from '$lib/types';
 	import { DIFFICULTY_LABELS, CATEGORIES } from '$lib/types';
 	import ChallengeCard from './ChallengeCard.svelte';
+	import Icon from './Icon.svelte';
 	import genres from '$lib/content/genres.json';
 	import type { Genre } from '$lib/types';
 
@@ -71,20 +72,7 @@
 			class="flex flex-1 flex-col items-center gap-0.5 rounded-lg px-3 py-2 text-xs hover:bg-card"
 			onclick={onRerollAll}
 		>
-			<svg
-				viewBox="0 0 24 24"
-				width="20"
-				height="20"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				aria-hidden="true"
-			>
-				<path d="M21 12a9 9 0 1 1-3-6.7" />
-				<path d="M21 4v5h-5" />
-			</svg>
+			<Icon name="rotate-cw" size={20} />
 			Reroll all
 		</button>
 
@@ -93,19 +81,7 @@
 			class="flex flex-1 flex-col items-center gap-0.5 rounded-lg px-3 py-2 text-xs hover:bg-card"
 			onclick={onSave}
 		>
-			<svg
-				viewBox="0 0 24 24"
-				width="20"
-				height="20"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				aria-hidden="true"
-			>
-				<path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z" />
-			</svg>
+			<Icon name="star" size={20} />
 			Save
 		</button>
 
@@ -114,21 +90,7 @@
 			class="flex flex-1 flex-col items-center gap-0.5 rounded-lg px-3 py-2 text-xs hover:bg-card"
 			onclick={onShowHistory}
 		>
-			<svg
-				viewBox="0 0 24 24"
-				width="20"
-				height="20"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				aria-hidden="true"
-			>
-				<line x1="3" y1="6" x2="21" y2="6" />
-				<line x1="3" y1="12" x2="21" y2="12" />
-				<line x1="3" y1="18" x2="21" y2="18" />
-			</svg>
+			<Icon name="history" size={20} />
 			History
 		</button>
 	</div>
