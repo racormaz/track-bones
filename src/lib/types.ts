@@ -53,6 +53,8 @@ export type SecondaryRef = {
 	url: string;
 };
 
+export type Rarity = 'common' | 'rare' | 'legendary';
+
 export type Concept = {
 	id: string;
 	name: string;
@@ -65,6 +67,7 @@ export type Concept = {
 	wikiSummary?: string;
 	secondaryRef?: SecondaryRef;
 	sections?: SectionId[]; // section affinity for Deep mode
+	rarity?: Rarity; // missing = common
 	relatedIds?: string[];
 };
 

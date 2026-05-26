@@ -27,7 +27,9 @@
 </script>
 
 <article
-	class="overflow-hidden rounded-[var(--radius-card)] border border-border bg-card transition-colors"
+	class="card overflow-hidden rounded-[var(--radius-card)] border border-border bg-card transition-colors"
+	class:rarity-rare={concept.rarity === 'rare'}
+	class:rarity-legendary={concept.rarity === 'legendary'}
 >
 	<div class="flex items-start gap-2">
 		<div
@@ -39,9 +41,20 @@
 			class="flex flex-1 cursor-pointer items-start gap-3 px-5 py-4 transition-colors hover:bg-card-2"
 		>
 			<div class="flex min-w-0 flex-1 flex-col gap-2">
-				<p class="text-[10px] font-semibold tracking-[0.2em] text-accent uppercase">
-					{CATEGORY_LABELS[concept.category]}
-				</p>
+				<div class="flex items-center gap-2">
+					<p class="text-[10px] font-semibold tracking-[0.2em] text-accent uppercase">
+						{CATEGORY_LABELS[concept.category]}
+					</p>
+					{#if concept.rarity === 'rare'}
+						<span class="rarity-tag inline-flex items-center gap-1 text-[9px] font-semibold tracking-[0.18em] uppercase">
+							<Icon name="sparkle" size={10} />Rare
+						</span>
+					{:else if concept.rarity === 'legendary'}
+						<span class="rarity-tag inline-flex items-center gap-1 text-[9px] font-semibold tracking-[0.18em] uppercase">
+							<Icon name="sparkles" size={10} />Legendary
+						</span>
+					{/if}
+				</div>
 				<h3 class="text-base leading-snug font-semibold">{concept.name}</h3>
 				<p class="text-sm leading-relaxed text-fg/90">{concept.prompt}</p>
 			</div>
@@ -102,3 +115,35 @@
 		</div>
 	{/if}
 </article>
+
+<style>
+	.card.rarity-rare {
+		border-color: rgba(124, 92, 255, 0.55);
+		box-shadow: 0 0 0 1px rgba(124, 92, 255, 0.25);
+	}
+	.card.rarity-rare .rarity-tag {
+		color: #b8a4ff;
+	}
+	.card.rarity-legendary {
+		border-color: #ffd166;
+		box-shadow: 0 0 24px -4px rgba(255, 209, 102, 0.35);
+		background: linear-gradient(180deg, rgba(255, 209, 102, 0.04), transparent 60%), var(--color-card);
+	}
+	.card.rarity-legendary .rarity-tag {
+		color: #ffd166;
+	}
+	@media (prefers-reduced-motion: no-preference) {
+		.card.rarity-legendary {
+			animation: legendary-pulse 4.5s ease-in-out infinite;
+		}
+	}
+	@keyframes legendary-pulse {
+		0%,
+		100% {
+			box-shadow: 0 0 24px -4px rgba(255, 209, 102, 0.35);
+		}
+		50% {
+			box-shadow: 0 0 32px -2px rgba(255, 209, 102, 0.55);
+		}
+	}
+</style>

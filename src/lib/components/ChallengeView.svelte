@@ -94,20 +94,22 @@
 	</header>
 
 	{#if useSections && grouped}
-		<div class="flex flex-col gap-3">
+		<div class="stagger-in flex flex-col gap-3">
 			{#each grouped as group (group.section.id)}
-				<SectionHeader label={group.section.label} barHint={group.section.barHint} />
-				<ol class="flex flex-col gap-3">
-					{#each group.items as { concept, index } (concept.id)}
-						<li>
-							<ChallengeCard {concept} onReroll={() => onRerollOne(index)} />
-						</li>
-					{/each}
-				</ol>
+				<div class="flex flex-col gap-3">
+					<SectionHeader label={group.section.label} barHint={group.section.barHint} />
+					<ol class="flex flex-col gap-3">
+						{#each group.items as { concept, index } (concept.id)}
+							<li>
+								<ChallengeCard {concept} onReroll={() => onRerollOne(index)} />
+							</li>
+						{/each}
+					</ol>
+				</div>
 			{/each}
 		</div>
 	{:else}
-		<ol class="flex flex-col gap-3">
+		<ol class="stagger-in flex flex-col gap-3">
 			{#each CATEGORIES as cat, i (cat)}
 				{@const item = orderedConcepts.find((x) => x.index === i)}
 				{#if item}

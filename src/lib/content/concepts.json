@@ -284,7 +284,8 @@
 		"prompt": "Layer a 7-note pitch row over a 5-note rhythm row so the two cycles only realign every 35 hits.",
 		"definition": "Isorhythm repeats a rhythmic pattern independently of a repeating pitch pattern.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Isorhythm",
-		"wikiSummary": "Isorhythm is a musical technique using a repeating rhythmic pattern, called a talea, in at least one voice part throughout a composition. Taleae are typically applied to one or more melodic patterns of pitches or colores, which may be of the same or a different length from the talea."
+		"wikiSummary": "Isorhythm is a musical technique using a repeating rhythmic pattern, called a talea, in at least one voice part throughout a composition. Taleae are typically applied to one or more melodic patterns of pitches or colores, which may be of the same or a different length from the talea.",
+		"rarity": "legendary"
 	},
 	{
 		"id": "euclidean-rhythm",
@@ -341,7 +342,8 @@
 		"prompt": "Redefine the pulse mid-track by treating your old triplet eighth as the new quarter note.",
 		"definition": "Metric modulation redefines the pulse using a subdivision of the old tempo.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Metric_modulation",
-		"wikiSummary": "In music, metric modulation is a change in pulse rate (tempo) and/or pulse grouping (subdivision) that is derived from a note value or grouping heard before the change. Examples of metric modulation may include changes in time signature across an unchanging tempo, but the concept applies more specifically to shifts from one time signature/tempo (metre) to another, wherein a note value from the first is made equivalent to a note value in the second, like a pivot or bridge. The term \"modulation\" invokes the analogous and more familiar term in analyses of tonal harmony, wherein a pitch or pitch interval serves as a bridge between two keys. In both terms, the pivoting value functions differently before and after the change, but sounds the same, and acts as an audible common element between them. Metric modulation was first described by Richard Franko Goldman while reviewing the Cello Sonata of Elliott Carter, who prefers to call it tempo modulation. Another synonymous term is proportional tempi.A technique in which a rhythmic pattern is superposed on another, heterometrically, and then supersedes it and becomes the basic metre. Usually, such time signatures are mutually prime, e.g., 44 and 38, and so have no common divisors. Thus the change of the basic metre decisively alters the numerical content of the beat, but the minimal denominator remains constant in duration."
+		"wikiSummary": "In music, metric modulation is a change in pulse rate (tempo) and/or pulse grouping (subdivision) that is derived from a note value or grouping heard before the change. Examples of metric modulation may include changes in time signature across an unchanging tempo, but the concept applies more specifically to shifts from one time signature/tempo (metre) to another, wherein a note value from the first is made equivalent to a note value in the second, like a pivot or bridge. The term \"modulation\" invokes the analogous and more familiar term in analyses of tonal harmony, wherein a pitch or pitch interval serves as a bridge between two keys. In both terms, the pivoting value functions differently before and after the change, but sounds the same, and acts as an audible common element between them. Metric modulation was first described by Richard Franko Goldman while reviewing the Cello Sonata of Elliott Carter, who prefers to call it tempo modulation. Another synonymous term is proportional tempi.A technique in which a rhythmic pattern is superposed on another, heterometrically, and then supersedes it and becomes the basic metre. Usually, such time signatures are mutually prime, e.g., 44 and 38, and so have no common divisors. Thus the change of the basic metre decisively alters the numerical content of the beat, but the minimal denominator remains constant in duration.",
+		"rarity": "rare"
 	},
 	{
 		"id": "backbeat",
@@ -616,7 +618,8 @@
 		"prompt": "End your bridge with a phrase played three times in a row that lands back on the downbeat of the next section.",
 		"definition": "A tihai is an Indian classical figure repeated three times to land on sam.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tihai",
-		"wikiSummary": "Tihai is a polyrhythmic technique found in Indian classical music, and often used to conclude a piece. Tihais can be either sung or played on an instrument. Tihais are sometimes used to distort the listeners’ perception of time, only to reveal the consistent underlying cycle at the sam."
+		"wikiSummary": "Tihai is a polyrhythmic technique found in Indian classical music, and often used to conclude a piece. Tihais can be either sung or played on an instrument. Tihais are sometimes used to distort the listeners’ perception of time, only to reveal the consistent underlying cycle at the sam.",
+		"rarity": "rare"
 	},
 	{
 		"id": "tala",
@@ -642,7 +645,8 @@
 		"prompt": "Vocalize a polyrhythmic phrase in konnakol syllables and sample your own voice as the rhythm source.",
 		"definition": "Konnakol is the South Indian art of vocalized rhythm syllables.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Konnakol",
-		"wikiSummary": "\n\nKonnakol is the art of performing percussion syllables vocally in South Indian Carnatic music. Konnakol is derived from Telugu, it translates to “reciting the rhythmic syllables”. Konnakol is the spoken component of solkattu, which refers to a combination of konnakol syllables spoken while simultaneously counting the tala (meter) with the hand. It is comparable in some respects to bol in Hindustani music, as both allow for the composition, memorization, communication, and performance of rhythms. A similar concept in Hindustani classical music is called padhant."
+		"wikiSummary": "\n\nKonnakol is the art of performing percussion syllables vocally in South Indian Carnatic music. Konnakol is derived from Telugu, it translates to “reciting the rhythmic syllables”. Konnakol is the spoken component of solkattu, which refers to a combination of konnakol syllables spoken while simultaneously counting the tala (meter) with the hand. It is comparable in some respects to bol in Hindustani music, as both allow for the composition, memorization, communication, and performance of rhythms. A similar concept in Hindustani classical music is called padhant.",
+		"rarity": "rare"
 	},
 	{
 		"id": "hocket",
@@ -656,7 +660,8 @@
 		"prompt": "Distribute a single melody across two synths so each plays alternating notes without overlapping.",
 		"definition": "Hocket distributes a single melodic line across alternating voices.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Hocket",
-		"wikiSummary": "In music, hocket is a rhythmic and linear technique involving the alternation of notes, pitches, or chords. In medieval practice, a single melody is shared between two voices such that one voice sounds while the other rests, creating a staggered, interlocking texture."
+		"wikiSummary": "In music, hocket is a rhythmic and linear technique involving the alternation of notes, pitches, or chords. In medieval practice, a single melody is shared between two voices such that one voice sounds while the other rests, creating a staggered, interlocking texture.",
+		"rarity": "rare"
 	},
 	{
 		"id": "phasing",
@@ -684,7 +689,8 @@
 		"prompt": "Build a tempo illusion by layering rhythms at compounding doublings so the groove appears to accelerate forever.",
 		"definition": "A Risset rhythm uses overlapping tempo layers to create the illusion of perpetual acceleration.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Jean-Claude_Risset",
-		"wikiSummary": "Jean-Claude Raoul Olivier Risset was a French composer, best known for his pioneering contributions to computer music. He was a former student of André Jolivet and former co-worker of Max Mathews at Bell Labs."
+		"wikiSummary": "Jean-Claude Raoul Olivier Risset was a French composer, best known for his pioneering contributions to computer music. He was a former student of André Jolivet and former co-worker of Max Mathews at Bell Labs.",
+		"rarity": "legendary"
 	},
 	{
 		"id": "motif",
@@ -1154,7 +1160,8 @@
 		"prompt": "Pass each note of your hook to a different instrument so the melody is sounded by timbre changes alone.",
 		"definition": "Klangfarbenmelodie distributes a melody across changing timbres.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Klangfarbenmelodie",
-		"wikiSummary": "Klangfarbenmelodie is a musical concept that treats timbre as a melodic element. Arnold Schoenberg originated the idea. It has become synonymous with the technique of fragmenting a melodic line between different timbres."
+		"wikiSummary": "Klangfarbenmelodie is a musical concept that treats timbre as a melodic element. Arnold Schoenberg originated the idea. It has become synonymous with the technique of fragmenting a melodic line between different timbres.",
+		"rarity": "legendary"
 	},
 	{
 		"id": "cantus-firmus",
@@ -1165,7 +1172,8 @@
 		"prompt": "Set a slow-moving 8-note cantus firmus in the bass and improvise faster counterpoint above it.",
 		"definition": "A cantus firmus is a pre-existing melody used as the structural scaffolding for new counterpoint.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Cantus_firmus",
-		"wikiSummary": "In music, a cantus firmus is a pre-existing melody forming the basis of a polyphonic composition."
+		"wikiSummary": "In music, a cantus firmus is a pre-existing melody forming the basis of a polyphonic composition.",
+		"rarity": "rare"
 	},
 	{
 		"id": "heterophony",
@@ -1179,7 +1187,8 @@
 		"prompt": "Layer two slightly different versions of the same melody on different patches so they decorate each other.",
 		"definition": "Heterophony lets multiple voices play variant versions of the same melody simultaneously.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Heterophony",
-		"wikiSummary": "In music, heterophony is a type of texture characterized by the simultaneous variation of a single melodic line. Such a texture can be regarded as a kind of complex monophony in which there is only one basic melody, but realized at the same time in multiple voices, each of which plays the melody differently, either in a different rhythm or tempo, or with various embellishments and elaborations. The term was initially introduced into systematic musicology to denote a subcategory of polyphonic music, though is now regarded as a textural category in its own right."
+		"wikiSummary": "In music, heterophony is a type of texture characterized by the simultaneous variation of a single melodic line. Such a texture can be regarded as a kind of complex monophony in which there is only one basic melody, but realized at the same time in multiple voices, each of which plays the melody differently, either in a different rhythm or tempo, or with various embellishments and elaborations. The term was initially introduced into systematic musicology to denote a subcategory of polyphonic music, though is now regarded as a textural category in its own right.",
+		"rarity": "rare"
 	},
 	{
 		"id": "alberti-bass",
@@ -1219,7 +1228,8 @@
 		"prompt": "Build a melody from ambiguous tritone leaps so listeners disagree on whether the line is rising or falling.",
 		"definition": "The tritone paradox is an auditory illusion where listeners disagree on the direction of a tritone pair.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tritone_paradox",
-		"wikiSummary": "The tritone paradox is an auditory illusion in which a sequentially played pair of Shepard tones separated by an interval of a tritone, or half octave, is heard as ascending by some people and as descending by others. Different populations tend to favor one of a limited set of different spots around the chromatic circle as central to the set of \"higher\" tones. Roger Shepard in 1963 had argued that such tone pairs would be heard ambiguously as either ascending or descending. However, psychology of music researcher Diana Deutsch in 1986 discovered that when the judgments of individual listeners were considered separately, their judgments depended on the positions of the tones along the chromatic circle. For example, one listener would hear the tone pair C–F♯ as ascending and the tone pair G–C♯ as descending. Yet another listener would hear the tone pair C–F♯ as descending and the tone pair G–C♯ as ascending. Furthermore, the way these tone pairs were perceived varied depending on the listener's language or dialect."
+		"wikiSummary": "The tritone paradox is an auditory illusion in which a sequentially played pair of Shepard tones separated by an interval of a tritone, or half octave, is heard as ascending by some people and as descending by others. Different populations tend to favor one of a limited set of different spots around the chromatic circle as central to the set of \"higher\" tones. Roger Shepard in 1963 had argued that such tone pairs would be heard ambiguously as either ascending or descending. However, psychology of music researcher Diana Deutsch in 1986 discovered that when the judgments of individual listeners were considered separately, their judgments depended on the positions of the tones along the chromatic circle. For example, one listener would hear the tone pair C–F♯ as ascending and the tone pair G–C♯ as descending. Yet another listener would hear the tone pair C–F♯ as descending and the tone pair G–C♯ as ascending. Furthermore, the way these tone pairs were perceived varied depending on the listener's language or dialect.",
+		"rarity": "rare"
 	},
 	{
 		"id": "root-fifth-bass",
@@ -1824,7 +1834,8 @@
 		"prompt": "Retune your pad's tuning table to pure 5-limit just intonation and never use a 12-TET interval.",
 		"definition": "Just intonation tunes intervals using pure whole-number frequency ratios.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Just_intonation",
-		"wikiSummary": "Just intonation is the tuning of a musical interval without beats. The result is an acoustically pure sound that resonates within the harmonic series. The simplest relationship between pitches in this series can be expressed as small whole number ratios. Musicians around the world instinctively perform in just intonation."
+		"wikiSummary": "Just intonation is the tuning of a musical interval without beats. The result is an acoustically pure sound that resonates within the harmonic series. The simplest relationship between pitches in this series can be expressed as small whole number ratios. Musicians around the world instinctively perform in just intonation.",
+		"rarity": "rare"
 	},
 	{
 		"id": "equal-temperament",
@@ -1849,7 +1860,8 @@
 		"prompt": "Bend at least one note per phrase by a quarter tone to push the melody outside 12-TET.",
 		"definition": "Microtonality uses pitches between the 12 standard semitones.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Microtonality",
-		"wikiSummary": "Microtonality is the use in music of microtones — intervals smaller than a semitone, also called \"microintervals\". It may also be extended to include any music using intervals not found in the customary Western tuning of twelve equal intervals per octave. In other words, a microtone may be thought of as a note that falls \"between the keys\" of a piano tuned in equal temperament."
+		"wikiSummary": "Microtonality is the use in music of microtones — intervals smaller than a semitone, also called \"microintervals\". It may also be extended to include any music using intervals not found in the customary Western tuning of twelve equal intervals per octave. In other words, a microtone may be thought of as a note that falls \"between the keys\" of a piano tuned in equal temperament.",
+		"rarity": "rare"
 	},
 	{
 		"id": "spectral-music",
@@ -1863,7 +1875,8 @@
 		"prompt": "Analyse the overtone series of a struck bell and write every chord as a transposition of those partials.",
 		"definition": "Spectral music derives composition from analysis of the spectral content of sounds.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Spectral_music",
-		"wikiSummary": "Spectral music uses the acoustic properties of sound – or sound spectra – as a basis for composition."
+		"wikiSummary": "Spectral music uses the acoustic properties of sound – or sound spectra – as a basis for composition.",
+		"rarity": "rare"
 	},
 	{
 		"id": "inharmonicity",
@@ -1877,7 +1890,8 @@
 		"prompt": "Voice a pad as a stretched-partial inharmonic spectrum so each note is detuned from the harmonic series.",
 		"definition": "Inharmonicity occurs when partials are not integer multiples of the fundamental.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Inharmonicity",
-		"wikiSummary": "In music, inharmonicity is the degree to which the frequencies of overtones depart from whole multiples of the fundamental frequency."
+		"wikiSummary": "In music, inharmonicity is the degree to which the frequencies of overtones depart from whole multiples of the fundamental frequency.",
+		"rarity": "rare"
 	},
 	{
 		"id": "combination-tone",
@@ -1890,7 +1904,8 @@
 		"prompt": "Choose two sine tones whose difference frequency lands on your tonic and let the phantom tone be heard.",
 		"definition": "A combination tone is a phantom pitch the ear creates from two simultaneous tones.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Combination_tone",
-		"wikiSummary": "A combination tone is a psychoacoustic and sometimes physical phenomenon of an additional tone or tones that are perceived when two real tones are sounded at the same time. Their discovery is credited to the violinist Giuseppe Tartini, so they are also called Tartini tones. He reported in 1754 that he heard it already in 1714."
+		"wikiSummary": "A combination tone is a psychoacoustic and sometimes physical phenomenon of an additional tone or tones that are perceived when two real tones are sounded at the same time. Their discovery is credited to the violinist Giuseppe Tartini, so they are also called Tartini tones. He reported in 1754 that he heard it already in 1714.",
+		"rarity": "rare"
 	},
 	{
 		"id": "missing-fundamental",
@@ -1904,7 +1919,8 @@
 		"prompt": "Filter out everything below 80 Hz in your bass and let the ear infer the missing fundamental from its harmonics.",
 		"definition": "The missing fundamental is a pitch the ear infers from its harmonic series even when the fundamental is absent.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Missing_fundamental",
-		"wikiSummary": "The missing fundamental phenomenon is the perceptual phenomenon of hearing a pitch corresponding to the lowest (fundamental) harmonic when presented with sound made of a set of frequency multiples (overtones), even when it is actually absent.. This can be used to simulate lower frequency sounds with speakers that cannot actually play those frequencies, by playing the overtones that are within its range."
+		"wikiSummary": "The missing fundamental phenomenon is the perceptual phenomenon of hearing a pitch corresponding to the lowest (fundamental) harmonic when presented with sound made of a set of frequency multiples (overtones), even when it is actually absent.. This can be used to simulate lower frequency sounds with speakers that cannot actually play those frequencies, by playing the overtones that are within its range.",
+		"rarity": "rare"
 	},
 	{
 		"id": "critical-band",
@@ -1915,7 +1931,8 @@
 		"prompt": "Avoid voicing thirds below middle C so no two notes share a critical band and your low end stays clean.",
 		"definition": "The critical band is the frequency range within which two simultaneous tones interfere audibly.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Critical_band",
-		"wikiSummary": "In audiology and psychoacoustics the concept of critical bands, introduced by Harvey Fletcher in 1933 and refined in 1940, describes the frequency bandwidth of the \"auditory filter\" created by the cochlea, the sense organ of hearing within the inner ear. Roughly, the critical band is the band of audio frequencies within which a second tone will interfere with the perception of the first tone by auditory masking."
+		"wikiSummary": "In audiology and psychoacoustics the concept of critical bands, introduced by Harvey Fletcher in 1933 and refined in 1940, describes the frequency bandwidth of the \"auditory filter\" created by the cochlea, the sense organ of hearing within the inner ear. Roughly, the critical band is the band of audio frequencies within which a second tone will interfere with the perception of the first tone by auditory masking.",
+		"rarity": "rare"
 	},
 	{
 		"id": "consonance-dissonance",
@@ -2703,7 +2720,8 @@
 		"prompt": "Recreate the “Mentasm” hoover (detuned saws + pitch-bend portamento + heavy modulation) and use it for the lead of one full section.",
 		"definition": "The detuned-saw \"hoover\" lead originally from Joey Beltram’s \"Mentasm\", iconic to hardcore and early jungle.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Hoover_sound",
-		"wikiSummary": "Hoover sound refers to a particular synthesizer sound in electronic music, commonly used in rave techno, hardcore techno, gabber, breakbeat hardcore, trance, hard house and hard NRG. Originally called the \"Mentasm\", the name that stuck was the one likening the sound to that of a vacuum cleaner."
+		"wikiSummary": "Hoover sound refers to a particular synthesizer sound in electronic music, commonly used in rave techno, hardcore techno, gabber, breakbeat hardcore, trance, hard house and hard NRG. Originally called the \"Mentasm\", the name that stuck was the one likening the sound to that of a vacuum cleaner.",
+		"rarity": "rare"
 	},
 	{
 		"id": "supersaw",
@@ -2818,7 +2836,8 @@
 			"kind": "article",
 			"label": "iZotope — Shepard Tone",
 			"url": "https://www.izotope.com/en/learn/shepard-tone"
-		}
+		},
+		"rarity": "legendary"
 	},
 	{
 		"id": "shepard-risset-glissando",
@@ -2838,7 +2857,8 @@
 			"kind": "article",
 			"label": "Cycling '74 — Risset Glissandos",
 			"url": "https://cycling74.com/2013/11/20/risset-glissandos-and-strange-loops-2/"
-		}
+		},
+		"rarity": "legendary"
 	},
 	{
 		"id": "reich-phasing",
@@ -2853,7 +2873,8 @@
 		"prompt": "Start two identical loops in sync and slowly nudge one out of phase across 60 seconds. Let the resulting interference be a full section.",
 		"definition": "Steve Reich’s compositional technique of two identical patterns drifting in and out of phase to generate new patterns.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Phase_music",
-		"wikiSummary": "Phase music is a form of music that uses phasing as a primary compositional process. It is an approach to musical composition that is often associated with minimal music, as it shares similar characteristics, but some commentators prefer to treat phase music as a separate category. Phasing is a compositional technique in which the same part is played on two musical instruments, in steady but not identical tempo. Thus, the two instruments gradually shift out of unison, creating first a slight echo as one instrument plays a little behind the other, then a doubling effect with each note heard twice, then a complex ringing effect, and eventually coming back through doubling and echo into unison."
+		"wikiSummary": "Phase music is a form of music that uses phasing as a primary compositional process. It is an approach to musical composition that is often associated with minimal music, as it shares similar characteristics, but some commentators prefer to treat phase music as a separate category. Phasing is a compositional technique in which the same part is played on two musical instruments, in steady but not identical tempo. Thus, the two instruments gradually shift out of unison, creating first a slight echo as one instrument plays a little behind the other, then a doubling effect with each note heard twice, then a complex ringing effect, and eventually coming back through doubling and echo into unison.",
+		"rarity": "legendary"
 	},
 	{
 		"id": "tape-loop",
@@ -2883,7 +2904,8 @@
 		"prompt": "Build a section using only field-recorded source material (no synths, no drum samples). Process it however you want.",
 		"definition": "Composition assembled from recorded real-world sounds rather than from notated instruments or pure synthesis.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Musique_concr%C3%A8te",
-		"wikiSummary": "Musique concrète is a type of music composition that utilizes recorded sounds as raw material. Sounds are often modified through the application of audio signal processing and tape music techniques, and may be assembled into a form of sound collage. It can feature sounds derived from recordings of musical instruments, the human voice, and the natural environment, as well as those created using sound synthesis and computer-based digital signal processing. Compositions in this idiom are not restricted to the normal musical rules of melody, harmony, rhythm, and metre. The technique exploits acousmatic sound, such that sound identities can often be intentionally obscured or appear unconnected to their source cause."
+		"wikiSummary": "Musique concrète is a type of music composition that utilizes recorded sounds as raw material. Sounds are often modified through the application of audio signal processing and tape music techniques, and may be assembled into a form of sound collage. It can feature sounds derived from recordings of musical instruments, the human voice, and the natural environment, as well as those created using sound synthesis and computer-based digital signal processing. Compositions in this idiom are not restricted to the normal musical rules of melody, harmony, rhythm, and metre. The technique exploits acousmatic sound, such that sound identities can often be intentionally obscured or appear unconnected to their source cause.",
+		"rarity": "rare"
 	},
 	{
 		"id": "acousmatic-sound",
@@ -2897,7 +2919,8 @@
 		"prompt": "Use a single sound whose physical source the listener cannot identify. Make it the harmonic anchor of your piece.",
 		"definition": "A sound heard without seeing or knowing its physical source — a whole tradition of electroacoustic music is built on it.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Acousmatic_music",
-		"wikiSummary": "\nAcousmatic music is a form of electroacoustic music that is specifically composed for presentation using speakers, as opposed to a live performance. It stems from a compositional tradition that dates back to the origins of musique concrète in the late 1940s. Unlike acoustic or electroacoustic musical works that are realized from scores, compositions that are purely acousmatic often exist solely as fixed media audio recordings."
+		"wikiSummary": "\nAcousmatic music is a form of electroacoustic music that is specifically composed for presentation using speakers, as opposed to a live performance. It stems from a compositional tradition that dates back to the origins of musique concrète in the late 1940s. Unlike acoustic or electroacoustic musical works that are realized from scores, compositions that are purely acousmatic often exist solely as fixed media audio recordings.",
+		"rarity": "rare"
 	},
 	{
 		"id": "generative-music",
@@ -2912,7 +2935,8 @@
 		"prompt": "Define one simple rule (e.g. \"trigger a random pitch from D dorian every 1.7 seconds\") and let it run untouched for 4 minutes.",
 		"definition": "Music created by a set of rules or processes that produce ongoing output without manual composition of each moment. Term coined by Brian Eno.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Generative_music",
-		"wikiSummary": "Generative music is a term popularized by Brian Eno to describe music that is ever-different and changing, and that is created by a system."
+		"wikiSummary": "Generative music is a term popularized by Brian Eno to describe music that is ever-different and changing, and that is created by a system.",
+		"rarity": "rare"
 	},
 	{
 		"id": "process-music",
@@ -2926,7 +2950,8 @@
 		"prompt": "Pick a single process (e.g. one note drops out every 16 bars) and let it run to completion as the entire track.",
 		"definition": "A compositional approach where a simple process is established and audibly runs to completion. Strongly associated with Steve Reich.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Process_music",
-		"wikiSummary": "Process music is music that arises from a process. It may make that process audible to the listener, or the process may be concealed."
+		"wikiSummary": "Process music is music that arises from a process. It may make that process audible to the listener, or the process may be concealed.",
+		"rarity": "rare"
 	},
 	{
 		"id": "aleatoric",
@@ -2940,7 +2965,8 @@
 		"prompt": "Use a dice roll (or random plugin) to determine the chord progression at each section boundary. Commit to the result.",
 		"definition": "Music incorporating chance or randomness into composition or performance decisions.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Aleatoric_music",
-		"wikiSummary": "Aleatoric music is music in which some element of the composition is left to chance, some primary element of a composed work's realization is left to the determination of its performer(s), or both. The term is most often associated with procedures in which the chance element involves a relatively limited number of possibilities."
+		"wikiSummary": "Aleatoric music is music in which some element of the composition is left to chance, some primary element of a composed work's realization is left to the determination of its performer(s), or both. The term is most often associated with procedures in which the chance element involves a relatively limited number of possibilities.",
+		"rarity": "rare"
 	},
 	{
 		"id": "stochastic-music",
@@ -2954,7 +2980,8 @@
 		"prompt": "Design a section where pitch density, register and dynamics are controlled by probability distributions rather than written notes.",
 		"definition": "Music composed using statistical distributions to determine its parameters — pioneered by Iannis Xenakis.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Stochastic",
-		"wikiSummary": "Stochastic is the property of being well-described by a random probability distribution. Stochasticity and randomness are technically distinct concepts. Stochasticity refers to a modeling approach, while randomness describes phenomena. These terms are often used interchangeably. In probability theory, the formal concept of a stochastic process is also referred to as a random process."
+		"wikiSummary": "Stochastic is the property of being well-described by a random probability distribution. Stochasticity and randomness are technically distinct concepts. Stochasticity refers to a modeling approach, while randomness describes phenomena. These terms are often used interchangeably. In probability theory, the formal concept of a stochastic process is also referred to as a random process.",
+		"rarity": "rare"
 	},
 	{
 		"id": "sound-mass",
@@ -2968,7 +2995,8 @@
 		"prompt": "Stack 16 voices playing micro-detuned versions of the same pitch and crossfade their relative volumes for a minute. No rhythm, no chord change.",
 		"definition": "A compositional approach where individual pitches and rhythms dissolve into a continuous textural mass (Ligeti, Penderecki).",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Sound_mass",
-		"wikiSummary": "In musical composition, a sound mass or sound collective is the result of compositional techniques, in which \"the importance of individual pitches\" is minimized \"in preference for texture, timbre, and dynamics as primary shapers of gesture and impact\", obscuring \"the boundary between sound and noise\"."
+		"wikiSummary": "In musical composition, a sound mass or sound collective is the result of compositional techniques, in which \"the importance of individual pitches\" is minimized \"in preference for texture, timbre, and dynamics as primary shapers of gesture and impact\", obscuring \"the boundary between sound and noise\".",
+		"rarity": "rare"
 	},
 	{
 		"id": "pitch-class-set",
@@ -2982,7 +3010,8 @@
 		"prompt": "Pick an unordered set of 4 pitch classes (e.g. {C, D♭, E, G♭}) and restrict your entire melody to permutations of that set.",
 		"definition": "Set theory applied to music: treating chords and melodies as unordered collections of pitch classes for analysis and composition.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Set_theory_(music)",
-		"wikiSummary": "Musical set theory provides concepts for categorizing musical objects and describing their relationships. Howard Hanson first elaborated many of the concepts for analyzing tonal music. Other theorists, such as Allen Forte, further developed the theory for analyzing atonal music, drawing on the twelve-tone theory of Milton Babbitt. The concepts of musical set theory are very general and can be applied to tonal and atonal styles in any equal temperament tuning system, and to some extent more generally than that."
+		"wikiSummary": "Musical set theory provides concepts for categorizing musical objects and describing their relationships. Howard Hanson first elaborated many of the concepts for analyzing tonal music. Other theorists, such as Allen Forte, further developed the theory for analyzing atonal music, drawing on the twelve-tone theory of Milton Babbitt. The concepts of musical set theory are very general and can be applied to tonal and atonal styles in any equal temperament tuning system, and to some extent more generally than that.",
+		"rarity": "rare"
 	},
 	{
 		"id": "mensural-canon",
@@ -2996,7 +3025,8 @@
 		"prompt": "Have two voices play the same melody but at different speed ratios (e.g. 1:2). The slow voice is the lead, the fast voice is its echo.",
 		"definition": "A strict canon where voices proceed through the same line at different speed ratios.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Prolation_canon",
-		"wikiSummary": "In music, a prolation canon is a type of canon, a musical composition wherein the main melody is accompanied by one or more imitations of that melody in other voices. Not only do the voices sing or play the same melody, they do so at different speeds. Accompanying voices may enter either simultaneously or successively."
+		"wikiSummary": "In music, a prolation canon is a type of canon, a musical composition wherein the main melody is accompanied by one or more imitations of that melody in other voices. Not only do the voices sing or play the same melody, they do so at different speeds. Accompanying voices may enter either simultaneously or successively.",
+		"rarity": "legendary"
 	},
 	{
 		"id": "sensory-dissonance",
@@ -3007,7 +3037,8 @@
 		"prompt": "Stack two pitches inside the critical band (within ~15 percent of each other) and ride that beating roughness as a lead voice for 8 bars.",
 		"definition": "Roughness perceived when two tones interfere within the critical band, independent of music-theoretic dissonance.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Consonance_and_dissonance",
-		"wikiSummary": "In music, consonance and dissonance are categorizations of simultaneous or successive sounds. Within the Western tradition, some listeners associate consonance with sweetness, pleasantness, and acceptability, and dissonance with harshness, unpleasantness, or unacceptability, although there is broad acknowledgement that this depends also on familiarity and musical expertise. The terms form a structural dichotomy in which they define each other by mutual exclusion: a consonance is what is not dissonant, and a dissonance is what is not consonant. However, a finer consideration shows that the distinction forms a gradation, from the most consonant to the most dissonant. In casual discourse, as German composer and music theorist Paul Hindemith stressed,\"The two concepts have never been completely explained, and for a thousand years the definitions have varied\"."
+		"wikiSummary": "In music, consonance and dissonance are categorizations of simultaneous or successive sounds. Within the Western tradition, some listeners associate consonance with sweetness, pleasantness, and acceptability, and dissonance with harshness, unpleasantness, or unacceptability, although there is broad acknowledgement that this depends also on familiarity and musical expertise. The terms form a structural dichotomy in which they define each other by mutual exclusion: a consonance is what is not dissonant, and a dissonance is what is not consonant. However, a finer consideration shows that the distinction forms a gradation, from the most consonant to the most dissonant. In casual discourse, as German composer and music theorist Paul Hindemith stressed,\"The two concepts have never been completely explained, and for a thousand years the definitions have varied\".",
+		"rarity": "rare"
 	},
 	{
 		"id": "auditory-streaming",
@@ -3021,7 +3052,8 @@
 		"prompt": "Write a fast single-line melody that leaps wide between two registers so the brain hears it as two interlocked voices instead of one.",
 		"definition": "The brain’s tendency to group successive tones into distinct perceptual streams based on pitch proximity.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Auditory_scene_analysis",
-		"wikiSummary": "In perception and psychophysics, auditory scene analysis (ASA) is a proposed model for the basis of auditory perception. This is understood as the process by which the human auditory system organizes sound into perceptually meaningful elements. The term was coined by psychologist Albert Bregman. The related concept in machine perception is computational auditory scene analysis (CASA), which is closely related to source separation and blind signal separation."
+		"wikiSummary": "In perception and psychophysics, auditory scene analysis (ASA) is a proposed model for the basis of auditory perception. This is understood as the process by which the human auditory system organizes sound into perceptually meaningful elements. The term was coined by psychologist Albert Bregman. The related concept in machine perception is computational auditory scene analysis (CASA), which is closely related to source separation and blind signal separation.",
+		"rarity": "rare"
 	},
 	{
 		"id": "earworm-motif",
