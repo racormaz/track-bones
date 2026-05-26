@@ -7,6 +7,20 @@
 			{ "id": "tech-house", "label": "Tech" },
 			{ "id": "progressive-house", "label": "Progressive" },
 			{ "id": "lo-fi-house", "label": "Lo-fi" }
+		],
+		"templates": [
+			{
+				"id": "club-mix",
+				"label": "Club Mix",
+				"description": "8-minute DJ-friendly extended mix.",
+				"sections": [
+					{ "id": "intro", "label": "Intro", "barHint": "32-64 bars" },
+					{ "id": "breakdown", "label": "Breakdown", "barHint": "16-32 bars" },
+					{ "id": "drop", "label": "Drop", "barHint": "32-64 bars" },
+					{ "id": "break", "label": "Mid Break", "barHint": "16-32 bars" },
+					{ "id": "outro", "label": "Outro", "barHint": "32 bars" }
+				]
+			}
 		]
 	},
 	{
@@ -17,6 +31,21 @@
 			{ "id": "industrial-techno", "label": "Industrial" },
 			{ "id": "minimal-techno", "label": "Minimal" },
 			{ "id": "dub-techno", "label": "Dub" }
+		],
+		"templates": [
+			{
+				"id": "club-tool",
+				"label": "Club Tool",
+				"description": "Long evolving structure with two energy peaks.",
+				"sections": [
+					{ "id": "intro", "label": "Intro", "barHint": "64 bars" },
+					{ "id": "build", "label": "First Build", "barHint": "16-32 bars" },
+					{ "id": "peak1", "label": "First Peak", "barHint": "32 bars" },
+					{ "id": "break", "label": "Mid Break" },
+					{ "id": "peak2", "label": "Second Peak", "barHint": "32-64 bars" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
 		]
 	},
 	{
@@ -27,6 +56,20 @@
 			{ "id": "neurofunk", "label": "Neurofunk" },
 			{ "id": "jungle", "label": "Jungle" },
 			{ "id": "jump-up", "label": "Jump-up" }
+		],
+		"templates": [
+			{
+				"id": "standard",
+				"label": "Standard",
+				"description": "Intro → first drop → mid-section break → second drop.",
+				"sections": [
+					{ "id": "intro", "label": "Intro", "barHint": "32 bars" },
+					{ "id": "drop1", "label": "First Drop", "barHint": "32-48 bars" },
+					{ "id": "break", "label": "Mid Break", "barHint": "16-32 bars" },
+					{ "id": "drop2", "label": "Second Drop", "barHint": "32-64 bars" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
 		]
 	},
 	{
@@ -37,6 +80,18 @@
 			{ "id": "dark-ambient", "label": "Dark" },
 			{ "id": "downtempo", "label": "Downtempo" },
 			{ "id": "new-age", "label": "New Age" }
+		],
+		"templates": [
+			{
+				"id": "free-form",
+				"label": "Free-form",
+				"description": "No rigid template. Three phases of evolving texture.",
+				"sections": [
+					{ "id": "opening", "label": "Opening" },
+					{ "id": "development", "label": "Development" },
+					{ "id": "dissolution", "label": "Dissolution" }
+				]
+			}
 		]
 	},
 	{
@@ -46,9 +101,38 @@
 			{ "id": "musique-concrete", "label": "Musique Concrète" },
 			{ "id": "glitch", "label": "Glitch" },
 			{ "id": "noise", "label": "Noise" }
+		],
+		"templates": [
+			{
+				"id": "free-form",
+				"label": "Free-form",
+				"description": "No template. Four phases of statement and transformation.",
+				"sections": [
+					{ "id": "opening", "label": "Opening" },
+					{ "id": "statement", "label": "Statement" },
+					{ "id": "development", "label": "Development" },
+					{ "id": "dissolution", "label": "Dissolution" }
+				]
+			}
 		]
 	},
-	{ "id": "idm", "label": "IDM" },
+	{
+		"id": "idm",
+		"label": "IDM",
+		"templates": [
+			{
+				"id": "free-form",
+				"label": "Free-form",
+				"description": "Through-composed, deliberately resistant to rigid section labels.",
+				"sections": [
+					{ "id": "opening", "label": "Opening" },
+					{ "id": "statement", "label": "Statement" },
+					{ "id": "development", "label": "Development" },
+					{ "id": "dissolution", "label": "Dissolution" }
+				]
+			}
+		]
+	},
 	{
 		"id": "bass",
 		"label": "Bass Music",
@@ -56,6 +140,21 @@
 			{ "id": "wave", "label": "Wave" },
 			{ "id": "halftime", "label": "Halftime" },
 			{ "id": "midtempo-bass", "label": "Midtempo" }
+		],
+		"templates": [
+			{
+				"id": "standard",
+				"label": "Standard",
+				"description": "Intro, two drops with a mid-track break.",
+				"sections": [
+					{ "id": "intro", "label": "Intro" },
+					{ "id": "build", "label": "Build" },
+					{ "id": "drop1", "label": "First Drop" },
+					{ "id": "break", "label": "Mid Break" },
+					{ "id": "drop2", "label": "Second Drop" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
 		]
 	},
 	{
@@ -65,6 +164,21 @@
 			{ "id": "uk-dubstep", "label": "UK / Deep" },
 			{ "id": "brostep", "label": "Brostep" },
 			{ "id": "riddim", "label": "Riddim" }
+		],
+		"templates": [
+			{
+				"id": "standard",
+				"label": "Standard",
+				"description": "Intro, build, half-time drop, second drop.",
+				"sections": [
+					{ "id": "intro", "label": "Intro", "barHint": "16-32 bars" },
+					{ "id": "build", "label": "Build", "barHint": "8-16 bars" },
+					{ "id": "drop1", "label": "First Drop", "barHint": "32 bars" },
+					{ "id": "break", "label": "Mid Break" },
+					{ "id": "drop2", "label": "Second Drop", "barHint": "32 bars" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
 		]
 	},
 	{
@@ -74,13 +188,157 @@
 			{ "id": "uplifting-trance", "label": "Uplifting" },
 			{ "id": "progressive-trance", "label": "Progressive" },
 			{ "id": "goa-trance", "label": "Goa" }
+		],
+		"templates": [
+			{
+				"id": "uplifting",
+				"label": "Uplifting",
+				"description": "Long build, anthemic breakdown, double drop.",
+				"sections": [
+					{ "id": "intro", "label": "Intro", "barHint": "32 bars" },
+					{ "id": "first-drop", "label": "First Drop", "barHint": "32 bars" },
+					{ "id": "breakdown", "label": "Breakdown", "barHint": "32-64 bars" },
+					{ "id": "build", "label": "Build", "barHint": "16-32 bars" },
+					{ "id": "main-drop", "label": "Main Drop", "barHint": "32-64 bars" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
 		]
 	},
-	{ "id": "acid-house", "label": "Acid House" },
-	{ "id": "uk-garage", "label": "UK Garage" },
-	{ "id": "psytrance", "label": "Psytrance" },
-	{ "id": "trap", "label": "Trap" },
-	{ "id": "future-bass", "label": "Future Bass" },
-	{ "id": "synthwave", "label": "Synthwave" },
-	{ "id": "hardstyle", "label": "Hardstyle" }
+	{
+		"id": "acid-house",
+		"label": "Acid House",
+		"templates": [
+			{
+				"id": "single-pattern",
+				"label": "Single Pattern",
+				"description": "One 16-step 303 line arranged purely by filter automation.",
+				"sections": [
+					{ "id": "intro", "label": "Intro" },
+					{ "id": "filter-open", "label": "Filter Opens" },
+					{ "id": "peak", "label": "Peak", "barHint": "32-64 bars" },
+					{ "id": "filter-close", "label": "Filter Closes" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
+		]
+	},
+	{
+		"id": "uk-garage",
+		"label": "UK Garage",
+		"templates": [
+			{
+				"id": "2-step",
+				"label": "2-Step",
+				"description": "Verse / chorus toggle between 2-step and 4-to-the-floor.",
+				"sections": [
+					{ "id": "intro", "label": "Intro" },
+					{ "id": "verse", "label": "Verse (2-step)" },
+					{ "id": "chorus", "label": "Chorus (4/4)" },
+					{ "id": "break", "label": "Break" },
+					{ "id": "chorus2", "label": "Final Chorus" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
+		]
+	},
+	{
+		"id": "psytrance",
+		"label": "Psytrance",
+		"templates": [
+			{
+				"id": "continuous-build",
+				"label": "Continuous Build",
+				"description": "Rolling bass throughout, melodic layers add and dissolve.",
+				"sections": [
+					{ "id": "intro", "label": "Intro" },
+					{ "id": "bass-roll", "label": "Bass Roll" },
+					{ "id": "melodic-layer", "label": "Melodic Layer" },
+					{ "id": "peak", "label": "Peak" },
+					{ "id": "dissolve", "label": "Dissolve" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
+		]
+	},
+	{
+		"id": "trap",
+		"label": "Trap",
+		"templates": [
+			{
+				"id": "standard",
+				"label": "Standard",
+				"description": "Intro, build, two drops separated by a switch.",
+				"sections": [
+					{ "id": "intro", "label": "Intro" },
+					{ "id": "build", "label": "Build" },
+					{ "id": "drop1", "label": "First Drop" },
+					{ "id": "switch", "label": "Switch" },
+					{ "id": "drop2", "label": "Second Drop" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
+		]
+	},
+	{
+		"id": "future-bass",
+		"label": "Future Bass",
+		"templates": [
+			{
+				"id": "standard",
+				"label": "Standard",
+				"description": "Vocal-chop chord stabs across a verse-chorus shape.",
+				"sections": [
+					{ "id": "intro", "label": "Intro" },
+					{ "id": "verse", "label": "Verse" },
+					{ "id": "build", "label": "Build" },
+					{ "id": "drop1", "label": "First Drop" },
+					{ "id": "break", "label": "Mid Break" },
+					{ "id": "drop2", "label": "Second Drop" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
+		]
+	},
+	{
+		"id": "synthwave",
+		"label": "Synthwave",
+		"templates": [
+			{
+				"id": "pop-form",
+				"label": "Pop Form",
+				"description": "Verse / chorus / bridge, borrowed from 80s pop.",
+				"sections": [
+					{ "id": "intro", "label": "Intro" },
+					{ "id": "verse1", "label": "Verse 1" },
+					{ "id": "chorus1", "label": "Chorus 1" },
+					{ "id": "verse2", "label": "Verse 2" },
+					{ "id": "chorus2", "label": "Chorus 2" },
+					{ "id": "bridge", "label": "Bridge" },
+					{ "id": "chorus3", "label": "Final Chorus" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
+		]
+	},
+	{
+		"id": "hardstyle",
+		"label": "Hardstyle",
+		"templates": [
+			{
+				"id": "standard",
+				"label": "Standard",
+				"description": "Build, kick-roll, drop with reverse-bass, second drop.",
+				"sections": [
+					{ "id": "intro", "label": "Intro" },
+					{ "id": "build", "label": "Build" },
+					{ "id": "kick-roll", "label": "Kick Roll" },
+					{ "id": "drop1", "label": "First Drop" },
+					{ "id": "break", "label": "Break" },
+					{ "id": "drop2", "label": "Second Drop (reverse-bass)" },
+					{ "id": "outro", "label": "Outro" }
+				]
+			}
+		]
+	}
 ]

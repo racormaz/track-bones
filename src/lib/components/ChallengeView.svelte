@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { Concept, GenreId, Difficulty, Mode } from '$lib/types';
+	import type { Concept, GenreId, Difficulty, Mode, SectionId, SectionTemplate } from '$lib/types';
 	import { DIFFICULTY_LABELS, MODE_LABELS, CATEGORIES } from '$lib/types';
 	import ChallengeCard from './ChallengeCard.svelte';
+	import SectionHeader from './SectionHeader.svelte';
 	import Icon from './Icon.svelte';
 	import genres from '$lib/content/genres.json';
 	import type { Genre } from '$lib/types';
@@ -12,6 +13,8 @@
 		mode,
 		genre,
 		difficulty,
+		template,
+		sectionAssignments,
 		onRerollOne,
 		onRerollAll,
 		onSave,
@@ -23,6 +26,8 @@
 		mode: Mode;
 		genre: GenreId;
 		difficulty: Difficulty;
+		template?: SectionTemplate | null;
+		sectionAssignments?: Record<string, SectionId>;
 		onRerollOne: (index: number) => void;
 		onRerollAll: () => void;
 		onSave: () => void;
@@ -34,8 +39,27 @@
 	const genreLabel = $derived(genreList.find((g) => g.id === genre)?.label ?? genre);
 
 	const orderedConcepts = $derived(
-		conceptIds.map((id) => conceptsById.get(id)).filter((c): c is Concept => c !== undefined)
+		conceptIds
+			.map((id, i) => ({ concept: conceptsById.get(id), index: i }))
+			.filter((x): x is { concept: Concept; index: number } => x.concept !== undefined)
 	);
+
+	const useSections = $derived(
+		mode === 'deep' && template != null && sectionAssignments != null
+	);
+
+	// Build section → list of {concept, index} in section order, only when useSections.
+	const grouped = $derived.by(() => {
+		if (!useSections || !template || !sectionAssignments) return null;
+		return template.sections
+			.map((section) => ({
+				section,
+				items: orderedConcepts.filter(
+					({ concept }) => sectionAssignments[concept.id] === section.id
+				)
+			}))
+			.filter((group) => group.items.length > 0);
+	});
 </script>
 
 <section class="flex flex-col gap-5 px-5 pt-8 pb-32">
@@ -51,18 +75,38 @@
 			<span class="text-border" aria-hidden="true">·</span>
 			<span class="text-muted">{DIFFICULTY_LABELS[difficulty]}</span>
 		</button>
-		<p class="text-xs tracking-[0.18em] text-muted uppercase">Your bones</p>
+		{#if useSections && template}
+			<p class="text-xs text-muted">{template.label}</p>
+		{:else}
+			<p class="text-xs tracking-[0.18em] text-muted uppercase">Your bones</p>
+		{/if}
 	</header>
 
-	<ol class="flex flex-col gap-3">
-		{#each CATEGORIES as cat, i (cat)}
-			{#if orderedConcepts[i]}
-				<li>
-					<ChallengeCard concept={orderedConcepts[i]} onReroll={() => onRerollOne(i)} />
-				</li>
-			{/if}
-		{/each}
-	</ol>
+	{#if useSections && grouped}
+		<div class="flex flex-col gap-3">
+			{#each grouped as group (group.section.id)}
+				<SectionHeader label={group.section.label} barHint={group.section.barHint} />
+				<ol class="flex flex-col gap-3">
+					{#each group.items as { concept, index } (concept.id)}
+						<li>
+							<ChallengeCard {concept} onReroll={() => onRerollOne(index)} />
+						</li>
+					{/each}
+				</ol>
+			{/each}
+		</div>
+	{:else}
+		<ol class="flex flex-col gap-3">
+			{#each CATEGORIES as cat, i (cat)}
+				{@const item = orderedConcepts.find((x) => x.index === i)}
+				{#if item}
+					<li>
+						<ChallengeCard concept={item.concept} onReroll={() => onRerollOne(i)} />
+					</li>
+				{/if}
+			{/each}
+		</ol>
+	{/if}
 </section>
 
 <nav

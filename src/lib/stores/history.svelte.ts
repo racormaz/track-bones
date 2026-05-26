@@ -44,6 +44,8 @@ export function saveChallenge(args: {
 	genre: GenreId;
 	difficulty: Difficulty;
 	conceptIds: string[];
+	templateId?: string;
+	sectionAssignments?: Record<string, string>;
 }): Challenge {
 	const entry: Challenge = {
 		id: uuid(),
@@ -51,7 +53,9 @@ export function saveChallenge(args: {
 		mode: args.mode,
 		genre: args.genre,
 		difficulty: args.difficulty,
-		conceptIds: args.conceptIds
+		conceptIds: args.conceptIds,
+		templateId: args.templateId,
+		sectionAssignments: args.sectionAssignments
 	};
 	state.items = [entry, ...state.items].slice(0, CAP);
 	persist(state.items);

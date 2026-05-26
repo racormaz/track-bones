@@ -1,4 +1,11 @@
-import type { Concept, Category, Difficulty, GenreId } from '../types';
+import type {
+	Concept,
+	Category,
+	Difficulty,
+	GenreId,
+	SectionTemplate,
+	SectionId
+} from '../types';
 import { CATEGORIES } from '../types';
 
 const GENRE_BIAS = 0.7;
@@ -73,6 +80,60 @@ export function generateChallenge(input: GenerateInput): string[] {
 	}
 
 	return picked;
+}
+
+// Pick a template for a genre. Weighted random when multiple templates exist.
+export function pickTemplate(
+	templates: SectionTemplate[] | undefined,
+	random: () => number = Math.random
+): SectionTemplate | null {
+	if (!templates || templates.length === 0) return null;
+	return templates[Math.floor(random() * templates.length)];
+}
+
+// Spread-first, affinity-second assignment of picked concepts to template sections.
+// Returns a map of conceptId → sectionId.
+export function assignSections(args: {
+	conceptIds: string[];
+	conceptsById: Map<string, Concept>;
+	template: SectionTemplate;
+	random?: () => number;
+}): Record<string, SectionId> {
+	const random = args.random ?? Math.random;
+	const sectionIds = args.template.sections.map((s) => s.id);
+	const result: Record<string, SectionId> = {};
+	const used = new Set<SectionId>();
+
+	// Build (concept, allowedSections[]) tuples.
+	const items = args.conceptIds.map((id) => {
+		const c = args.conceptsById.get(id);
+		const affinity = c?.sections ?? [];
+		const allowed = affinity.filter((s) => sectionIds.includes(s));
+		return {
+			id,
+			allowed: allowed.length > 0 ? allowed : sectionIds.slice() // fall back to all sections
+		};
+	});
+
+	// Most-constrained-first.
+	items.sort((a, b) => a.allowed.length - b.allowed.length);
+
+	for (const item of items) {
+		// First try an unused allowed section.
+		let chosen = item.allowed.find((s) => !used.has(s));
+		if (!chosen) {
+			// Fall back: any unused section.
+			chosen = sectionIds.find((s) => !used.has(s));
+		}
+		if (!chosen) {
+			// Pure overflow: pick a random section (shouldn't happen with 5 cards ≤ N sections).
+			chosen = sectionIds[Math.floor(random() * sectionIds.length)];
+		}
+		result[item.id] = chosen;
+		used.add(chosen);
+	}
+
+	return result;
 }
 
 export function rerollOne(

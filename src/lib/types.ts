@@ -64,6 +64,7 @@ export type Concept = {
 	wikiUrl: string | null;
 	wikiSummary?: string;
 	secondaryRef?: SecondaryRef;
+	sections?: SectionId[]; // section affinity for Deep mode
 	relatedIds?: string[];
 };
 
@@ -71,6 +72,7 @@ export type Genre = {
 	id: GenreId;
 	label: string;
 	subgenres?: { id: string; label: string }[];
+	templates?: SectionTemplate[]; // optional during incremental rollout
 };
 
 export type Mode = 'quick' | 'deep';
@@ -80,6 +82,21 @@ export const MODE_LABELS: Record<Mode, string> = {
 	deep: 'Deep'
 };
 
+export type SectionId = string;
+
+export type Section = {
+	id: SectionId;
+	label: string;
+	barHint?: string;
+};
+
+export type SectionTemplate = {
+	id: string;
+	label: string;
+	description?: string;
+	sections: Section[];
+};
+
 export type Challenge = {
 	id: string; // uuid-ish
 	timestamp: number; // epoch ms
@@ -87,6 +104,8 @@ export type Challenge = {
 	genre: GenreId;
 	difficulty: Difficulty;
 	conceptIds: string[]; // one per category, in CATEGORIES order
+	templateId?: string; // deep mode only
+	sectionAssignments?: Record<string, SectionId>; // deep mode only; conceptId → sectionId
 };
 
 export type Preferences = {

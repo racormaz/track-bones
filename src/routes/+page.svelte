@@ -1,12 +1,27 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import type { Concept, GenreId, Difficulty, Challenge, Mode } from '$lib/types';
+	import type {
+		Concept,
+		GenreId,
+		Difficulty,
+		Challenge,
+		Mode,
+		Genre,
+		SectionId,
+		SectionTemplate
+	} from '$lib/types';
 	import { CATEGORIES } from '$lib/types';
 	import conceptsRaw from '$lib/content/concepts.json';
+	import genresRaw from '$lib/content/genres.json';
 	import { preferences, setMode, setGenre, setDifficulty } from '$lib/stores/preferences.svelte';
 	import { history, saveChallenge, recentConceptIds } from '$lib/stores/history.svelte';
-	import { generateChallenge, rerollOne } from '$lib/challenge/generator';
+	import {
+		generateChallenge,
+		rerollOne,
+		pickTemplate,
+		assignSections
+	} from '$lib/challenge/generator';
 	import ModePicker from '$lib/components/ModePicker.svelte';
 	import GenrePicker from '$lib/components/GenrePicker.svelte';
 	import DifficultyPicker from '$lib/components/DifficultyPicker.svelte';
@@ -15,11 +30,15 @@
 
 	const concepts = conceptsRaw as Concept[];
 	const conceptsById = new Map(concepts.map((c) => [c.id, c] as const));
+	const genres = genresRaw as Genre[];
+	const genresById = new Map(genres.map((g) => [g.id, g] as const));
 
 	type Step = 'mode' | 'genre' | 'difficulty' | 'challenge';
 
 	let step = $state<Step>('mode');
 	let conceptIds = $state<string[]>([]);
+	let template = $state<SectionTemplate | null>(null);
+	let sectionAssignments = $state<Record<string, SectionId> | undefined>(undefined);
 	let drawerOpen = $state(false);
 	let toast = $state<string | null>(null);
 
@@ -39,6 +58,24 @@
 				difficulty: preferences.lastDifficulty,
 				excludeIds: recentConceptIds(10)
 			});
+
+			if (preferences.lastMode === 'deep') {
+				const genre = genresById.get(preferences.lastGenre);
+				template = pickTemplate(genre?.templates);
+				if (template) {
+					sectionAssignments = assignSections({
+						conceptIds,
+						conceptsById,
+						template
+					});
+				} else {
+					sectionAssignments = undefined;
+				}
+			} else {
+				template = null;
+				sectionAssignments = undefined;
+			}
+
 			step = 'challenge';
 		} catch (err) {
 			console.error(err);
@@ -92,6 +129,11 @@
 				excludeIds: [...conceptIds, ...recentConceptIds(10)]
 			});
 			conceptIds = conceptIds.map((id, i) => (i === index ? newId : id));
+
+			// Re-assign sections if in Deep mode so the new concept sits somewhere sensible.
+			if (preferences.lastMode === 'deep' && template) {
+				sectionAssignments = assignSections({ conceptIds, conceptsById, template });
+			}
 		} catch (err) {
 			console.error(err);
 			showToast('No alternatives left for this slot.');
@@ -115,7 +157,9 @@
 			mode: preferences.lastMode,
 			genre: preferences.lastGenre,
 			difficulty: preferences.lastDifficulty,
-			conceptIds
+			conceptIds,
+			templateId: template?.id,
+			sectionAssignments
 		});
 		showToast('Saved to history');
 	}
@@ -142,6 +186,25 @@
 				/* leave partial */
 			}
 		}
+
+		// Restore template + sections from saved challenge if present, otherwise re-derive.
+		if (c.mode === 'deep') {
+			const genre = genresById.get(c.genre);
+			const savedTemplate = c.templateId
+				? (genre?.templates ?? []).find((t) => t.id === c.templateId)
+				: undefined;
+			template = savedTemplate ?? pickTemplate(genre?.templates);
+			if (template) {
+				sectionAssignments =
+					c.sectionAssignments ?? assignSections({ conceptIds, conceptsById, template });
+			} else {
+				sectionAssignments = undefined;
+			}
+		} else {
+			template = null;
+			sectionAssignments = undefined;
+		}
+
 		step = 'challenge';
 		drawerOpen = false;
 	}
@@ -190,6 +253,8 @@
 				mode={preferences.lastMode}
 				genre={preferences.lastGenre}
 				difficulty={preferences.lastDifficulty}
+				{template}
+				{sectionAssignments}
 				{onRerollOne}
 				{onRerollAll}
 				{onSave}
