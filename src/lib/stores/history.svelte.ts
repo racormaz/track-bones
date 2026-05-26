@@ -1,5 +1,5 @@
 import { browser } from '$app/environment';
-import type { Challenge, GenreId, Difficulty } from '../types';
+import type { Challenge, GenreId, Difficulty, Mode } from '../types';
 
 const KEY = 'track-bones:history';
 const CAP = 50;
@@ -40,6 +40,7 @@ function uuid(): string {
 }
 
 export function saveChallenge(args: {
+	mode: Mode;
 	genre: GenreId;
 	difficulty: Difficulty;
 	conceptIds: string[];
@@ -47,6 +48,7 @@ export function saveChallenge(args: {
 	const entry: Challenge = {
 		id: uuid(),
 		timestamp: Date.now(),
+		mode: args.mode,
 		genre: args.genre,
 		difficulty: args.difficulty,
 		conceptIds: args.conceptIds

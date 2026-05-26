@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import type { Concept, GenreId, Difficulty, Challenge } from '$lib/types';
+	import type { Concept, GenreId, Difficulty, Challenge, Mode } from '$lib/types';
 	import { CATEGORIES } from '$lib/types';
 	import conceptsRaw from '$lib/content/concepts.json';
-	import { preferences, setGenre, setDifficulty } from '$lib/stores/preferences.svelte';
+	import { preferences, setMode, setGenre, setDifficulty } from '$lib/stores/preferences.svelte';
 	import { history, saveChallenge, recentConceptIds } from '$lib/stores/history.svelte';
 	import { generateChallenge, rerollOne } from '$lib/challenge/generator';
+	import ModePicker from '$lib/components/ModePicker.svelte';
 	import GenrePicker from '$lib/components/GenrePicker.svelte';
 	import DifficultyPicker from '$lib/components/DifficultyPicker.svelte';
 	import ChallengeView from '$lib/components/ChallengeView.svelte';
@@ -15,9 +16,9 @@
 	const concepts = conceptsRaw as Concept[];
 	const conceptsById = new Map(concepts.map((c) => [c.id, c] as const));
 
-	type Step = 'genre' | 'difficulty' | 'challenge';
+	type Step = 'mode' | 'genre' | 'difficulty' | 'challenge';
 
-	let step = $state<Step>('genre');
+	let step = $state<Step>('mode');
 	let conceptIds = $state<string[]>([]);
 	let drawerOpen = $state(false);
 	let toast = $state<string | null>(null);
@@ -46,10 +47,26 @@
 	}
 
 	onMount(() => {
-		if (preferences.lastGenre && preferences.lastDifficulty && concepts.length > 0) {
+		if (
+			preferences.lastMode &&
+			preferences.lastGenre &&
+			preferences.lastDifficulty &&
+			concepts.length > 0
+		) {
 			generate();
+		} else if (preferences.lastMode) {
+			step = 'genre';
 		}
 	});
+
+	function onPickMode(m: Mode) {
+		setMode(m);
+		if (preferences.lastGenre && preferences.lastDifficulty) {
+			generate();
+		} else {
+			step = 'genre';
+		}
+	}
 
 	function onPickGenre(g: GenreId) {
 		setGenre(g);
@@ -86,9 +103,16 @@
 	}
 
 	function onSave() {
-		if (preferences.lastGenre === null || preferences.lastDifficulty === null) return;
+		if (
+			preferences.lastMode === null ||
+			preferences.lastGenre === null ||
+			preferences.lastDifficulty === null
+		) {
+			return;
+		}
 		if (conceptIds.length === 0) return;
 		saveChallenge({
+			mode: preferences.lastMode,
 			genre: preferences.lastGenre,
 			difficulty: preferences.lastDifficulty,
 			conceptIds
@@ -101,6 +125,7 @@
 	}
 
 	function onOpenFromHistory(c: Challenge) {
+		if (c.mode) setMode(c.mode);
 		setGenre(c.genre);
 		setDifficulty(c.difficulty);
 		conceptIds = c.conceptIds.filter((id) => conceptsById.has(id));
@@ -122,7 +147,7 @@
 	}
 
 	function onChangePrefs() {
-		step = 'genre';
+		step = 'mode';
 	}
 </script>
 
@@ -145,6 +170,10 @@
 				The concepts.json seed hasn't been authored yet. Generation will be available once it is.
 			</p>
 		</div>
+	{:else if step === 'mode'}
+		<div in:fade={{ duration: 150 }}>
+			<ModePicker selected={preferences.lastMode} onSelect={onPickMode} />
+		</div>
 	{:else if step === 'genre'}
 		<div in:fade={{ duration: 150 }}>
 			<GenrePicker selected={preferences.lastGenre} onSelect={onPickGenre} />
@@ -153,11 +182,12 @@
 		<div in:fade={{ duration: 150 }}>
 			<DifficultyPicker selected={preferences.lastDifficulty} onSelect={onPickDifficulty} />
 		</div>
-	{:else if step === 'challenge' && preferences.lastGenre && preferences.lastDifficulty}
+	{:else if step === 'challenge' && preferences.lastMode && preferences.lastGenre && preferences.lastDifficulty}
 		<div in:fade={{ duration: 150 }}>
 			<ChallengeView
 				{conceptIds}
 				{conceptsById}
+				mode={preferences.lastMode}
 				genre={preferences.lastGenre}
 				difficulty={preferences.lastDifficulty}
 				{onRerollOne}

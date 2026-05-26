@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Concept, GenreId, Difficulty } from '$lib/types';
-	import { DIFFICULTY_LABELS, CATEGORIES } from '$lib/types';
+	import type { Concept, GenreId, Difficulty, Mode } from '$lib/types';
+	import { DIFFICULTY_LABELS, MODE_LABELS, CATEGORIES } from '$lib/types';
 	import ChallengeCard from './ChallengeCard.svelte';
 	import Icon from './Icon.svelte';
 	import genres from '$lib/content/genres.json';
@@ -9,6 +9,7 @@
 	let {
 		conceptIds,
 		conceptsById,
+		mode,
 		genre,
 		difficulty,
 		onRerollOne,
@@ -19,6 +20,7 @@
 	}: {
 		conceptIds: string[];
 		conceptsById: Map<string, Concept>;
+		mode: Mode;
 		genre: GenreId;
 		difficulty: Difficulty;
 		onRerollOne: (index: number) => void;
@@ -43,10 +45,11 @@
 			class="flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs hover:bg-card-2"
 			onclick={onChangePrefs}
 		>
+			<span class="text-accent">{MODE_LABELS[mode]}</span>
+			<span class="text-border" aria-hidden="true">·</span>
 			<span class="text-muted">{genreLabel}</span>
 			<span class="text-border" aria-hidden="true">·</span>
 			<span class="text-muted">{DIFFICULTY_LABELS[difficulty]}</span>
-			<span class="text-fg" aria-hidden="true">↺</span>
 		</button>
 		<p class="text-xs tracking-[0.18em] text-muted uppercase">Your bones</p>
 	</header>

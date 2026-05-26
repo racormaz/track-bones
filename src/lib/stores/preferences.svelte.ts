@@ -1,8 +1,13 @@
 import { browser } from '$app/environment';
-import type { Preferences, GenreId, Difficulty } from '../types';
+import type { Preferences, GenreId, Difficulty, Mode } from '../types';
 
 const KEY = 'track-bones:preferences';
-const DEFAULTS: Preferences = { lastGenre: null, lastDifficulty: null, theme: 'dark' };
+const DEFAULTS: Preferences = {
+	lastMode: null,
+	lastGenre: null,
+	lastDifficulty: null,
+	theme: 'dark'
+};
 
 function load(): Preferences {
 	if (!browser) return { ...DEFAULTS };
@@ -29,6 +34,11 @@ const state = $state<Preferences>(load());
 
 export const preferences = state;
 
+export function setMode(m: Mode) {
+	state.lastMode = m;
+	persist(state);
+}
+
 export function setGenre(g: GenreId) {
 	state.lastGenre = g;
 	persist(state);
@@ -40,6 +50,7 @@ export function setDifficulty(d: Difficulty) {
 }
 
 export function resetPreferences() {
+	state.lastMode = null;
 	state.lastGenre = null;
 	state.lastDifficulty = null;
 	persist(state);

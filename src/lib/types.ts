@@ -73,15 +73,24 @@ export type Genre = {
 	subgenres?: { id: string; label: string }[];
 };
 
+export type Mode = 'quick' | 'deep';
+
+export const MODE_LABELS: Record<Mode, string> = {
+	quick: 'Quick',
+	deep: 'Deep'
+};
+
 export type Challenge = {
 	id: string; // uuid-ish
 	timestamp: number; // epoch ms
+	mode?: Mode; // optional for backward-compat with v1 saves
 	genre: GenreId;
 	difficulty: Difficulty;
 	conceptIds: string[]; // one per category, in CATEGORIES order
 };
 
 export type Preferences = {
+	lastMode: Mode | null;
 	lastGenre: GenreId | null;
 	lastDifficulty: Difficulty | null;
 	theme: 'dark'; // reserved for future light mode
