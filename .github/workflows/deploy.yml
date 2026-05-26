@@ -25,7 +25,9 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      # `npm install` over `npm ci` because Tailwind v4 + lightningcss pull platform-specific
+      # optional native deps; the Windows-authored lockfile fails strict `npm ci` validation on Linux.
+      - run: npm install --no-audit --no-fund
 
       - name: Build (with base path)
         env:
