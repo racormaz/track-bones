@@ -1,9 +1,20 @@
 <script lang="ts">
-	import type { Difficulty } from '$lib/types';
+	import type { Difficulty, Mode } from '$lib/types';
 	import { DIFFICULTY_LABELS } from '$lib/types';
 
-	let { selected, onSelect }: { selected: Difficulty | null; onSelect: (d: Difficulty) => void } =
-		$props();
+	let {
+		selected,
+		mode,
+		combosEnabled,
+		onSelect,
+		onCombosToggle
+	}: {
+		selected: Difficulty | null;
+		mode: Mode | null;
+		combosEnabled: boolean;
+		onSelect: (d: Difficulty) => void;
+		onCombosToggle: (enabled: boolean) => void;
+	} = $props();
 
 	const items: { value: Difficulty; label: string; blurb: string }[] = [
 		{ value: 1, label: DIFFICULTY_LABELS[1], blurb: 'Common, well-known techniques.' },
@@ -34,4 +45,21 @@
 			</li>
 		{/each}
 	</ul>
+
+	{#if mode === 'deep'}
+		<label
+			class="mt-2 flex items-start gap-3 rounded-[var(--radius-card)] border border-border bg-card px-4 py-3 transition-colors hover:bg-card-2"
+		>
+			<input
+				type="checkbox"
+				class="mt-0.5 h-4 w-4 accent-[var(--color-accent)]"
+				checked={combosEnabled}
+				onchange={(e) => onCombosToggle((e.currentTarget as HTMLInputElement).checked)}
+			/>
+			<span class="flex flex-1 flex-col gap-0.5">
+				<span class="text-sm font-medium">Include synergies</span>
+				<span class="text-xs text-muted">Pair pre-authored concept combinations into the brief.</span>
+			</span>
+		</label>
+	{/if}
 </section>

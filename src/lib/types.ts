@@ -75,6 +75,14 @@ export type Genre = {
 	templates?: SectionTemplate[]; // optional during incremental rollout
 };
 
+export type Combo = {
+	id: string;
+	conceptIds: [string, string];
+	synergyPrompt: string;
+	genres?: GenreId[]; // empty/missing = any genre
+	difficulty?: Difficulty; // optional gate
+};
+
 export type Mode = 'quick' | 'deep';
 
 export const MODE_LABELS: Record<Mode, string> = {
@@ -106,11 +114,13 @@ export type Challenge = {
 	conceptIds: string[]; // one per category, in CATEGORIES order
 	templateId?: string; // deep mode only
 	sectionAssignments?: Record<string, SectionId>; // deep mode only; conceptId → sectionId
+	comboId?: string; // deep mode + combos enabled
 };
 
 export type Preferences = {
 	lastMode: Mode | null;
 	lastGenre: GenreId | null;
 	lastDifficulty: Difficulty | null;
+	combosEnabled: boolean | null; // null = use difficulty default
 	theme: 'dark'; // reserved for future light mode
 };

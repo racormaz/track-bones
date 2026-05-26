@@ -6,6 +6,7 @@ const DEFAULTS: Preferences = {
 	lastMode: null,
 	lastGenre: null,
 	lastDifficulty: null,
+	combosEnabled: null,
 	theme: 'dark'
 };
 
@@ -47,6 +48,18 @@ export function setGenre(g: GenreId) {
 export function setDifficulty(d: Difficulty) {
 	state.lastDifficulty = d;
 	persist(state);
+}
+
+export function setCombosEnabled(enabled: boolean | null) {
+	state.combosEnabled = enabled;
+	persist(state);
+}
+
+// Resolved combo-enabled state: explicit user choice wins, else difficulty default.
+// Difficulty 3 = on by default. Others = off.
+export function combosResolved(): boolean {
+	if (state.combosEnabled !== null) return state.combosEnabled;
+	return state.lastDifficulty === 3;
 }
 
 export function resetPreferences() {

@@ -1,7 +1,16 @@
 <script lang="ts">
-	import type { Concept, GenreId, Difficulty, Mode, SectionId, SectionTemplate } from '$lib/types';
+	import type {
+		Concept,
+		GenreId,
+		Difficulty,
+		Mode,
+		SectionId,
+		SectionTemplate,
+		Combo
+	} from '$lib/types';
 	import { DIFFICULTY_LABELS, MODE_LABELS, CATEGORIES } from '$lib/types';
 	import ChallengeCard from './ChallengeCard.svelte';
+	import ComboCard from './ComboCard.svelte';
 	import SectionHeader from './SectionHeader.svelte';
 	import Icon from './Icon.svelte';
 	import genres from '$lib/content/genres.json';
@@ -15,6 +24,7 @@
 		difficulty,
 		template,
 		sectionAssignments,
+		combo,
 		onRerollOne,
 		onRerollAll,
 		onSave,
@@ -28,6 +38,7 @@
 		difficulty: Difficulty;
 		template?: SectionTemplate | null;
 		sectionAssignments?: Record<string, SectionId>;
+		combo?: Combo | null;
 		onRerollOne: (index: number) => void;
 		onRerollAll: () => void;
 		onSave: () => void;
@@ -106,6 +117,13 @@
 				{/if}
 			{/each}
 		</ol>
+	{/if}
+
+	{#if combo}
+		<div class="mt-4 flex flex-col gap-2">
+			<SectionHeader label="Synergy" />
+			<ComboCard {combo} {conceptsById} />
+		</div>
 	{/if}
 </section>
 

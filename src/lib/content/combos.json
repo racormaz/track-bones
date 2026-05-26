@@ -1,0 +1,104 @@
+[
+	{
+		"id": "shepard-x-half-drop",
+		"conceptIds": ["shepard-tone", "half-drop"],
+		"synergyPrompt": "Use a Shepard tone as your only build element, then collapse into a half-drop so the perceived rise never actually resolves.",
+		"genres": ["dubstep", "future-bass", "trance"]
+	},
+	{
+		"id": "shepard-risset-x-pre-drop-silence",
+		"conceptIds": ["shepard-risset-glissando", "pre-drop-silence"],
+		"synergyPrompt": "Run a continuous Shepard-Risset glissando into a one-bar dead silence right before the drop. The rise never gets paid off.",
+		"genres": ["dubstep", "trance", "future-bass"]
+	},
+	{
+		"id": "reich-x-process-music",
+		"conceptIds": ["reich-phasing", "process-music"],
+		"synergyPrompt": "Treat Reich-style phasing as your single process and let it run to completion as the entire track structure.",
+		"genres": ["ambient", "experimental", "idm"]
+	},
+	{
+		"id": "four-on-floor-x-syncopated-hihat",
+		"conceptIds": ["four-on-the-floor-anchor", "syncopation-hihat"],
+		"synergyPrompt": "Lock four-on-the-floor and use syncopated hi-hats as the only rhythmic counterweight to the kick.",
+		"genres": ["house", "techno"]
+	},
+	{
+		"id": "wobble-x-pre-drop-silence",
+		"conceptIds": ["wobble-bass", "pre-drop-silence"],
+		"synergyPrompt": "Cut everything to one bar of silence and let the first wobble of the drop be the loudest moment of the track.",
+		"genres": ["dubstep"]
+	},
+	{
+		"id": "reese-x-amen",
+		"conceptIds": ["reese-bass", "syncopation"],
+		"synergyPrompt": "Pair a growling Reese bass with syncopated, displaced snares so the bass groove and the drums fight for the downbeat.",
+		"genres": ["dnb"]
+	},
+	{
+		"id": "sidechain-x-pad-pump",
+		"conceptIds": ["sidechain-compression", "pad-sidechain"],
+		"synergyPrompt": "Sidechain a long-reverb pad hard to the kick. The pump becomes the rhythm; the kick gets to breathe.",
+		"genres": ["house", "trance", "future-bass"]
+	},
+	{
+		"id": "acid-303-x-filter-sweep",
+		"conceptIds": ["acid-303-bassline", "filter-sweep-automation"],
+		"synergyPrompt": "Loop one 16-step 303 pattern for 64 bars and arrange purely by slowly opening and closing a low-pass filter.",
+		"genres": ["acid-house"]
+	},
+	{
+		"id": "dotted-x-deceptive",
+		"conceptIds": ["dotted-rhythm-melody", "deceptive-cadence"],
+		"synergyPrompt": "Land your dotted lead accent on the V chord that's about to fool the listener with a deceptive cadence.",
+		"genres": []
+	},
+	{
+		"id": "psytrance-roll-x-four-floor",
+		"conceptIds": ["psytrance-rolling-bass", "four-on-the-floor-anchor"],
+		"synergyPrompt": "Lock four-on-the-floor kicks against a rolling 16th-note off-beat bass for the entire drop. No variation.",
+		"genres": ["psytrance"]
+	},
+	{
+		"id": "trap-808-x-pre-drop-silence",
+		"conceptIds": ["trap-808-glide", "pre-drop-silence"],
+		"synergyPrompt": "Drop one beat of silence and let the gliding 808 slide define the first note after.",
+		"genres": ["trap", "future-bass"]
+	},
+	{
+		"id": "supersaw-x-trance-double",
+		"conceptIds": ["supersaw", "trance-double-drop"],
+		"synergyPrompt": "Save your full supersaw stack for the second drop only. First drop is the same progression with a single lead voice.",
+		"genres": ["trance"]
+	},
+	{
+		"id": "hardstyle-reverse-x-anthem",
+		"conceptIds": ["hardstyle-reverse-bass-entry", "supersaw"],
+		"synergyPrompt": "Hold the reverse-bass until the second drop, then layer it under a supersaw anthem lead at full stack.",
+		"genres": ["hardstyle"]
+	},
+	{
+		"id": "synthwave-snare-x-chorus",
+		"conceptIds": ["synthwave-gated-snare-arrival", "chorus-effect"],
+		"synergyPrompt": "Save the gated-reverb snare for the second verse, and put one chorus pedal on the lead — nothing else needs effects.",
+		"genres": ["synthwave"]
+	},
+	{
+		"id": "uk-garage-shuffle-x-twostep",
+		"conceptIds": ["syncopation-hihat", "uk-garage-two-step-structure"],
+		"synergyPrompt": "Shuffle off-beat hi-hats throughout, and toggle between 2-step verse and 4-to-the-floor chorus every 16 bars.",
+		"genres": ["uk-garage"]
+	},
+	{
+		"id": "ambient-drone-x-tape-loop",
+		"conceptIds": ["drone", "tape-loop"],
+		"synergyPrompt": "Hold a single drone and loop a 4-second tape sample over it. No other elements for 4 minutes.",
+		"genres": ["ambient", "experimental"]
+	},
+	{
+		"id": "musique-concrete-x-acousmatic",
+		"conceptIds": ["musique-concrete", "acousmatic-sound"],
+		"synergyPrompt": "Build the section entirely from field recordings, and make sure no sound source is identifiable to the listener.",
+		"genres": ["experimental", "ambient", "idm"]
+	}
+]

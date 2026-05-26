@@ -9,18 +9,29 @@
 		Mode,
 		Genre,
 		SectionId,
-		SectionTemplate
+		SectionTemplate,
+		Combo
 	} from '$lib/types';
 	import { CATEGORIES } from '$lib/types';
 	import conceptsRaw from '$lib/content/concepts.json';
 	import genresRaw from '$lib/content/genres.json';
-	import { preferences, setMode, setGenre, setDifficulty } from '$lib/stores/preferences.svelte';
+	import combosRaw from '$lib/content/combos.json';
+	import {
+		preferences,
+		setMode,
+		setGenre,
+		setDifficulty,
+		setCombosEnabled,
+		combosResolved
+	} from '$lib/stores/preferences.svelte';
 	import { history, saveChallenge, recentConceptIds } from '$lib/stores/history.svelte';
 	import {
 		generateChallenge,
+		generateChallengeWithCombo,
 		rerollOne,
 		pickTemplate,
-		assignSections
+		assignSections,
+		findActiveCombo
 	} from '$lib/challenge/generator';
 	import ModePicker from '$lib/components/ModePicker.svelte';
 	import GenrePicker from '$lib/components/GenrePicker.svelte';
@@ -32,6 +43,8 @@
 	const conceptsById = new Map(concepts.map((c) => [c.id, c] as const));
 	const genres = genresRaw as Genre[];
 	const genresById = new Map(genres.map((g) => [g.id, g] as const));
+	const combos = combosRaw as Combo[];
+	const combosById = new Map(combos.map((c) => [c.id, c] as const));
 
 	type Step = 'mode' | 'genre' | 'difficulty' | 'challenge';
 
@@ -39,6 +52,7 @@
 	let conceptIds = $state<string[]>([]);
 	let template = $state<SectionTemplate | null>(null);
 	let sectionAssignments = $state<Record<string, SectionId> | undefined>(undefined);
+	let activeCombo = $state<Combo | null>(null);
 	let drawerOpen = $state(false);
 	let toast = $state<string | null>(null);
 
@@ -52,12 +66,30 @@
 	function generate() {
 		if (preferences.lastGenre === null || preferences.lastDifficulty === null) return;
 		try {
-			conceptIds = generateChallenge({
-				concepts,
-				genre: preferences.lastGenre,
-				difficulty: preferences.lastDifficulty,
-				excludeIds: recentConceptIds(10)
-			});
+			const wantCombos = preferences.lastMode === 'deep' && combosResolved();
+
+			if (wantCombos) {
+				const result = generateChallengeWithCombo({
+					concepts,
+					combos,
+					genre: preferences.lastGenre,
+					difficulty: preferences.lastDifficulty,
+					excludeIds: recentConceptIds(10)
+				});
+				conceptIds = result.conceptIds;
+				activeCombo = result.comboId ? (combosById.get(result.comboId) ?? null) : null;
+				if (!activeCombo) {
+					showToast('No combos available for this set yet.');
+				}
+			} else {
+				conceptIds = generateChallenge({
+					concepts,
+					genre: preferences.lastGenre,
+					difficulty: preferences.lastDifficulty,
+					excludeIds: recentConceptIds(10)
+				});
+				activeCombo = null;
+			}
 
 			if (preferences.lastMode === 'deep') {
 				const genre = genresById.get(preferences.lastGenre);
@@ -134,6 +166,16 @@
 			if (preferences.lastMode === 'deep' && template) {
 				sectionAssignments = assignSections({ conceptIds, conceptsById, template });
 			}
+
+			// Re-evaluate active combo: if the new picks still satisfy a combo, keep / find one.
+			if (preferences.lastMode === 'deep' && combosResolved() && preferences.lastGenre && preferences.lastDifficulty) {
+				activeCombo = findActiveCombo({
+					combos,
+					picked: conceptIds,
+					genre: preferences.lastGenre,
+					difficulty: preferences.lastDifficulty
+				});
+			}
 		} catch (err) {
 			console.error(err);
 			showToast('No alternatives left for this slot.');
@@ -159,7 +201,8 @@
 			difficulty: preferences.lastDifficulty,
 			conceptIds,
 			templateId: template?.id,
-			sectionAssignments
+			sectionAssignments,
+			comboId: activeCombo?.id
 		});
 		showToast('Saved to history');
 	}
@@ -173,6 +216,7 @@
 		setGenre(c.genre);
 		setDifficulty(c.difficulty);
 		conceptIds = c.conceptIds.filter((id) => conceptsById.has(id));
+		activeCombo = c.comboId ? (combosById.get(c.comboId) ?? null) : null;
 		// If any concept was deleted since save, refill missing slots.
 		if (conceptIds.length < CATEGORIES.length) {
 			try {
@@ -243,7 +287,13 @@
 		</div>
 	{:else if step === 'difficulty'}
 		<div in:fade={{ duration: 150 }}>
-			<DifficultyPicker selected={preferences.lastDifficulty} onSelect={onPickDifficulty} />
+			<DifficultyPicker
+				selected={preferences.lastDifficulty}
+				mode={preferences.lastMode}
+				combosEnabled={combosResolved()}
+				onSelect={onPickDifficulty}
+				onCombosToggle={(enabled) => setCombosEnabled(enabled)}
+			/>
 		</div>
 	{:else if step === 'challenge' && preferences.lastMode && preferences.lastGenre && preferences.lastDifficulty}
 		<div in:fade={{ duration: 150 }}>
@@ -255,6 +305,7 @@
 				difficulty={preferences.lastDifficulty}
 				{template}
 				{sectionAssignments}
+				combo={activeCombo}
 				{onRerollOne}
 				{onRerollAll}
 				{onSave}

@@ -4,7 +4,8 @@ import type {
 	Difficulty,
 	GenreId,
 	SectionTemplate,
-	SectionId
+	SectionId,
+	Combo
 } from '../types';
 import { CATEGORIES } from '../types';
 
@@ -80,6 +81,112 @@ export function generateChallenge(input: GenerateInput): string[] {
 	}
 
 	return picked;
+}
+
+// Filter combos to those eligible for the given genre/difficulty + that reference
+// concept IDs the library knows about (so a stale combo doesn't crash). Returns
+// the eligible list. Caller decides whether to pick from it.
+export function eligibleCombos(args: {
+	combos: Combo[];
+	conceptIds: Set<string>;
+	genre: GenreId;
+	difficulty: Difficulty;
+}): Combo[] {
+	return args.combos.filter((c) => {
+		if (c.difficulty !== undefined && c.difficulty > args.difficulty) return false;
+		if (c.genres && c.genres.length > 0 && !c.genres.includes(args.genre)) return false;
+		return c.conceptIds.every((id) => args.conceptIds.has(id));
+	});
+}
+
+// Look at a picked challenge's conceptIds and return any combo whose pair is fully
+// represented in the picks. Null if none.
+export function findActiveCombo(args: {
+	combos: Combo[];
+	picked: string[];
+	genre: GenreId;
+	difficulty: Difficulty;
+	random?: () => number;
+}): Combo | null {
+	const random = args.random ?? Math.random;
+	const pickedSet = new Set(args.picked);
+	const matches = args.combos.filter((c) => {
+		if (c.difficulty !== undefined && c.difficulty > args.difficulty) return false;
+		if (c.genres && c.genres.length > 0 && !c.genres.includes(args.genre)) return false;
+		return c.conceptIds.every((id) => pickedSet.has(id));
+	});
+	if (matches.length === 0) return null;
+	return matches[Math.floor(random() * matches.length)];
+}
+
+// Generate a challenge that's biased toward triggering a combo. Picks a combo first,
+// locks its two concepts into their categories, then fills the remaining 3 slots.
+// Falls back to plain generation if no combos match.
+export function generateChallengeWithCombo(input: GenerateInput & { combos: Combo[] }): {
+	conceptIds: string[];
+	comboId?: string;
+} {
+	const random = input.random ?? Math.random;
+	const allKnownIds = new Set(input.concepts.map((c) => c.id));
+
+	const eligible = eligibleCombos({
+		combos: input.combos,
+		conceptIds: allKnownIds,
+		genre: input.genre,
+		difficulty: input.difficulty
+	});
+
+	if (eligible.length === 0) {
+		// No combos available — fall back.
+		return { conceptIds: generateChallenge(input) };
+	}
+
+	const combo = eligible[Math.floor(random() * eligible.length)];
+	const [aId, bId] = combo.conceptIds;
+	const a = input.concepts.find((c) => c.id === aId);
+	const b = input.concepts.find((c) => c.id === bId);
+	if (!a || !b) {
+		return { conceptIds: generateChallenge(input) };
+	}
+
+	// Build the 5-card result by locking a and b into their categories, then filling.
+	const exclude = new Set(input.excludeIds ?? []);
+	exclude.add(aId);
+	exclude.add(bId);
+
+	const result: Record<Category, string> = {} as Record<Category, string>;
+	result[a.category] = aId;
+	if (b.category !== a.category) {
+		result[b.category] = bId;
+	}
+
+	for (const category of CATEGORIES) {
+		if (result[category]) continue;
+		const c = pickFromBucket(
+			{
+				concepts: input.concepts,
+				genre: input.genre,
+				difficulty: input.difficulty,
+				category,
+				exclude
+			},
+			random
+		);
+		if (!c) {
+			throw new Error(`No concept available for category "${category}".`);
+		}
+		result[category] = c.id;
+		exclude.add(c.id);
+	}
+
+	// If b's category collides with a's, the second concept never made it in.
+	// That breaks the combo — fall back to standard generation in that case.
+	if (b.category === a.category) {
+		return { conceptIds: generateChallenge(input) };
+	}
+
+	const ordered = CATEGORIES.map((cat) => result[cat]);
+	return { conceptIds: ordered, comboId: combo.id };
 }
 
 // Pick a template for a genre. Weighted random when multiple templates exist.
