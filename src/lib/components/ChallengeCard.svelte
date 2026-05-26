@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { Concept } from '$lib/types';
+	import type { Concept, RefKind } from '$lib/types';
 	import { CATEGORY_LABELS } from '$lib/types';
 	import { slide } from 'svelte/transition';
-	import Icon from './Icon.svelte';
+	import Icon, { type IconName } from './Icon.svelte';
 
 	let { concept, onReroll }: { concept: Concept; onReroll: () => void } = $props();
 
@@ -18,6 +18,12 @@
 			toggle();
 		}
 	}
+
+	const REF_KIND_ICON: Record<RefKind, IconName> = {
+		article: 'book-open',
+		video: 'play',
+		interactive: 'mouse-pointer-click'
+	};
 </script>
 
 <article
@@ -65,16 +71,33 @@
 			{#if concept.wikiSummary}
 				<p class="mt-3 text-xs leading-relaxed text-muted italic">{concept.wikiSummary}</p>
 			{/if}
-			{#if concept.wikiUrl}
-				<a
-					href={concept.wikiUrl}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
-				>
-					Read more on Wikipedia
-					<Icon name="external-link" size={12} />
-				</a>
+			{#if concept.wikiUrl || concept.secondaryRef}
+				<div class="mt-4 flex flex-col gap-2">
+					{#if concept.wikiUrl}
+						<a
+							href={concept.wikiUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
+						>
+							<Icon name="book-open" size={12} />
+							<span>Wikipedia</span>
+							<Icon name="external-link" size={12} />
+						</a>
+					{/if}
+					{#if concept.secondaryRef}
+						<a
+							href={concept.secondaryRef.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center gap-1.5 text-xs font-medium text-accent hover:underline"
+						>
+							<Icon name={REF_KIND_ICON[concept.secondaryRef.kind]} size={12} />
+							<span>{concept.secondaryRef.label}</span>
+							<Icon name="external-link" size={12} />
+						</a>
+					{/if}
+				</div>
 			{/if}
 		</div>
 	{/if}

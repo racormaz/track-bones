@@ -45,6 +45,14 @@ export type GenreId =
 	| 'synthwave'
 	| 'hardstyle';
 
+export type RefKind = 'article' | 'video' | 'interactive';
+
+export type SecondaryRef = {
+	kind: RefKind;
+	label: string;
+	url: string;
+};
+
 export type Concept = {
 	id: string;
 	name: string;
@@ -55,6 +63,7 @@ export type Concept = {
 	definition: string;
 	wikiUrl: string | null;
 	wikiSummary?: string;
+	secondaryRef?: SecondaryRef;
 	relatedIds?: string[];
 };
 

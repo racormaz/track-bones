@@ -15,11 +15,17 @@
 		"name": "Syncopated Hi-Hat",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["house", "techno", "uk-garage"],
+		"genres": [
+			"house",
+			"techno",
+			"uk-garage"
+		],
 		"prompt": "Program your hi-hat so every audible hit lands on an off-beat sixteenth for the first drop.",
 		"definition": "Hi-hat syncopation places hat hits between the main beats to drive groove forward.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Syncopation",
-		"relatedIds": ["syncopation"],
+		"relatedIds": [
+			"syncopation"
+		],
 		"wikiSummary": "In music, syncopation is a variety of rhythms played together to make a piece of music, making part or all of a tune or piece of music off-beat. More simply, syncopation is \"a disturbance or interruption of the regular flow of rhythm\": a \"placement of rhythmic stresses or accents where they wouldn't normally occur\". It is the correlation of at least two sets of time intervals."
 	},
 	{
@@ -38,7 +44,10 @@
 		"name": "Shuffle",
 		"category": "rhythm",
 		"difficulty": 2,
-		"genres": ["uk-garage", "house"],
+		"genres": [
+			"uk-garage",
+			"house"
+		],
 		"prompt": "Quantize every sixteenth to a long-short triplet ratio so the entire groove leans hard into a shuffle.",
 		"definition": "Shuffle is a pronounced long-short triplet subdivision, a stronger form of swing.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Swing_time",
@@ -60,11 +69,16 @@
 		"name": "4:3 Polyrhythm",
 		"category": "rhythm",
 		"difficulty": 2,
-		"genres": ["idm", "experimental"],
+		"genres": [
+			"idm",
+			"experimental"
+		],
 		"prompt": "Run a four-against-three polyrhythm between your lead arp and your percussion for at least 16 bars.",
 		"definition": "A 4:3 polyrhythm places four evenly spaced hits over the same span as three.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Polyrhythm",
-		"relatedIds": ["polyrhythm-3-2"],
+		"relatedIds": [
+			"polyrhythm-3-2"
+		],
 		"wikiSummary": "Polyrhythm is the simultaneous use of two or more rhythms that are not readily perceived as deriving from one another, or as simple manifestations of the same meter. The rhythmic layers may be the basis of an entire piece of music (cross-rhythm), or a momentary section. Polyrhythms can be distinguished from irrational rhythms, which can occur within the context of a single part; polyrhythms require at least two rhythms to be played concurrently, one of which is typically an irrational rhythm. Concurrently in this context means within the same rhythmic cycle. The underlying pulse, whether explicit or implicit can be considered one of the concurrent rhythms. For example, the son clave is poly-rhythmic because its 3 section suggests a different meter from the pulse of the entire pattern."
 	},
 	{
@@ -72,7 +86,10 @@
 		"name": "Polymeter",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["idm", "experimental"],
+		"genres": [
+			"idm",
+			"experimental"
+		],
 		"prompt": "Loop a 7/8 melodic phrase over a 4/4 drum kit at the same tempo until the downbeats realign.",
 		"definition": "Polymeter layers two different meters at the same tempo, causing phrase displacement.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Metre_(music)",
@@ -105,7 +122,10 @@
 		"name": "Quintuplet Fill",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["idm", "dnb"],
+		"genres": [
+			"idm",
+			"dnb"
+		],
 		"prompt": "Write a one-bar drum fill entirely in quintuplets to land back on the next downbeat.",
 		"definition": "A tuplet is any irregular subdivision, like five hits in the space of four.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tuplet",
@@ -116,7 +136,10 @@
 		"name": "Septuplet Subdivision",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["idm", "experimental"],
+		"genres": [
+			"idm",
+			"experimental"
+		],
 		"prompt": "Drop a septuplet hi-hat pattern across one bar before resolving back to straight sixteenths.",
 		"definition": "A septuplet divides a beat or bar into seven equal parts.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tuplet",
@@ -138,11 +161,16 @@
 		"name": "Dotted Rhythm (Bass)",
 		"category": "rhythm",
 		"difficulty": 2,
-		"genres": ["dubstep", "bass"],
+		"genres": [
+			"dubstep",
+			"bass"
+		],
 		"prompt": "Write a bassline that only uses dotted-eighth note values until it loops on itself.",
 		"definition": "Dotted rhythms in bass lines create groove that runs against the kick grid.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Dotted_note",
-		"relatedIds": ["dotted-rhythm-melody"],
+		"relatedIds": [
+			"dotted-rhythm-melody"
+		],
 		"wikiSummary": "In Western musical notation, a dotted note is a note with a small dot written after it. In modern practice, the dot increases the duration of the original note by half of its value. This makes a dotted note equivalent to the original note tied to a note of half the value – for example, a dotted half note is equivalent to a half note tied to a quarter note. Subsequent dots add progressively halved value, as shown in the example to the right."
 	},
 	{
@@ -161,7 +189,11 @@
 		"name": "Half-Time Feel",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["dubstep", "trap", "dnb"],
+		"genres": [
+			"dubstep",
+			"trap",
+			"dnb"
+		],
 		"prompt": "Move your snare from 2 and 4 to just beat 3 for the drop so the perceived tempo halves.",
 		"definition": "Half-time places the snare on beat 3 only, doubling the perceived bar length.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Half-time_(music)",
@@ -172,7 +204,9 @@
 		"name": "Double-Time Feel",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["dnb"],
+		"genres": [
+			"dnb"
+		],
 		"prompt": "Switch the second drop into double-time by adding snares on every off-beat to halve the perceived bar.",
 		"definition": "Double-time halves the perceived bar length by doubling rhythmic density.",
 		"wikiUrl": null
@@ -257,7 +291,10 @@
 		"name": "Euclidean Rhythm",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["techno", "idm"],
+		"genres": [
+			"techno",
+			"idm"
+		],
 		"prompt": "Build your bassline using a Euclidean E(5,16) pattern and leave the algorithm to do the syncopation for you.",
 		"definition": "A Euclidean rhythm distributes N hits across M steps as evenly as possible.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Euclidean_rhythm",
@@ -268,11 +305,17 @@
 		"name": "Euclidean Percussion Layer",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["techno", "idm", "experimental"],
+		"genres": [
+			"techno",
+			"idm",
+			"experimental"
+		],
 		"prompt": "Stack three percussion layers as E(3,8), E(5,8) and E(7,16) and let them weave through each other.",
 		"definition": "Stacked Euclidean rhythms create dense interlocking percussion textures.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Euclidean_rhythm",
-		"relatedIds": ["euclidean-rhythm"],
+		"relatedIds": [
+			"euclidean-rhythm"
+		],
 		"wikiSummary": "The Euclidean rhythm in music was discovered by Godfried Toussaint in 2004 and is described in a 2005 paper \"The Euclidean Algorithm Generates Traditional Musical Rhythms\". The greatest common divisor of two numbers is used rhythmically giving the number of beats and silences, generating almost all of the most important world music rhythms, except some Indian talas. The beats in the resulting rhythms are as equidistant as possible; the same results can be obtained from the Bresenham algorithm."
 	},
 	{
@@ -280,7 +323,10 @@
 		"name": "Additive Rhythm",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["experimental", "idm"],
+		"genres": [
+			"experimental",
+			"idm"
+		],
 		"prompt": "Group your bar as 3+3+2 eighths and accent the first hit of each group throughout the track.",
 		"definition": "Additive rhythm builds meter from grouped subdivisions like 3+3+2 instead of equal beats.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Additive_rhythm_and_divisive_rhythm",
@@ -313,7 +359,10 @@
 		"name": "Off-Beat Open Hats",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["house", "techno"],
+		"genres": [
+			"house",
+			"techno"
+		],
 		"prompt": "Put an open hi-hat on every 'and' of the bar and never let it fall on a downbeat.",
 		"definition": "Off-beat hats fall on the 'and' between beats, a defining house sound.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Hi-hat",
@@ -335,7 +384,10 @@
 		"name": "Tresillo",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["trap", "house"],
+		"genres": [
+			"trap",
+			"house"
+		],
 		"prompt": "Use a 3-3-2 tresillo pattern for your kick and resist adding any additional downbeats.",
 		"definition": "Tresillo is a 3-3-2 rhythm common across Afro-Latin and modern pop music.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tresillo_(rhythm)",
@@ -356,7 +408,11 @@
 		"name": "Stutter / Beat Repeat",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["dnb", "idm", "dubstep"],
+		"genres": [
+			"dnb",
+			"idm",
+			"dubstep"
+		],
 		"prompt": "Re-trigger your vocal slice at sixteenth then 32nd then 64th intervals in the last bar before the drop.",
 		"definition": "A stutter or beat repeat re-triggers a slice at progressively smaller intervals.",
 		"wikiUrl": null
@@ -377,7 +433,10 @@
 		"name": "Breakbeat",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["dnb", "bass"],
+		"genres": [
+			"dnb",
+			"bass"
+		],
 		"prompt": "Replace your programmed drums with a chopped breakbeat sample and re-sequence its hits across the bar.",
 		"definition": "A breakbeat is a sampled or programmed drum break used in place of four-on-the-floor.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Breakbeat",
@@ -388,7 +447,9 @@
 		"name": "Amen Break",
 		"category": "rhythm",
 		"difficulty": 2,
-		"genres": ["dnb"],
+		"genres": [
+			"dnb"
+		],
 		"prompt": "Chop the Amen break at every transient and re-sequence those slices into a new 2-bar pattern.",
 		"definition": "The Amen break is a six-second drum break that underpins much of jungle and dnb.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Amen_break",
@@ -399,7 +460,14 @@
 		"name": "Four on the Floor",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["house", "techno", "trance", "hardstyle", "acid-house", "psytrance"],
+		"genres": [
+			"house",
+			"techno",
+			"trance",
+			"hardstyle",
+			"acid-house",
+			"psytrance"
+		],
 		"prompt": "Lock a kick on every quarter note at 124 BPM and refuse to drop a single one until the breakdown.",
 		"definition": "Four on the floor places a kick drum on every quarter note of a 4/4 bar.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Four_on_the_floor_(music)",
@@ -410,7 +478,10 @@
 		"name": "Two-Step",
 		"category": "rhythm",
 		"difficulty": 2,
-		"genres": ["uk-garage", "dnb"],
+		"genres": [
+			"uk-garage",
+			"dnb"
+		],
 		"prompt": "Program a 2-step pattern with kicks on 1 and 3 and a swung snare on the off-beat between.",
 		"definition": "Two-step puts kicks on 1 and 3 with a snare on the 'and' between, a UK garage staple.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/2-step_garage",
@@ -453,7 +524,10 @@
 		"name": "Rubato",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental"],
+		"genres": [
+			"ambient",
+			"experimental"
+		],
 		"prompt": "Strip your breakdown of any grid and let one melodic line breathe entirely in rubato.",
 		"definition": "Rubato is expressive elasticity of tempo for emotional phrasing.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tempo_rubato",
@@ -464,11 +538,16 @@
 		"name": "UK Garage Shuffle",
 		"category": "rhythm",
 		"difficulty": 2,
-		"genres": ["uk-garage"],
+		"genres": [
+			"uk-garage"
+		],
 		"prompt": "Run swung sixteenths at 65 percent on hats and snares while keeping the kick on 1 and 3 only.",
 		"definition": "The UK garage shuffle layers swung sixteenth hats over a 2-step kick.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/UK_garage",
-		"relatedIds": ["two-step", "shuffle"],
+		"relatedIds": [
+			"two-step",
+			"shuffle"
+		],
 		"wikiSummary": "UK garage, abbreviated as UKG, is a genre of electronic music which originated in England in the early to mid-1990s. It is defined by percussive, shuffled rhythms with syncopated hi-hats, cymbals, and snares, and may include either 4/4 house kick patterns or more irregular \"2-step\" rhythms. Garage tracks also commonly feature \"chopped up\" and time-stretched or pitch-shifted vocal samples complementing the underlying rhythmic structure at a tempo usually around 130 BPM. The genre was influenced by garage house, jungle, Jamaican soundsystem, ragga, dancehall, gospel music, R&B, and rave culture."
 	},
 	{
@@ -476,11 +555,16 @@
 		"name": "Amen Snare Displacement",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["dnb"],
+		"genres": [
+			"dnb"
+		],
 		"prompt": "Slide the Amen snare hits onto random 32nd-note offsets each bar so no two bars resolve the same way.",
 		"definition": "Snare displacement reorders Amen break hits to break out of its native pattern.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Amen_break",
-		"relatedIds": ["amen-break", "rhythmic-displacement"],
+		"relatedIds": [
+			"amen-break",
+			"rhythmic-displacement"
+		],
 		"wikiSummary": "The Amen break is a drum break that has been widely sampled in popular music. It comes from the 1969 track \"Amen, Brother\" by the American soul group the Winstons, released as the B-side of the 1969 single \"Color Him Father\". The drum break lasts seven seconds and was performed by Gregory Coleman."
 	},
 	{
@@ -488,7 +572,9 @@
 		"name": "Trap Hi-Hat Rolls",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["trap"],
+		"genres": [
+			"trap"
+		],
 		"prompt": "Trigger a sixteenth-triplet hi-hat roll every fourth bar that ramps into 32nd notes by its end.",
 		"definition": "Trap hi-hat rolls use triplet and faster subdivisions for movement over half-time drums.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Trap_music",
@@ -499,7 +585,9 @@
 		"name": "Psytrance Rolling Bass",
 		"category": "rhythm",
 		"difficulty": 2,
-		"genres": ["psytrance"],
+		"genres": [
+			"psytrance"
+		],
 		"prompt": "Roll a sixteenth-note bass between the kicks, hitting only on the e-and-a of each beat.",
 		"definition": "Psytrance rolling bass plays sixteenths on the off-beats between four-on-the-floor kicks.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Psychedelic_trance",
@@ -510,7 +598,10 @@
 		"name": "Trance Off-Beat Bass",
 		"category": "rhythm",
 		"difficulty": 1,
-		"genres": ["trance", "psytrance"],
+		"genres": [
+			"trance",
+			"psytrance"
+		],
 		"prompt": "Pluck a short root-note bass on every off-beat eighth between your four-on-the-floor kicks.",
 		"definition": "Off-beat bass plays root notes on the 'and' of each beat between kick hits.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Trance_music",
@@ -532,7 +623,9 @@
 		"name": "Tala Cycle",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["experimental"],
+		"genres": [
+			"experimental"
+		],
 		"prompt": "Loop a 16-beat tala cycle and mark the vibhags with subtle percussion changes instead of using bar markers.",
 		"definition": "A tala is an Indian classical rhythmic cycle of fixed length divided into vibhags.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tala_(music)",
@@ -543,7 +636,9 @@
 		"name": "Konnakol Phrasing",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["experimental"],
+		"genres": [
+			"experimental"
+		],
 		"prompt": "Vocalize a polyrhythmic phrase in konnakol syllables and sample your own voice as the rhythm source.",
 		"definition": "Konnakol is the South Indian art of vocalized rhythm syllables.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Konnakol",
@@ -554,7 +649,10 @@
 		"name": "Hocket",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["experimental", "idm"],
+		"genres": [
+			"experimental",
+			"idm"
+		],
 		"prompt": "Distribute a single melody across two synths so each plays alternating notes without overlapping.",
 		"definition": "Hocket distributes a single melodic line across alternating voices.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Hocket",
@@ -565,7 +663,10 @@
 		"name": "Reichian Phasing",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["experimental", "ambient"],
+		"genres": [
+			"experimental",
+			"ambient"
+		],
 		"prompt": "Play identical patterns on two synths at 119.5 and 120 BPM and let them slowly drift out and back into phase.",
 		"definition": "Phasing runs two identical patterns at slightly different tempos so they drift apart and realign.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Phase_music",
@@ -576,7 +677,10 @@
 		"name": "Risset Rhythm",
 		"category": "rhythm",
 		"difficulty": 3,
-		"genres": ["experimental", "idm"],
+		"genres": [
+			"experimental",
+			"idm"
+		],
 		"prompt": "Build a tempo illusion by layering rhythms at compounding doublings so the groove appears to accelerate forever.",
 		"definition": "A Risset rhythm uses overlapping tempo layers to create the illusion of perpetual acceleration.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Jean-Claude_Risset",
@@ -646,7 +750,9 @@
 		"prompt": "Repeat your motif at three different scale degrees while keeping every note diatonic to the key.",
 		"definition": "A tonal sequence transposes a motif within the key, adjusting intervals to stay diatonic.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Sequence_(music)",
-		"relatedIds": ["sequence-real"],
+		"relatedIds": [
+			"sequence-real"
+		],
 		"wikiSummary": "In music, a sequence is the restatement of a motif or longer melodic passage at a higher or lower pitch in the same voice. It is one of the most common and simple methods of elaborating a melody in eighteenth and nineteenth century classical music. Characteristics of sequences:Two segments, usually no more than three or four\nUsually in only one direction: continually higher or lower\nSegments continue by same interval distance"
 	},
 	{
@@ -680,7 +786,10 @@
 		"prompt": "Reverse and invert your hook simultaneously, then play it under the original as counterpoint.",
 		"definition": "Retrograde inversion reverses a motif and mirrors its intervals.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Retrograde_inversion",
-		"relatedIds": ["retrograde", "melodic-inversion"],
+		"relatedIds": [
+			"retrograde",
+			"melodic-inversion"
+		],
 		"wikiSummary": "Retrograde inversion is the practice of flipping and reversing a musical passage. Used throughout music history, the technique gained prominence in the 20th century through the work of the Second Viennese School."
 	},
 	{
@@ -830,7 +939,10 @@
 		"name": "Whole-Tone Scale",
 		"category": "melody",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental"],
+		"genres": [
+			"ambient",
+			"experimental"
+		],
 		"prompt": "Build your breakdown lead entirely from the whole-tone scale so no note feels grounded.",
 		"definition": "The whole-tone scale is built entirely of whole steps and has no leading tone.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Whole-tone_scale",
@@ -852,7 +964,10 @@
 		"name": "Harmonic Minor",
 		"category": "melody",
 		"difficulty": 2,
-		"genres": ["psytrance", "trance"],
+		"genres": [
+			"psytrance",
+			"trance"
+		],
 		"prompt": "Write a lead in harmonic minor and ride the augmented-second between the sixth and seventh degree every phrase.",
 		"definition": "Harmonic minor raises the seventh degree of the natural minor scale.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Minor_scale",
@@ -874,7 +989,10 @@
 		"name": "Phrygian Dominant",
 		"category": "melody",
 		"difficulty": 2,
-		"genres": ["psytrance", "trance"],
+		"genres": [
+			"psytrance",
+			"trance"
+		],
 		"prompt": "Set your lead in Phrygian dominant and emphasise the flat-second to major-third interval as your hook.",
 		"definition": "Phrygian dominant is the fifth mode of harmonic minor with a flat second and major third.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Phrygian_dominant_scale",
@@ -885,7 +1003,9 @@
 		"name": "Dorian Mode",
 		"category": "melody",
 		"difficulty": 2,
-		"genres": ["house"],
+		"genres": [
+			"house"
+		],
 		"prompt": "Centre your modal vamp on Dorian and use the major sixth as the resolving note of every phrase.",
 		"definition": "Dorian is a minor mode with a raised sixth, often jazzy and ambiguous.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Dorian_mode",
@@ -896,7 +1016,10 @@
 		"name": "Phrygian Mode",
 		"category": "melody",
 		"difficulty": 2,
-		"genres": ["acid-house", "techno"],
+		"genres": [
+			"acid-house",
+			"techno"
+		],
 		"prompt": "Write a brooding bassline in Phrygian and let the flat-second land on every downbeat.",
 		"definition": "Phrygian is a minor mode with a lowered second, brooding and Spanish in feel.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Phrygian_mode",
@@ -907,7 +1030,10 @@
 		"name": "Lydian Mode",
 		"category": "melody",
 		"difficulty": 2,
-		"genres": ["ambient", "synthwave"],
+		"genres": [
+			"ambient",
+			"synthwave"
+		],
 		"prompt": "Stick to Lydian and let the raised fourth ring out on every long sustained note of your pad.",
 		"definition": "Lydian is a major mode with a raised fourth, dreamlike and suspended in feel.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Lydian_mode",
@@ -918,7 +1044,9 @@
 		"name": "Mixolydian Mode",
 		"category": "melody",
 		"difficulty": 2,
-		"genres": ["house"],
+		"genres": [
+			"house"
+		],
 		"prompt": "Use Mixolydian for your modal vamp and let the flat-seven anchor every cadence.",
 		"definition": "Mixolydian is a major mode with a lowered seventh, common to rock and house.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Mixolydian_mode",
@@ -940,7 +1068,9 @@
 		"name": "Locrian Mode",
 		"category": "melody",
 		"difficulty": 3,
-		"genres": ["experimental"],
+		"genres": [
+			"experimental"
+		],
 		"prompt": "Write your lead in Locrian and resist treating the diminished fifth as a passing tone.",
 		"definition": "Locrian is a minor mode with a lowered second and fifth, unstable and rare.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Locrian_mode",
@@ -1017,7 +1147,10 @@
 		"name": "Klangfarbenmelodie",
 		"category": "melody",
 		"difficulty": 3,
-		"genres": ["experimental", "idm"],
+		"genres": [
+			"experimental",
+			"idm"
+		],
 		"prompt": "Pass each note of your hook to a different instrument so the melody is sounded by timbre changes alone.",
 		"definition": "Klangfarbenmelodie distributes a melody across changing timbres.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Klangfarbenmelodie",
@@ -1039,7 +1172,10 @@
 		"name": "Heterophony",
 		"category": "melody",
 		"difficulty": 3,
-		"genres": ["experimental", "ambient"],
+		"genres": [
+			"experimental",
+			"ambient"
+		],
 		"prompt": "Layer two slightly different versions of the same melody on different patches so they decorate each other.",
 		"definition": "Heterophony lets multiple voices play variant versions of the same melody simultaneously.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Heterophony",
@@ -1050,7 +1186,9 @@
 		"name": "Alberti Bass",
 		"category": "melody",
 		"difficulty": 2,
-		"genres": ["synthwave"],
+		"genres": [
+			"synthwave"
+		],
 		"prompt": "Replace your bassline with an Alberti pattern: root, fifth, third, fifth on repeating eighths.",
 		"definition": "Alberti bass is a broken-chord accompaniment in a root-fifth-third-fifth pattern.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Alberti_bass",
@@ -1061,7 +1199,10 @@
 		"name": "Walking Bass",
 		"category": "melody",
 		"difficulty": 2,
-		"genres": ["house", "techno"],
+		"genres": [
+			"house",
+			"techno"
+		],
 		"prompt": "Write a quarter-note walking bass that connects every chord change by step or chromatic approach.",
 		"definition": "A walking bass plays a quarter-note line moving mostly stepwise between chord tones.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Bassline",
@@ -1072,7 +1213,9 @@
 		"name": "Tritone Paradox",
 		"category": "melody",
 		"difficulty": 3,
-		"genres": ["experimental"],
+		"genres": [
+			"experimental"
+		],
 		"prompt": "Build a melody from ambiguous tritone leaps so listeners disagree on whether the line is rising or falling.",
 		"definition": "The tritone paradox is an auditory illusion where listeners disagree on the direction of a tritone pair.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tritone_paradox",
@@ -1083,7 +1226,10 @@
 		"name": "Root-Fifth Bass",
 		"category": "melody",
 		"difficulty": 1,
-		"genres": ["synthwave", "house"],
+		"genres": [
+			"synthwave",
+			"house"
+		],
 		"prompt": "Limit your bassline to roots and fifths only and pulse it in straight eighths under the chord changes.",
 		"definition": "A root-fifth bassline alternates between the root and fifth of each chord.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Bass_(sound)",
@@ -1094,7 +1240,10 @@
 		"name": "Pedal-Note Melody",
 		"category": "melody",
 		"difficulty": 2,
-		"genres": ["ambient", "trance"],
+		"genres": [
+			"ambient",
+			"trance"
+		],
 		"prompt": "Return to the same pedal note between every other melodic note in your hook for the first 8 bars.",
 		"definition": "A pedal-note melody anchors a melodic line by repeatedly returning to one fixed pitch.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Pedal_point",
@@ -1105,7 +1254,9 @@
 		"name": "Synthwave Octave Arp",
 		"category": "melody",
 		"difficulty": 1,
-		"genres": ["synthwave"],
+		"genres": [
+			"synthwave"
+		],
 		"prompt": "Arpeggiate root, fifth, root one octave up, fifth on straight eighths under your entire chorus.",
 		"definition": "A synthwave octave arp pulses root-fifth-root-fifth across two octaves.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Synthwave",
@@ -1120,7 +1271,12 @@
 		"prompt": "Resolve every 8-bar phrase with a clean V to I cadence and never hide it behind passing chords.",
 		"definition": "An authentic cadence moves from the dominant chord (V) to the tonic (I) for strong resolution.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Cadence",
-		"wikiSummary": "In Western musical theory, a cadence is the end of a phrase in which the melody or harmony creates a sense of full or partial resolution, especially in music of the 16th century onwards. A harmonic cadence is a progression of two or more chords that concludes a phrase, section, or piece of music. A rhythmic cadence is a characteristic rhythmic pattern that indicates the end of a phrase. A cadence can be labeled \"weak\" or \"strong\" depending on the impression of finality it gives."
+		"wikiSummary": "In Western musical theory, a cadence is the end of a phrase in which the melody or harmony creates a sense of full or partial resolution, especially in music of the 16th century onwards. A harmonic cadence is a progression of two or more chords that concludes a phrase, section, or piece of music. A rhythmic cadence is a characteristic rhythmic pattern that indicates the end of a phrase. A cadence can be labeled \"weak\" or \"strong\" depending on the impression of finality it gives.",
+		"secondaryRef": {
+			"kind": "interactive",
+			"label": "muted.io — Cadences",
+			"url": "https://muted.io/cadence/"
+		}
 	},
 	{
 		"id": "plagal-cadence",
@@ -1131,7 +1287,12 @@
 		"prompt": "End your breakdown with a soft IV to I plagal cadence rather than a dominant resolution.",
 		"definition": "A plagal cadence moves from the subdominant (IV) to the tonic (I), the gentler 'amen' cadence.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Cadence",
-		"wikiSummary": "In Western musical theory, a cadence is the end of a phrase in which the melody or harmony creates a sense of full or partial resolution, especially in music of the 16th century onwards. A harmonic cadence is a progression of two or more chords that concludes a phrase, section, or piece of music. A rhythmic cadence is a characteristic rhythmic pattern that indicates the end of a phrase. A cadence can be labeled \"weak\" or \"strong\" depending on the impression of finality it gives."
+		"wikiSummary": "In Western musical theory, a cadence is the end of a phrase in which the melody or harmony creates a sense of full or partial resolution, especially in music of the 16th century onwards. A harmonic cadence is a progression of two or more chords that concludes a phrase, section, or piece of music. A rhythmic cadence is a characteristic rhythmic pattern that indicates the end of a phrase. A cadence can be labeled \"weak\" or \"strong\" depending on the impression of finality it gives.",
+		"secondaryRef": {
+			"kind": "interactive",
+			"label": "muted.io — Cadences",
+			"url": "https://muted.io/cadence/"
+		}
 	},
 	{
 		"id": "half-cadence",
@@ -1142,7 +1303,12 @@
 		"prompt": "Park every phrase on the dominant chord and resist resolving to the tonic until the final bar.",
 		"definition": "A half cadence ends on the dominant chord, leaving the listener expecting resolution.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Cadence",
-		"wikiSummary": "In Western musical theory, a cadence is the end of a phrase in which the melody or harmony creates a sense of full or partial resolution, especially in music of the 16th century onwards. A harmonic cadence is a progression of two or more chords that concludes a phrase, section, or piece of music. A rhythmic cadence is a characteristic rhythmic pattern that indicates the end of a phrase. A cadence can be labeled \"weak\" or \"strong\" depending on the impression of finality it gives."
+		"wikiSummary": "In Western musical theory, a cadence is the end of a phrase in which the melody or harmony creates a sense of full or partial resolution, especially in music of the 16th century onwards. A harmonic cadence is a progression of two or more chords that concludes a phrase, section, or piece of music. A rhythmic cadence is a characteristic rhythmic pattern that indicates the end of a phrase. A cadence can be labeled \"weak\" or \"strong\" depending on the impression of finality it gives.",
+		"secondaryRef": {
+			"kind": "interactive",
+			"label": "muted.io — Cadences",
+			"url": "https://muted.io/cadence/"
+		}
 	},
 	{
 		"id": "deceptive-cadence",
@@ -1153,7 +1319,12 @@
 		"prompt": "Set up a V chord with full build energy and resolve to vi instead of I for a fake drop.",
 		"definition": "A deceptive cadence sets up a V to I resolution but swerves to vi instead.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Cadence",
-		"wikiSummary": "In Western musical theory, a cadence is the end of a phrase in which the melody or harmony creates a sense of full or partial resolution, especially in music of the 16th century onwards. A harmonic cadence is a progression of two or more chords that concludes a phrase, section, or piece of music. A rhythmic cadence is a characteristic rhythmic pattern that indicates the end of a phrase. A cadence can be labeled \"weak\" or \"strong\" depending on the impression of finality it gives."
+		"wikiSummary": "In Western musical theory, a cadence is the end of a phrase in which the melody or harmony creates a sense of full or partial resolution, especially in music of the 16th century onwards. A harmonic cadence is a progression of two or more chords that concludes a phrase, section, or piece of music. A rhythmic cadence is a characteristic rhythmic pattern that indicates the end of a phrase. A cadence can be labeled \"weak\" or \"strong\" depending on the impression of finality it gives.",
+		"secondaryRef": {
+			"kind": "interactive",
+			"label": "muted.io — Cadences",
+			"url": "https://muted.io/cadence/"
+		}
 	},
 	{
 		"id": "phrygian-half-cadence",
@@ -1248,7 +1419,10 @@
 		"name": "Chromatic Mediant",
 		"category": "harmony",
 		"difficulty": 2,
-		"genres": ["synthwave", "ambient"],
+		"genres": [
+			"synthwave",
+			"ambient"
+		],
 		"prompt": "Move from I to a chromatic-mediant III major as a cinematic chord change in your breakdown.",
 		"definition": "A chromatic mediant is a chord a third away from the tonic with chromatic alterations.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Chromatic_mediant",
@@ -1281,7 +1455,10 @@
 		"name": "Drone",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["ambient", "psytrance"],
+		"genres": [
+			"ambient",
+			"psytrance"
+		],
 		"prompt": "Lay a fundamental-key drone under the entire track and never let it stop sounding.",
 		"definition": "A drone is a continuous sustained low pitch used as a harmonic foundation.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Drone_(sound)",
@@ -1292,7 +1469,10 @@
 		"name": "Modal Vamp",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["house", "ambient"],
+		"genres": [
+			"house",
+			"ambient"
+		],
 		"prompt": "Oscillate between two chords for the whole track and never cadence to a tonic.",
 		"definition": "A modal vamp is a two-chord oscillation that establishes a mode without cadencing.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Ostinato",
@@ -1303,7 +1483,11 @@
 		"name": "Loop-Based Harmony",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["house", "techno", "trance"],
+		"genres": [
+			"house",
+			"techno",
+			"trance"
+		],
 		"prompt": "Commit to a single 4-bar chord loop as the entire harmonic plan and rearrange around it.",
 		"definition": "Loop-based harmony treats a short chord cycle as the complete harmonic structure.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Chord_progression",
@@ -1314,7 +1498,10 @@
 		"name": "Power Chord",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["hardstyle", "bass"],
+		"genres": [
+			"hardstyle",
+			"bass"
+		],
 		"prompt": "Use only root and fifth power chords in your bass synth so the harmony stays mode-agnostic.",
 		"definition": "A power chord uses only the root and fifth, omitting the third.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Power_chord",
@@ -1325,7 +1512,10 @@
 		"name": "Quartal Harmony",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental"],
+		"genres": [
+			"ambient",
+			"experimental"
+		],
 		"prompt": "Voice every chord in stacked perfect fourths instead of tertian thirds.",
 		"definition": "Quartal harmony builds chords by stacking fourths instead of thirds.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Quartal_and_quintal_harmony",
@@ -1336,7 +1526,10 @@
 		"name": "Suspended Chord",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["trance", "ambient"],
+		"genres": [
+			"trance",
+			"ambient"
+		],
 		"prompt": "Replace every major triad with a sus2 voicing and never resolve to the third.",
 		"definition": "A suspended chord replaces the third with a second or fourth.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Suspended_chord",
@@ -1347,7 +1540,11 @@
 		"name": "Add9 Voicing",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["future-bass", "house", "ambient"],
+		"genres": [
+			"future-bass",
+			"house",
+			"ambient"
+		],
 		"prompt": "Voice every chord as an add9 with the ninth at the top of the voicing.",
 		"definition": "An add9 chord adds the ninth scale degree to a triad without the seventh.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Added_tone_chord",
@@ -1358,7 +1555,9 @@
 		"name": "Seventh Chord",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["house"],
+		"genres": [
+			"house"
+		],
 		"prompt": "Replace every triad in your progression with its diatonic seventh chord.",
 		"definition": "A seventh chord adds the seventh scale degree above a triad.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Extended_chord",
@@ -1369,7 +1568,9 @@
 		"name": "Extended Chord",
 		"category": "harmony",
 		"difficulty": 2,
-		"genres": ["house"],
+		"genres": [
+			"house"
+		],
 		"prompt": "Voice your pad in 9, 11 and 13 extensions and avoid playing the root.",
 		"definition": "Extended chords stack tertian extensions beyond the seventh.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Extended_chord",
@@ -1391,7 +1592,10 @@
 		"name": "Parallel Motion",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["future-bass", "ambient"],
+		"genres": [
+			"future-bass",
+			"ambient"
+		],
 		"prompt": "Move every voice in your pad in parallel fifths or octaves so the chord shape never changes.",
 		"definition": "Parallel motion moves voices in the same direction at the same interval.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Parallel_harmony",
@@ -1468,7 +1672,9 @@
 		"name": "Truck Driver's Gear Change",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["trance"],
+		"genres": [
+			"trance"
+		],
 		"prompt": "Bump every voicing up a semitone for the final chorus to inject one last burst of energy.",
 		"definition": "A truck driver's modulation shifts the key up by a semitone or tone for a final section.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Modulation_(music)",
@@ -1523,7 +1729,9 @@
 		"name": "ii-V-I",
 		"category": "harmony",
 		"difficulty": 1,
-		"genres": ["house"],
+		"genres": [
+			"house"
+		],
 		"prompt": "Build your chord progression entirely from looped ii-V-I cycles in your chosen key.",
 		"definition": "The ii-V-I progression is the backbone of Western tonal harmony.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Circle_of_fifths",
@@ -1545,7 +1753,10 @@
 		"name": "Polychord",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["experimental", "ambient"],
+		"genres": [
+			"experimental",
+			"ambient"
+		],
 		"prompt": "Stack an F major triad on top of a C major triad and use that polychord as your pad voicing.",
 		"definition": "A polychord stacks two complete chords, one above the other.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Polychord",
@@ -1567,7 +1778,9 @@
 		"name": "Twelve-Tone Row",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["experimental"],
+		"genres": [
+			"experimental"
+		],
 		"prompt": "Order all 12 chromatic pitches into a tone row and use it as your melody without repeating any pitch until all 12 have played.",
 		"definition": "Twelve-tone technique uses an ordered series of all 12 pitches as the basis for composition.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Twelve-tone_technique",
@@ -1578,7 +1791,9 @@
 		"name": "Pitch-Class Set",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["experimental"],
+		"genres": [
+			"experimental"
+		],
 		"prompt": "Restrict every harmony in your track to the [0,1,4,6] pitch-class set transposed across the keyboard.",
 		"definition": "Pitch-class set theory treats chords and motifs as unordered note collections.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Set_theory_(music)",
@@ -1589,7 +1804,9 @@
 		"name": "Total Serialism",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["experimental"],
+		"genres": [
+			"experimental"
+		],
 		"prompt": "Serialize pitches, durations, velocities and pans together so every parameter follows its own row.",
 		"definition": "Total serialism applies serial ordering not just to pitch but to all musical parameters.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Serialism",
@@ -1600,7 +1817,10 @@
 		"name": "Just Intonation",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental"],
+		"genres": [
+			"ambient",
+			"experimental"
+		],
 		"prompt": "Retune your pad's tuning table to pure 5-limit just intonation and never use a 12-TET interval.",
 		"definition": "Just intonation tunes intervals using pure whole-number frequency ratios.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Just_intonation",
@@ -1622,7 +1842,10 @@
 		"name": "Microtonal Pitches",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental"],
+		"genres": [
+			"ambient",
+			"experimental"
+		],
 		"prompt": "Bend at least one note per phrase by a quarter tone to push the melody outside 12-TET.",
 		"definition": "Microtonality uses pitches between the 12 standard semitones.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Microtonality",
@@ -1633,7 +1856,10 @@
 		"name": "Spectral Composition",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["experimental", "ambient"],
+		"genres": [
+			"experimental",
+			"ambient"
+		],
 		"prompt": "Analyse the overtone series of a struck bell and write every chord as a transposition of those partials.",
 		"definition": "Spectral music derives composition from analysis of the spectral content of sounds.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Spectral_music",
@@ -1644,7 +1870,10 @@
 		"name": "Inharmonic Chord",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental"],
+		"genres": [
+			"ambient",
+			"experimental"
+		],
 		"prompt": "Voice a pad as a stretched-partial inharmonic spectrum so each note is detuned from the harmonic series.",
 		"definition": "Inharmonicity occurs when partials are not integer multiples of the fundamental.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Inharmonicity",
@@ -1655,7 +1884,9 @@
 		"name": "Combination Tone",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["experimental"],
+		"genres": [
+			"experimental"
+		],
 		"prompt": "Choose two sine tones whose difference frequency lands on your tonic and let the phantom tone be heard.",
 		"definition": "A combination tone is a phantom pitch the ear creates from two simultaneous tones.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Combination_tone",
@@ -1666,7 +1897,10 @@
 		"name": "Missing Fundamental",
 		"category": "harmony",
 		"difficulty": 3,
-		"genres": ["bass", "dubstep"],
+		"genres": [
+			"bass",
+			"dubstep"
+		],
 		"prompt": "Filter out everything below 80 Hz in your bass and let the ear infer the missing fundamental from its harmonics.",
 		"definition": "The missing fundamental is a pitch the ear infers from its harmonic series even when the fundamental is absent.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Missing_fundamental",
@@ -1688,7 +1922,9 @@
 		"name": "Sensory Dissonance",
 		"category": "harmony",
 		"difficulty": 2,
-		"genres": ["experimental"],
+		"genres": [
+			"experimental"
+		],
 		"prompt": "Pile two notes a minor ninth apart in the bass register to maximise sensory dissonance for one bar.",
 		"definition": "Sensory dissonance is the perceptual roughness produced when partials beat within the critical band.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Consonance_and_dissonance",
@@ -1699,7 +1935,15 @@
 		"name": "Intro / Build / Drop / Breakdown",
 		"category": "arrangement",
 		"difficulty": 1,
-		"genres": ["house", "techno", "trance", "dubstep", "dnb", "future-bass", "hardstyle"],
+		"genres": [
+			"house",
+			"techno",
+			"trance",
+			"dubstep",
+			"dnb",
+			"future-bass",
+			"hardstyle"
+		],
 		"prompt": "Lay the entire track out in the classic intro / build / drop / breakdown / second drop / outro shape before adding any sound.",
 		"definition": "The dominant EDM song-form built around two energy peaks separated by a breakdown.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Song_structure",
@@ -1732,7 +1976,11 @@
 		"name": "32-bar Phrasing",
 		"category": "arrangement",
 		"difficulty": 3,
-		"genres": ["techno", "progressive-house", "ambient"],
+		"genres": [
+			"techno",
+			"progressive-house",
+			"ambient"
+		],
 		"prompt": "Make every section last exactly 32 bars. Patience over novelty for the entire track.",
 		"definition": "Extended phrase length favored by progressive and minimal styles where slow evolution is the point.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Musical_phrasing",
@@ -1763,7 +2011,13 @@
 		"name": "Riser Transition",
 		"category": "arrangement",
 		"difficulty": 1,
-		"genres": ["trance", "future-bass", "dubstep", "hardstyle", "house"],
+		"genres": [
+			"trance",
+			"future-bass",
+			"dubstep",
+			"hardstyle",
+			"house"
+		],
 		"prompt": "Use a single, slowly automated riser to carry the listener across the 8 bars before your drop. Nothing else moves.",
 		"definition": "A rising-pitch or rising-noise FX layer used to telegraph an incoming section change.",
 		"wikiUrl": null
@@ -1773,7 +2027,11 @@
 		"name": "Downlifter",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["trance", "future-bass", "dubstep"],
+		"genres": [
+			"trance",
+			"future-bass",
+			"dubstep"
+		],
 		"prompt": "Place a reverse-cymbal or descending sweep exactly on the bar that ends your drop and snaps to silence.",
 		"definition": "A descending or reversed FX used to mark the end of a high-energy section.",
 		"wikiUrl": null
@@ -1804,7 +2062,12 @@
 		"name": "Fake Drop",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["dubstep", "future-bass", "trap", "trance"],
+		"genres": [
+			"dubstep",
+			"future-bass",
+			"trap",
+			"trance"
+		],
 		"prompt": "Telegraph a full drop, then cut to silence or a misleading element for exactly 4 bars before delivering the real drop.",
 		"definition": "A misleading drop that subverts the listener’s expectation before the real one lands.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Drop_(music)",
@@ -1815,7 +2078,11 @@
 		"name": "Half Drop",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["dubstep", "dnb", "future-bass"],
+		"genres": [
+			"dubstep",
+			"dnb",
+			"future-bass"
+		],
 		"prompt": "Make your first drop a stripped-back version with only kick + bass + minimal lead; save the full drop for the second one.",
 		"definition": "A drop with reduced energy or sparser instrumentation, usually a setup for the full drop later.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Drop_(music)",
@@ -1826,7 +2093,13 @@
 		"name": "Pre-drop Silence",
 		"category": "arrangement",
 		"difficulty": 1,
-		"genres": ["dubstep", "trap", "dnb", "future-bass", "hardstyle"],
+		"genres": [
+			"dubstep",
+			"trap",
+			"dnb",
+			"future-bass",
+			"hardstyle"
+		],
 		"prompt": "Cut everything to silence for exactly 1 bar before your drop hits. No tail, no reverb wash, no cymbal — total silence.",
 		"definition": "A deliberate gap of silence immediately before a drop to maximize contrast.",
 		"wikiUrl": null
@@ -1857,7 +2130,11 @@
 		"name": "Through-composed",
 		"category": "arrangement",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental", "idm"],
+		"genres": [
+			"ambient",
+			"experimental",
+			"idm"
+		],
 		"prompt": "Write a track in which no section ever repeats. Every 16 bars introduces new material, building on but never recapitulating what came before.",
 		"definition": "A compositional approach where the music continuously evolves without literal repetition of sections.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Through-composed_music",
@@ -1901,7 +2178,11 @@
 		"name": "Patient Breakdown",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["trance", "progressive-house", "techno"],
+		"genres": [
+			"trance",
+			"progressive-house",
+			"techno"
+		],
 		"prompt": "Make your mid-track breakdown last at least 32 bars before you start the rebuild.",
 		"definition": "An extended low-energy section that lets the track breathe before the next peak.",
 		"wikiUrl": null
@@ -1911,7 +2192,12 @@
 		"name": "Four-on-the-floor Anchor",
 		"category": "arrangement",
 		"difficulty": 1,
-		"genres": ["house", "techno", "trance", "hardstyle"],
+		"genres": [
+			"house",
+			"techno",
+			"trance",
+			"hardstyle"
+		],
 		"prompt": "Lock a single kick pattern on every downbeat and never break it for the entire track. The kick is the contract.",
 		"definition": "A kick on every beat of a 4/4 bar; the defining pulse of much dance music.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Four_on_the_floor_(music)",
@@ -1922,7 +2208,11 @@
 		"name": "DJ-friendly Intro",
 		"category": "arrangement",
 		"difficulty": 1,
-		"genres": ["house", "techno", "trance"],
+		"genres": [
+			"house",
+			"techno",
+			"trance"
+		],
 		"prompt": "Build a 32-bar intro of just percussion and one filtered element — no melody, no bass — so a DJ can mix it cleanly.",
 		"definition": "An extended percussive intro designed for DJ mixing into the previous track.",
 		"wikiUrl": null
@@ -1932,7 +2222,9 @@
 		"name": "UK Garage 2-Step Structure",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["uk-garage"],
+		"genres": [
+			"uk-garage"
+		],
 		"prompt": "Build the verse around skipping 2-step drums and the chorus around 4-to-the-floor, alternating every 16 bars.",
 		"definition": "UK garage’s signature structural toggle between syncopated 2-step and 4/4 sections.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/2-step_garage",
@@ -1943,7 +2235,9 @@
 		"name": "DnB Intro–Break–Drop",
 		"category": "arrangement",
 		"difficulty": 1,
-		"genres": ["dnb"],
+		"genres": [
+			"dnb"
+		],
 		"prompt": "Structure as 32 bars of intro (no breakbeat), 16-bar break (drums solo), then the drop. Repeat.",
 		"definition": "The conventional drum & bass arrangement: a long melodic intro, a drum solo break, then the bassline drop.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Drum_and_bass",
@@ -1954,7 +2248,9 @@
 		"name": "Ambient Long-form Structure",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["ambient"],
+		"genres": [
+			"ambient"
+		],
 		"prompt": "Write a 7+ minute piece with no drums and no clear section boundaries. The only change allowed is one new texture every 90 seconds.",
 		"definition": "An ambient compositional approach where evolution is slow and structural boundaries are deliberately blurred.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Ambient_music",
@@ -1965,7 +2261,9 @@
 		"name": "Acid 303 Filter Sweep Build",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["acid-house"],
+		"genres": [
+			"acid-house"
+		],
 		"prompt": "Loop one 16-step 303 pattern unchanged for 64 bars and arrange purely by slowly opening the filter cutoff.",
 		"definition": "The classic acid arrangement technique of holding pattern static while sweeping the TB-303 filter.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Acid_house",
@@ -1976,7 +2274,9 @@
 		"name": "Trance Double Drop",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["trance"],
+		"genres": [
+			"trance"
+		],
 		"prompt": "Drop in twice — first at the standard 64-bar mark with a stripped lead, second time with full supersaw arpeggios layered on top of the same chord progression.",
 		"definition": "A trance staple where the second drop layers richer leads over the first drop’s progression.",
 		"wikiUrl": null
@@ -1986,7 +2286,9 @@
 		"name": "Dubstep Half-time Drop",
 		"category": "arrangement",
 		"difficulty": 1,
-		"genres": ["dubstep"],
+		"genres": [
+			"dubstep"
+		],
 		"prompt": "Halve the snare rate at the drop (140 BPM track → snare on beat 3 only) and let the bass do all the rhythmic work.",
 		"definition": "Dubstep’s defining feel: drums slow to half-time at the drop while sub work continues.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Dubstep",
@@ -1997,7 +2299,9 @@
 		"name": "Synthwave Gated-snare Arrival",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["synthwave"],
+		"genres": [
+			"synthwave"
+		],
 		"prompt": "Hold off introducing the gated-reverb snare until the second verse, then never remove it again.",
 		"definition": "Synthwave structural convention of saving the big 80s gated snare for impact mid-track.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Gated_reverb",
@@ -2008,7 +2312,9 @@
 		"name": "Hardstyle Reverse-bass Entry",
 		"category": "arrangement",
 		"difficulty": 2,
-		"genres": ["hardstyle"],
+		"genres": [
+			"hardstyle"
+		],
 		"prompt": "Bring in the reverse-bass exclusively at the second drop, never the first, so its arrival defines the track’s peak.",
 		"definition": "A hardstyle convention of holding the iconic reverse-bass back for impact at the second drop.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Hardstyle",
@@ -2019,11 +2325,22 @@
 		"name": "Sidechain Compression",
 		"category": "sound-design",
 		"difficulty": 1,
-		"genres": ["house", "techno", "trance", "future-bass", "hardstyle"],
+		"genres": [
+			"house",
+			"techno",
+			"trance",
+			"future-bass",
+			"hardstyle"
+		],
 		"prompt": "Sidechain every non-kick element to the kick with a 100ms release so the whole mix pumps in time.",
 		"definition": "Ducking one signal in response to another, typically the bass and pads ducking under the kick.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Dynamic_range_compression",
-		"wikiSummary": "Dynamic range compression (DRC) or simply compression, is an audio signal processing operation that reduces the volume of loud sounds or amplifies quiet sounds, thus reducing or compressing an audio signal's dynamic range. Compression is commonly used in sound recording and reproduction, broadcasting, live sound reinforcement and some instrument amplifiers."
+		"wikiSummary": "Dynamic range compression (DRC) or simply compression, is an audio signal processing operation that reduces the volume of loud sounds or amplifies quiet sounds, thus reducing or compressing an audio signal's dynamic range. Compression is commonly used in sound recording and reproduction, broadcasting, live sound reinforcement and some instrument amplifiers.",
+		"secondaryRef": {
+			"kind": "article",
+			"label": "Black Ghost Audio — Sidechain in Ableton",
+			"url": "https://www.blackghostaudio.com/blog/how-to-use-sidechain-compression-in-ableton"
+		}
 	},
 	{
 		"id": "parallel-compression",
@@ -2063,7 +2380,12 @@
 		"name": "Layered Bass",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["dubstep", "dnb", "bass", "future-bass"],
+		"genres": [
+			"dubstep",
+			"dnb",
+			"bass",
+			"future-bass"
+		],
 		"prompt": "Build your bass from three layers: a pure sine sub below 80Hz, a mid-range character layer 100-400Hz, and a top-end FM layer above 1kHz.",
 		"definition": "Splitting bass into frequency-specific layers for control and weight.",
 		"wikiUrl": null
@@ -2084,7 +2406,12 @@
 		"name": "Mono Sub-bass Discipline",
 		"category": "sound-design",
 		"difficulty": 1,
-		"genres": ["dubstep", "dnb", "house", "techno"],
+		"genres": [
+			"dubstep",
+			"dnb",
+			"house",
+			"techno"
+		],
 		"prompt": "Force everything below 120Hz to mono. Use a utility plugin on the master to guarantee it.",
 		"definition": "Keeping low-frequency content centered to avoid phase issues and translation problems on club systems.",
 		"wikiUrl": null
@@ -2105,7 +2432,11 @@
 		"name": "Granular Synthesis",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental", "idm"],
+		"genres": [
+			"ambient",
+			"experimental",
+			"idm"
+		],
 		"prompt": "Take a 4-second field recording and granulate it into the pad layer of your track. No other pad allowed.",
 		"definition": "Synthesis that breaks audio into tiny grains and recombines them to create textures.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Granular_synthesis",
@@ -2116,29 +2447,51 @@
 		"name": "FM Synthesis",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["future-bass", "dubstep", "idm"],
+		"genres": [
+			"future-bass",
+			"dubstep",
+			"idm"
+		],
 		"prompt": "Build your lead from a two-operator FM patch — sine carrier, sine modulator — and resist adding any other layers to it.",
 		"definition": "Frequency-modulation synthesis: one oscillator modulates the frequency of another to produce complex timbres.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Frequency_modulation_synthesis",
-		"wikiSummary": "Frequency modulation synthesis is a form of sound synthesis whereby the frequency of a waveform is changed by modulating its frequency with a modulator. The (instantaneous) frequency of an oscillator is altered in accordance with the amplitude of a modulating signal."
+		"wikiSummary": "Frequency modulation synthesis is a form of sound synthesis whereby the frequency of a waveform is changed by modulating its frequency with a modulator. The (instantaneous) frequency of an oscillator is altered in accordance with the amplitude of a modulating signal.",
+		"secondaryRef": {
+			"kind": "interactive",
+			"label": "Ableton — Learn Synths",
+			"url": "https://learningsynths.ableton.com/"
+		}
 	},
 	{
 		"id": "wavetable-synthesis",
 		"name": "Wavetable Synthesis",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["dubstep", "future-bass", "trance"],
+		"genres": [
+			"dubstep",
+			"future-bass",
+			"trance"
+		],
 		"prompt": "Automate the wavetable position of your lead across the bar so the timbre morphs even on a held note.",
 		"definition": "A synthesis method that scans through stored single-cycle waveforms to produce evolving timbres.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Wavetable_synthesis",
-		"wikiSummary": "Wavetable synthesis is a sound synthesis technique used to create quasi-periodic waveforms often used in the production of musical tones or notes. It uses a series of waveforms that are digitized as a series of amplitude values. Each waveform normally consists of a single cycle of the wave. Many such digitized waves are collected and stored in a table, often containing a series of slightly modified versions of an original \"pure\" tone."
+		"wikiSummary": "Wavetable synthesis is a sound synthesis technique used to create quasi-periodic waveforms often used in the production of musical tones or notes. It uses a series of waveforms that are digitized as a series of amplitude values. Each waveform normally consists of a single cycle of the wave. Many such digitized waves are collected and stored in a table, often containing a series of slightly modified versions of an original \"pure\" tone.",
+		"secondaryRef": {
+			"kind": "article",
+			"label": "Attack Magazine — Wavetable Foghorn Bass",
+			"url": "https://www.attackmagazine.com/technique/synth-secrets/drum-n-bass-foghorn-bass-with-wavetable/"
+		}
 	},
 	{
 		"id": "bitcrushing",
 		"name": "Bitcrushing",
 		"category": "sound-design",
 		"difficulty": 1,
-		"genres": ["idm", "experimental", "glitch"],
+		"genres": [
+			"idm",
+			"experimental",
+			"glitch"
+		],
 		"prompt": "Send your hi-hats to an 8-bit bitcrusher and leave the kick clean.",
 		"definition": "Lo-fi distortion via bit-depth and sample-rate reduction.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Bitcrusher",
@@ -2149,7 +2502,12 @@
 		"name": "Resampling",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["idm", "experimental", "dnb", "dubstep"],
+		"genres": [
+			"idm",
+			"experimental",
+			"dnb",
+			"dubstep"
+		],
 		"prompt": "Bounce your bass to audio, chop the bounce into 16ths, and rearrange those chops into a new bassline.",
 		"definition": "Recording a synth or chain to audio so it can be processed, chopped, or reused as a new sound source.",
 		"wikiUrl": null
@@ -2170,7 +2528,11 @@
 		"name": "Tape Emulation",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["lo-fi-house", "ambient", "synthwave"],
+		"genres": [
+			"lo-fi-house",
+			"ambient",
+			"synthwave"
+		],
 		"prompt": "Put a tape emulation plugin on your master bus with wow + flutter on, and tune the saturation to taste.",
 		"definition": "Plugins that model the harmonic distortion, compression, and pitch instability of analog tape.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tape_recorder",
@@ -2203,7 +2565,11 @@
 		"name": "Gated Reverb",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["synthwave", "pop", "dnb"],
+		"genres": [
+			"synthwave",
+			"pop",
+			"dnb"
+		],
 		"prompt": "Place a long-tail reverb followed by a noise gate set to 200ms after the snare hit — get the 80s drum sound.",
 		"definition": "A reverb tail cut short by a noise gate, defining the 80s snare sound.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Gated_reverb",
@@ -2214,7 +2580,10 @@
 		"name": "Comb Filter",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["experimental", "idm"],
+		"genres": [
+			"experimental",
+			"idm"
+		],
 		"prompt": "Run your lead through a comb filter and modulate its delay time with an LFO synced to a dotted eighth.",
 		"definition": "A filter that creates a series of regularly-spaced notches or peaks across the frequency spectrum.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Comb_filter",
@@ -2247,7 +2616,10 @@
 		"name": "Chorus",
 		"category": "sound-design",
 		"difficulty": 1,
-		"genres": ["synthwave", "house"],
+		"genres": [
+			"synthwave",
+			"house"
+		],
 		"prompt": "Use a single instance of chorus on your lead, set the rate slow, and resist using it anywhere else.",
 		"definition": "A modulated short-delay effect that thickens a sound by simulating multiple voices.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Chorus_(audio_effect)",
@@ -2258,7 +2630,11 @@
 		"name": "Vocoder",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["idm", "experimental", "synthwave"],
+		"genres": [
+			"idm",
+			"experimental",
+			"synthwave"
+		],
 		"prompt": "Vocode a chord pad with a rhythmic spoken-word vocal as the modulator. Use no other harmonic content for 16 bars.",
 		"definition": "An effect that imposes the spectral envelope of one signal onto the tone of another, classically used for \"talking\" synth sounds.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Vocoder",
@@ -2269,29 +2645,46 @@
 		"name": "Acid 303 Bassline",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["acid-house"],
+		"genres": [
+			"acid-house"
+		],
 		"prompt": "Program a 16-step monophonic bassline with slides and accents that emulate the TB-303, and automate cutoff + resonance throughout.",
 		"definition": "The squelchy, resonant bassline sound defined by the Roland TB-303 synthesizer.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Roland_TB-303",
-		"wikiSummary": "The Roland TB-303 Bass Line is a bass synthesizer released by Roland Corporation in 1981. Designed to simulate bass guitars, it was a commercial failure and was discontinued in 1984. However, cheap second-hand units were adopted by electronic musicians, and its \"squelching\" or \"chirping\" sound became a foundation of electronic dance music genres such as acid house, Chicago house and techno. It has inspired numerous clones."
+		"wikiSummary": "The Roland TB-303 Bass Line is a bass synthesizer released by Roland Corporation in 1981. Designed to simulate bass guitars, it was a commercial failure and was discontinued in 1984. However, cheap second-hand units were adopted by electronic musicians, and its \"squelching\" or \"chirping\" sound became a foundation of electronic dance music genres such as acid house, Chicago house and techno. It has inspired numerous clones.",
+		"secondaryRef": {
+			"kind": "interactive",
+			"label": "Ableton — Learn Synths",
+			"url": "https://learningsynths.ableton.com/"
+		}
 	},
 	{
 		"id": "reese-bass",
 		"name": "Reese Bass",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["dnb", "neurofunk"],
+		"genres": [
+			"dnb",
+			"neurofunk"
+		],
 		"prompt": "Stack two detuned saws an octave apart and run them through a notch filter swept by an LFO. That growl is your only bass for the drop.",
 		"definition": "A detuned sawtooth-wave bass with a characteristic growling movement, originally by Kevin Saunderson as Reese.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Kevin_Saunderson",
-		"wikiSummary": "Kevin Maurice Saunderson is an American electronic dance music DJ and record producer. He is famous for being a member of a trio, along with Juan Atkins and Derrick May, who came to be known as the Belleville Three, who are often credited to being among the pioneers and originators of techno: in particular this act helped define Detroit techno, the earliest style of this music genre. Born in New York, at the age of nine he moved to Belleville, Michigan, a suburb of Detroit, where at Belleville High School he befriended the other members of the trio."
+		"wikiSummary": "Kevin Maurice Saunderson is an American electronic dance music DJ and record producer. He is famous for being a member of a trio, along with Juan Atkins and Derrick May, who came to be known as the Belleville Three, who are often credited to being among the pioneers and originators of techno: in particular this act helped define Detroit techno, the earliest style of this music genre. Born in New York, at the age of nine he moved to Belleville, Michigan, a suburb of Detroit, where at Belleville High School he befriended the other members of the trio.",
+		"secondaryRef": {
+			"kind": "article",
+			"label": "Attack Magazine — Reese Bass Redux",
+			"url": "https://www.attackmagazine.com/technique/tutorials/reese-bass-redux/"
+		}
 	},
 	{
 		"id": "wobble-bass",
 		"name": "Wobble Bass",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["dubstep"],
+		"genres": [
+			"dubstep"
+		],
 		"prompt": "Modulate your bass filter cutoff with an LFO set to 1/4-note triplets for the entire drop. No straight rhythms allowed.",
 		"definition": "A dubstep bass technique using LFO-modulated filter cutoff to create the signature “wobble” movement.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Dubstep",
@@ -2302,7 +2695,11 @@
 		"name": "Mentasm / Hoover",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["hardstyle", "dnb", "breakbeat"],
+		"genres": [
+			"hardstyle",
+			"dnb",
+			"breakbeat"
+		],
 		"prompt": "Recreate the “Mentasm” hoover (detuned saws + pitch-bend portamento + heavy modulation) and use it for the lead of one full section.",
 		"definition": "The detuned-saw \"hoover\" lead originally from Joey Beltram’s \"Mentasm\", iconic to hardcore and early jungle.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Hoover_sound",
@@ -2313,7 +2710,11 @@
 		"name": "Supersaw",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["trance", "hardstyle", "future-bass"],
+		"genres": [
+			"trance",
+			"hardstyle",
+			"future-bass"
+		],
 		"prompt": "Build a supersaw lead from 7 detuned sawtooth oscillators, spread the detune wide, and play a long-held chord at the drop.",
 		"definition": "A stacked, detuned sawtooth synth voice popularized by the Roland JP-8000 and trance music.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Roland_JP-8000",
@@ -2324,18 +2725,30 @@
 		"name": "FM Bass",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["future-bass", "dubstep"],
+		"genres": [
+			"future-bass",
+			"dubstep"
+		],
 		"prompt": "Use FM synthesis to design a bass that scoops in pitch over its first 50ms and add a stable sub layer underneath.",
 		"definition": "Bass voices built with FM synthesis, producing aggressive, metallic, or vocal-like character.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Frequency_modulation_synthesis",
-		"wikiSummary": "Frequency modulation synthesis is a form of sound synthesis whereby the frequency of a waveform is changed by modulating its frequency with a modulator. The (instantaneous) frequency of an oscillator is altered in accordance with the amplitude of a modulating signal."
+		"wikiSummary": "Frequency modulation synthesis is a form of sound synthesis whereby the frequency of a waveform is changed by modulating its frequency with a modulator. The (instantaneous) frequency of an oscillator is altered in accordance with the amplitude of a modulating signal.",
+		"secondaryRef": {
+			"kind": "article",
+			"label": "Attack Magazine — Dirty FM Bass",
+			"url": "https://www.attackmagazine.com/technique/tutorials/dirty-fm-bass/"
+		}
 	},
 	{
 		"id": "pad-sidechain",
 		"name": "Pad Sidechain Pump",
 		"category": "sound-design",
 		"difficulty": 1,
-		"genres": ["house", "trance", "future-bass"],
+		"genres": [
+			"house",
+			"trance",
+			"future-bass"
+		],
 		"prompt": "Drown your pad in long-tail reverb, then sidechain it hard to the kick so it audibly breathes on every downbeat.",
 		"definition": "Heavy sidechaining applied specifically to pads to create the signature “pumping” pad breath of dance music.",
 		"wikiUrl": null
@@ -2345,17 +2758,28 @@
 		"name": "Kick-bass Ducking",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["dnb", "dubstep", "bass"],
+		"genres": [
+			"dnb",
+			"dubstep",
+			"bass"
+		],
 		"prompt": "Sidechain your sub bass to the kick with a 1ms attack and 30ms release so the kick punches through cleanly while the bass holds otherwise.",
 		"definition": "Tight ducking of the bass under each kick hit so the two never compete for headroom.",
-		"wikiUrl": null
+		"wikiUrl": null,
+		"secondaryRef": {
+			"kind": "article",
+			"label": "dsokolovskiy — How to fit kick and bass",
+			"url": "https://dsokolovskiy.com/blog/all/how-to-fit-kick-and-bass-together/"
+		}
 	},
 	{
 		"id": "psytrance-rolling-bass",
 		"name": "Psytrance Rolling Bass",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["psytrance"],
+		"genres": [
+			"psytrance"
+		],
 		"prompt": "Lock a 16th-note rolling bass on the off-beats (every \"and\") for the whole track, ducked to the kick on each downbeat.",
 		"definition": "The relentless 16th-note off-beat bass that defines psytrance momentum.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Psychedelic_trance",
@@ -2366,7 +2790,10 @@
 		"name": "Trap 808 with Glide",
 		"category": "sound-design",
 		"difficulty": 1,
-		"genres": ["trap", "future-bass"],
+		"genres": [
+			"trap",
+			"future-bass"
+		],
 		"prompt": "Use a single 808 sample with portamento between pitches, and let it carry both the bass and chord function for the entire drop.",
 		"definition": "The portamento-pitched 808 bass that doubles as bass + harmony in modern trap.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Roland_TR-808",
@@ -2377,29 +2804,52 @@
 		"name": "Shepard Tone",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["trance", "dubstep", "experimental", "idm"],
+		"genres": [
+			"trance",
+			"dubstep",
+			"experimental",
+			"idm"
+		],
 		"prompt": "Build your build-up around a Shepard tone so the riser appears to rise forever without ever actually going up in pitch.",
 		"definition": "An auditory illusion of an endlessly ascending or descending pitch, created by stacked octaves crossfading in volume.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Shepard_tone",
-		"wikiSummary": "A Shepard tone, named after Roger Shepard, is a sound consisting of a superposition of sine waves separated by octaves. When played with the bass pitch of the tone moving upward or downward, it is referred to as the Shepard scale. This creates the auditory illusion of a tone that seems to continually ascend or descend in pitch, yet which ultimately gets no higher or lower."
+		"wikiSummary": "A Shepard tone, named after Roger Shepard, is a sound consisting of a superposition of sine waves separated by octaves. When played with the bass pitch of the tone moving upward or downward, it is referred to as the Shepard scale. This creates the auditory illusion of a tone that seems to continually ascend or descend in pitch, yet which ultimately gets no higher or lower.",
+		"secondaryRef": {
+			"kind": "article",
+			"label": "iZotope — Shepard Tone",
+			"url": "https://www.izotope.com/en/learn/shepard-tone"
+		}
 	},
 	{
 		"id": "shepard-risset-glissando",
 		"name": "Shepard-Risset Glissando",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["experimental", "idm", "ambient"],
+		"genres": [
+			"experimental",
+			"idm",
+			"ambient"
+		],
 		"prompt": "Use a continuous Shepard-Risset glissando as the only transition element through your breakdown.",
 		"definition": "A continuous (rather than stepwise) version of the Shepard tone, perpetually gliding in pitch.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Shepard_tone",
-		"wikiSummary": "A Shepard tone, named after Roger Shepard, is a sound consisting of a superposition of sine waves separated by octaves. When played with the bass pitch of the tone moving upward or downward, it is referred to as the Shepard scale. This creates the auditory illusion of a tone that seems to continually ascend or descend in pitch, yet which ultimately gets no higher or lower."
+		"wikiSummary": "A Shepard tone, named after Roger Shepard, is a sound consisting of a superposition of sine waves separated by octaves. When played with the bass pitch of the tone moving upward or downward, it is referred to as the Shepard scale. This creates the auditory illusion of a tone that seems to continually ascend or descend in pitch, yet which ultimately gets no higher or lower.",
+		"secondaryRef": {
+			"kind": "article",
+			"label": "Cycling '74 — Risset Glissandos",
+			"url": "https://cycling74.com/2013/11/20/risset-glissandos-and-strange-loops-2/"
+		}
 	},
 	{
 		"id": "reich-phasing",
 		"name": "Reich-style Phasing",
 		"category": "arrangement",
 		"difficulty": 3,
-		"genres": ["experimental", "idm", "ambient"],
+		"genres": [
+			"experimental",
+			"idm",
+			"ambient"
+		],
 		"prompt": "Start two identical loops in sync and slowly nudge one out of phase across 60 seconds. Let the resulting interference be a full section.",
 		"definition": "Steve Reich’s compositional technique of two identical patterns drifting in and out of phase to generate new patterns.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Phase_music",
@@ -2410,7 +2860,11 @@
 		"name": "Tape Loop",
 		"category": "sound-design",
 		"difficulty": 2,
-		"genres": ["ambient", "experimental", "idm"],
+		"genres": [
+			"ambient",
+			"experimental",
+			"idm"
+		],
 		"prompt": "Pick a 4-second sample, loop it raw with no edits, and let it run unaltered for an entire 32-bar section as your only harmonic content.",
 		"definition": "A short audio loop, originally a physical loop of magnetic tape, used as a compositional building block.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Tape_loop",
@@ -2421,7 +2875,11 @@
 		"name": "Musique Concrète",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["experimental", "ambient", "idm"],
+		"genres": [
+			"experimental",
+			"ambient",
+			"idm"
+		],
 		"prompt": "Build a section using only field-recorded source material (no synths, no drum samples). Process it however you want.",
 		"definition": "Composition assembled from recorded real-world sounds rather than from notated instruments or pure synthesis.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Musique_concr%C3%A8te",
@@ -2432,7 +2890,10 @@
 		"name": "Acousmatic Sound",
 		"category": "sound-design",
 		"difficulty": 3,
-		"genres": ["experimental", "ambient"],
+		"genres": [
+			"experimental",
+			"ambient"
+		],
 		"prompt": "Use a single sound whose physical source the listener cannot identify. Make it the harmonic anchor of your piece.",
 		"definition": "A sound heard without seeing or knowing its physical source — a whole tradition of electroacoustic music is built on it.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Acousmatic_music",
@@ -2443,7 +2904,11 @@
 		"name": "Generative Music",
 		"category": "arrangement",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental", "idm"],
+		"genres": [
+			"ambient",
+			"experimental",
+			"idm"
+		],
 		"prompt": "Define one simple rule (e.g. \"trigger a random pitch from D dorian every 1.7 seconds\") and let it run untouched for 4 minutes.",
 		"definition": "Music created by a set of rules or processes that produce ongoing output without manual composition of each moment. Term coined by Brian Eno.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Generative_music",
@@ -2454,7 +2919,10 @@
 		"name": "Process Music",
 		"category": "arrangement",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental"],
+		"genres": [
+			"ambient",
+			"experimental"
+		],
 		"prompt": "Pick a single process (e.g. one note drops out every 16 bars) and let it run to completion as the entire track.",
 		"definition": "A compositional approach where a simple process is established and audibly runs to completion. Strongly associated with Steve Reich.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Process_music",
@@ -2465,7 +2933,10 @@
 		"name": "Aleatoric / Chance Music",
 		"category": "arrangement",
 		"difficulty": 3,
-		"genres": ["experimental", "idm"],
+		"genres": [
+			"experimental",
+			"idm"
+		],
 		"prompt": "Use a dice roll (or random plugin) to determine the chord progression at each section boundary. Commit to the result.",
 		"definition": "Music incorporating chance or randomness into composition or performance decisions.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Aleatoric_music",
@@ -2476,7 +2947,10 @@
 		"name": "Stochastic Music",
 		"category": "arrangement",
 		"difficulty": 3,
-		"genres": ["experimental", "idm"],
+		"genres": [
+			"experimental",
+			"idm"
+		],
 		"prompt": "Design a section where pitch density, register and dynamics are controlled by probability distributions rather than written notes.",
 		"definition": "Music composed using statistical distributions to determine its parameters — pioneered by Iannis Xenakis.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Stochastic",
@@ -2487,7 +2961,10 @@
 		"name": "Sound Mass",
 		"category": "arrangement",
 		"difficulty": 3,
-		"genres": ["ambient", "experimental"],
+		"genres": [
+			"ambient",
+			"experimental"
+		],
 		"prompt": "Stack 16 voices playing micro-detuned versions of the same pitch and crossfade their relative volumes for a minute. No rhythm, no chord change.",
 		"definition": "A compositional approach where individual pitches and rhythms dissolve into a continuous textural mass (Ligeti, Penderecki).",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Sound_mass",
@@ -2498,7 +2975,10 @@
 		"name": "Pitch-Class Set",
 		"category": "melody",
 		"difficulty": 3,
-		"genres": ["idm", "experimental"],
+		"genres": [
+			"idm",
+			"experimental"
+		],
 		"prompt": "Pick an unordered set of 4 pitch classes (e.g. {C, D♭, E, G♭}) and restrict your entire melody to permutations of that set.",
 		"definition": "Set theory applied to music: treating chords and melodies as unordered collections of pitch classes for analysis and composition.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Set_theory_(music)",
@@ -2509,7 +2989,10 @@
 		"name": "Mensural / Prolation Canon",
 		"category": "melody",
 		"difficulty": 3,
-		"genres": ["idm", "experimental"],
+		"genres": [
+			"idm",
+			"experimental"
+		],
 		"prompt": "Have two voices play the same melody but at different speed ratios (e.g. 1:2). The slow voice is the lead, the fast voice is its echo.",
 		"definition": "A strict canon where voices proceed through the same line at different speed ratios.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Prolation_canon",
@@ -2531,7 +3014,10 @@
 		"name": "Auditory Streaming",
 		"category": "melody",
 		"difficulty": 3,
-		"genres": ["idm", "experimental"],
+		"genres": [
+			"idm",
+			"experimental"
+		],
 		"prompt": "Write a fast single-line melody that leaps wide between two registers so the brain hears it as two interlocked voices instead of one.",
 		"definition": "The brain’s tendency to group successive tones into distinct perceptual streams based on pitch proximity.",
 		"wikiUrl": "https://en.wikipedia.org/wiki/Auditory_scene_analysis",
