@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { fly, fade } from 'svelte/transition';
+	import { base } from '$app/paths';
 	import { history, deleteChallenge, clearHistory } from '$lib/stores/history.svelte';
 	import { DIFFICULTY_LABELS } from '$lib/types';
 	import genres from '$lib/content/genres.json';
@@ -7,6 +8,10 @@
 	import Icon from './Icon.svelte';
 
 	let { onClose, onOpen }: { onClose: () => void; onOpen: (c: Challenge) => void } = $props();
+
+	function hrefFor(item: Challenge): string {
+		return item.encoded ? `${base}/c/${item.encoded}` : `${base}/mode`;
+	}
 
 	const genreList = genres as Genre[];
 	function genreLabel(id: string): string {
@@ -76,16 +81,20 @@
 			<ul class="flex flex-col gap-2 pb-4">
 				{#each history.items as item (item.id)}
 					<li class="flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3">
-						<button
-							type="button"
+						<a
+							href={hrefFor(item)}
 							class="flex flex-1 flex-col items-start gap-1 text-left"
-							onclick={() => onOpen(item)}
+							onclick={(e) => {
+								// Route via the parent so the drawer can close cleanly.
+								e.preventDefault();
+								onOpen(item);
+							}}
 						>
 							<span class="text-sm font-medium">{genreLabel(item.genre)}</span>
 							<span class="text-xs text-muted">
 								{DIFFICULTY_LABELS[item.difficulty]} · {formatTime(item.timestamp)}
 							</span>
-						</button>
+						</a>
 						<button
 							type="button"
 							aria-label="Delete"

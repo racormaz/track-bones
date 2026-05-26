@@ -135,6 +135,7 @@ export type Challenge = {
 	deepSectionPicks?: { sectionId: SectionId; conceptId: string }[]; // deep mode only, ordered per template
 	framingConceptId?: string; // deep mode only, arrangement concept used as overall framing
 	comboId?: string;
+	encoded?: string; // base64url-encoded permalink slug; populated on new saves
 };
 
 export type Preferences = {

@@ -48,6 +48,7 @@ export function saveChallenge(args: {
 	deepSectionPicks?: { sectionId: SectionId; conceptId: string }[];
 	framingConceptId?: string;
 	comboId?: string;
+	encoded?: string;
 }): Challenge {
 	const entry: Challenge = {
 		id: uuid(),
@@ -59,7 +60,8 @@ export function saveChallenge(args: {
 		templateId: args.templateId,
 		deepSectionPicks: args.deepSectionPicks,
 		framingConceptId: args.framingConceptId,
-		comboId: args.comboId
+		comboId: args.comboId,
+		encoded: args.encoded
 	};
 	state.items = [entry, ...state.items].slice(0, CAP);
 	persist(state.items);
